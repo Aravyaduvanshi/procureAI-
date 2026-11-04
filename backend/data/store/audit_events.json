@@ -1,0 +1,574 @@
+[
+  {
+    "id": "audit_1793652410806_w00fre",
+    "entityType": "approval",
+    "entityId": "APP-MVZQC1PW-3244D3",
+    "action": "DECISION_APPROVED",
+    "actor": "leadbuyer@example.com",
+    "details": {
+      "proposalId": "MATCH-TEST-PROPOSAL-01",
+      "proposalVersion": 1,
+      "actionType": "SHORTLIST_APPROVAL",
+      "selectedSuppliers": 2
+    },
+    "timestamp": "2026-11-02T20:46:50.806Z",
+    "updatedAt": "2026-11-02T20:46:50.806Z",
+    "createdAt": "2026-11-02T20:46:50.806Z"
+  },
+  {
+    "id": "audit_1793652410808_wysljj",
+    "entityType": "approval",
+    "entityId": "APP-MVZQC1Q0-0E7A74",
+    "action": "DECISION_REJECTED",
+    "actor": "buyer@example.com",
+    "details": {
+      "proposalId": "MATCH-REJECT-02",
+      "proposalVersion": 1,
+      "actionType": "SHORTLIST_APPROVAL",
+      "selectedSuppliers": 0
+    },
+    "timestamp": "2026-11-02T20:46:50.808Z",
+    "updatedAt": "2026-11-02T20:46:50.808Z",
+    "createdAt": "2026-11-02T20:46:50.808Z"
+  },
+  {
+    "id": "audit_1793652411370_z2lf96",
+    "entityType": "approval",
+    "entityId": "APP-MVZQC25I-0A1087",
+    "action": "DECISION_APPROVED",
+    "actor": "leadbuyer@example.com",
+    "details": {
+      "proposalId": "MATCH-E2E-1793652411362",
+      "proposalVersion": 1,
+      "actionType": "SHORTLIST_APPROVAL",
+      "selectedSuppliers": 1
+    },
+    "timestamp": "2026-11-02T20:46:51.371Z",
+    "updatedAt": "2026-11-02T20:46:51.371Z",
+    "createdAt": "2026-11-02T20:46:51.371Z"
+  },
+  {
+    "id": "audit_1793652411373_ux53ww",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQC25O-89BB6B",
+    "action": "NEGOTIATION_SESSION_CREATED",
+    "actor": "buyer@example.com",
+    "details": {
+      "supplierId": "SUP-IND-010",
+      "requirementId": "REQ-E2E-1793652411343"
+    },
+    "timestamp": "2026-11-02T20:46:51.373Z",
+    "updatedAt": "2026-11-02T20:46:51.373Z",
+    "createdAt": "2026-11-02T20:46:51.373Z"
+  },
+  {
+    "id": "audit_1793652411376_tgei0e",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQC25O-89BB6B",
+    "action": "STRATEGY_AND_DRAFT_GENERATED",
+    "actor": "buyer@example.com",
+    "details": {
+      "proposedOpeningOffer": 461
+    },
+    "timestamp": "2026-11-02T20:46:51.377Z",
+    "updatedAt": "2026-11-02T20:46:51.378Z",
+    "createdAt": "2026-11-02T20:46:51.378Z"
+  },
+  {
+    "id": "audit_1793652411381_hsgk2h",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQC25O-89BB6B",
+    "action": "STRATEGY_APPROVED_BY_BUYER",
+    "actor": "buyer@example.com",
+    "details": {
+      "commercialParameters": {
+        "supplierIndicativePrice": 455,
+        "buyerTargetPrice": 480,
+        "authorizedReservationLimit": 499,
+        "proposedOpeningOffer": 461,
+        "currency": "INR",
+        "batchQuantity": 5000
+      }
+    },
+    "timestamp": "2026-11-02T20:46:51.381Z",
+    "updatedAt": "2026-11-02T20:46:51.381Z",
+    "createdAt": "2026-11-02T20:46:51.381Z"
+  },
+  {
+    "id": "audit_1793652411385_woqeiq",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQC25O-89BB6B",
+    "action": "MESSAGE_DRAFT_APPROVED_FOR_SEND",
+    "actor": "buyer@example.com",
+    "details": {
+      "recipientEmail": "rfq@sanandautomachining.example.com"
+    },
+    "timestamp": "2026-11-02T20:46:51.385Z",
+    "updatedAt": "2026-11-02T20:46:51.385Z",
+    "createdAt": "2026-11-02T20:46:51.385Z"
+  },
+  {
+    "id": "audit_1793652411391_oreryx",
+    "entityType": "negotiation_message",
+    "entityId": "MSG-MVZQC263-B0A11C",
+    "action": "OUTBOUND_MESSAGE_DISPATCHED",
+    "actor": "buyer@example.com",
+    "details": {
+      "negotiationId": "NEG-MVZQC25O-89BB6B",
+      "recipient": "rfq@sanandautomachining.example.com",
+      "mode": "MOCK_SIMULATED"
+    },
+    "timestamp": "2026-11-02T20:46:51.391Z",
+    "updatedAt": "2026-11-02T20:46:51.391Z",
+    "createdAt": "2026-11-02T20:46:51.391Z"
+  },
+  {
+    "id": "audit_1793652411401_f8ilut",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQC25O-89BB6B",
+    "action": "COUNTEROFFER_RECORDED",
+    "actor": "supplier_inbound",
+    "details": {
+      "proposedUnitPrice": 475,
+      "verdict": "HIGHLY_FAVORABLE"
+    },
+    "timestamp": "2026-11-02T20:46:51.401Z",
+    "updatedAt": "2026-11-02T20:46:51.401Z",
+    "createdAt": "2026-11-02T20:46:51.401Z"
+  },
+  {
+    "id": "audit_1793652411404_hgpl4o",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQC25O-89BB6B",
+    "action": "NEGOTIATION_COMPLETED_AGREEMENT",
+    "actor": "buyer@example.com",
+    "details": {
+      "decision": "AGREED",
+      "agreedUnitPrice": 475,
+      "agreedLeadTimeDays": 30,
+      "currency": "INR",
+      "completedAt": "2026-11-02T20:46:51.403Z",
+      "buyerSignedBy": "buyer@example.com",
+      "remarks": "Agreed terms accepted by buyer"
+    },
+    "timestamp": "2026-11-02T20:46:51.404Z",
+    "updatedAt": "2026-11-02T20:46:51.404Z",
+    "createdAt": "2026-11-02T20:46:51.404Z"
+  },
+  {
+    "id": "audit_1793652713034_lzq1e0",
+    "entityType": "approval",
+    "entityId": "APP-MVZQIIX4-286856",
+    "action": "DECISION_REJECTED",
+    "actor": "buyer@example.com",
+    "details": {
+      "proposalId": "MATCH-REJECT-02",
+      "proposalVersion": 1,
+      "actionType": "SHORTLIST_APPROVAL",
+      "selectedSuppliers": 0
+    },
+    "timestamp": "2026-11-02T20:51:53.034Z",
+    "updatedAt": "2026-11-02T20:51:53.034Z",
+    "createdAt": "2026-11-02T20:51:53.034Z"
+  },
+  {
+    "id": "audit_1793652713585_9jbe3k",
+    "entityType": "approval",
+    "entityId": "APP-MVZQIJCG-19E699",
+    "action": "DECISION_APPROVED",
+    "actor": "leadbuyer@example.com",
+    "details": {
+      "proposalId": "MATCH-E2E-1793652713583",
+      "proposalVersion": 1,
+      "actionType": "SHORTLIST_APPROVAL",
+      "selectedSuppliers": 1
+    },
+    "timestamp": "2026-11-02T20:51:53.585Z",
+    "updatedAt": "2026-11-02T20:51:53.585Z",
+    "createdAt": "2026-11-02T20:51:53.585Z"
+  },
+  {
+    "id": "audit_1793652713586_l3esde",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQIJCI-AF6EC0",
+    "action": "NEGOTIATION_SESSION_CREATED",
+    "actor": "buyer@example.com",
+    "details": {
+      "supplierId": "SUP-IND-010",
+      "requirementId": "REQ-E2E-1793652713580"
+    },
+    "timestamp": "2026-11-02T20:51:53.586Z",
+    "updatedAt": "2026-11-02T20:51:53.586Z",
+    "createdAt": "2026-11-02T20:51:53.586Z"
+  },
+  {
+    "id": "audit_1793652713587_a6nsa4",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQIJCI-AF6EC0",
+    "action": "STRATEGY_AND_DRAFT_GENERATED",
+    "actor": "buyer@example.com",
+    "details": {
+      "proposedOpeningOffer": 461
+    },
+    "timestamp": "2026-11-02T20:51:53.587Z",
+    "updatedAt": "2026-11-02T20:51:53.587Z",
+    "createdAt": "2026-11-02T20:51:53.587Z"
+  },
+  {
+    "id": "audit_1793652713589_njjtl0",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQIJCI-AF6EC0",
+    "action": "STRATEGY_APPROVED_BY_BUYER",
+    "actor": "buyer@example.com",
+    "details": {
+      "commercialParameters": {
+        "supplierIndicativePrice": 455,
+        "buyerTargetPrice": 480,
+        "authorizedReservationLimit": 499,
+        "proposedOpeningOffer": 461,
+        "currency": "INR",
+        "batchQuantity": 5000
+      }
+    },
+    "timestamp": "2026-11-02T20:51:53.589Z",
+    "updatedAt": "2026-11-02T20:51:53.589Z",
+    "createdAt": "2026-11-02T20:51:53.589Z"
+  },
+  {
+    "id": "audit_1793652713590_rwle2q",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQIJCI-AF6EC0",
+    "action": "MESSAGE_DRAFT_APPROVED_FOR_SEND",
+    "actor": "buyer@example.com",
+    "details": {
+      "recipientEmail": "rfq@sanandautomachining.example.com"
+    },
+    "timestamp": "2026-11-02T20:51:53.590Z",
+    "updatedAt": "2026-11-02T20:51:53.590Z",
+    "createdAt": "2026-11-02T20:51:53.590Z"
+  },
+  {
+    "id": "audit_1793652713591_mtcz02",
+    "entityType": "negotiation_message",
+    "entityId": "MSG-MVZQIJCM-C946F7",
+    "action": "OUTBOUND_MESSAGE_DISPATCHED",
+    "actor": "buyer@example.com",
+    "details": {
+      "negotiationId": "NEG-MVZQIJCI-AF6EC0",
+      "recipient": "rfq@sanandautomachining.example.com",
+      "mode": "MOCK_SIMULATED"
+    },
+    "timestamp": "2026-11-02T20:51:53.591Z",
+    "updatedAt": "2026-11-02T20:51:53.591Z",
+    "createdAt": "2026-11-02T20:51:53.591Z"
+  },
+  {
+    "id": "audit_1793652713592_cqpqli",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQIJCI-AF6EC0",
+    "action": "COUNTEROFFER_RECORDED",
+    "actor": "supplier_inbound",
+    "details": {
+      "proposedUnitPrice": 475,
+      "verdict": "HIGHLY_FAVORABLE"
+    },
+    "timestamp": "2026-11-02T20:51:53.592Z",
+    "updatedAt": "2026-11-02T20:51:53.592Z",
+    "createdAt": "2026-11-02T20:51:53.592Z"
+  },
+  {
+    "id": "audit_1793652713593_ushvci",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQIJCI-AF6EC0",
+    "action": "NEGOTIATION_COMPLETED_AGREEMENT",
+    "actor": "buyer@example.com",
+    "details": {
+      "decision": "AGREED",
+      "agreedUnitPrice": 475,
+      "agreedLeadTimeDays": 30,
+      "currency": "INR",
+      "completedAt": "2026-11-02T20:51:53.593Z",
+      "buyerSignedBy": "buyer@example.com",
+      "remarks": "Agreed terms accepted by buyer"
+    },
+    "timestamp": "2026-11-02T20:51:53.593Z",
+    "updatedAt": "2026-11-02T20:51:53.593Z",
+    "createdAt": "2026-11-02T20:51:53.593Z"
+  },
+  {
+    "id": "audit_1793652732669_8th0nt",
+    "entityType": "approval",
+    "entityId": "APP-MVZQIY2J-7A3B38",
+    "action": "DECISION_APPROVED",
+    "actor": "leadbuyer@example.com",
+    "details": {
+      "proposalId": "MATCH-TEST-PROPOSAL-1793652732665",
+      "proposalVersion": 1,
+      "actionType": "SHORTLIST_APPROVAL",
+      "selectedSuppliers": 2
+    },
+    "timestamp": "2026-11-02T20:52:12.669Z",
+    "updatedAt": "2026-11-02T20:52:12.669Z",
+    "createdAt": "2026-11-02T20:52:12.669Z"
+  },
+  {
+    "id": "audit_1793652732671_n4bnvz",
+    "entityType": "approval",
+    "entityId": "APP-MVZQIY2M-64573C",
+    "action": "DECISION_REJECTED",
+    "actor": "buyer@example.com",
+    "details": {
+      "proposalId": "MATCH-REJECT-02",
+      "proposalVersion": 1,
+      "actionType": "SHORTLIST_APPROVAL",
+      "selectedSuppliers": 0
+    },
+    "timestamp": "2026-11-02T20:52:12.671Z",
+    "updatedAt": "2026-11-02T20:52:12.671Z",
+    "createdAt": "2026-11-02T20:52:12.671Z"
+  },
+  {
+    "id": "audit_1793652733016_6ycesy",
+    "entityType": "approval",
+    "entityId": "APP-MVZQIYC7-7AAE7B",
+    "action": "DECISION_APPROVED",
+    "actor": "leadbuyer@example.com",
+    "details": {
+      "proposalId": "MATCH-E2E-1793652733014",
+      "proposalVersion": 1,
+      "actionType": "SHORTLIST_APPROVAL",
+      "selectedSuppliers": 1
+    },
+    "timestamp": "2026-11-02T20:52:13.016Z",
+    "updatedAt": "2026-11-02T20:52:13.016Z",
+    "createdAt": "2026-11-02T20:52:13.016Z"
+  },
+  {
+    "id": "audit_1793652733017_7ek13g",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQIYC8-711519",
+    "action": "NEGOTIATION_SESSION_CREATED",
+    "actor": "buyer@example.com",
+    "details": {
+      "supplierId": "SUP-IND-010",
+      "requirementId": "REQ-E2E-1793652733011"
+    },
+    "timestamp": "2026-11-02T20:52:13.017Z",
+    "updatedAt": "2026-11-02T20:52:13.017Z",
+    "createdAt": "2026-11-02T20:52:13.017Z"
+  },
+  {
+    "id": "audit_1793652733018_zy8ptq",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQIYC8-711519",
+    "action": "STRATEGY_AND_DRAFT_GENERATED",
+    "actor": "buyer@example.com",
+    "details": {
+      "proposedOpeningOffer": 461
+    },
+    "timestamp": "2026-11-02T20:52:13.018Z",
+    "updatedAt": "2026-11-02T20:52:13.018Z",
+    "createdAt": "2026-11-02T20:52:13.018Z"
+  },
+  {
+    "id": "audit_1793652733019_chyqfw",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQIYC8-711519",
+    "action": "STRATEGY_APPROVED_BY_BUYER",
+    "actor": "buyer@example.com",
+    "details": {
+      "commercialParameters": {
+        "supplierIndicativePrice": 455,
+        "buyerTargetPrice": 480,
+        "authorizedReservationLimit": 499,
+        "proposedOpeningOffer": 461,
+        "currency": "INR",
+        "batchQuantity": 5000
+      }
+    },
+    "timestamp": "2026-11-02T20:52:13.019Z",
+    "updatedAt": "2026-11-02T20:52:13.019Z",
+    "createdAt": "2026-11-02T20:52:13.019Z"
+  },
+  {
+    "id": "audit_1793652733020_rs4g6p",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQIYC8-711519",
+    "action": "MESSAGE_DRAFT_APPROVED_FOR_SEND",
+    "actor": "buyer@example.com",
+    "details": {
+      "recipientEmail": "rfq@sanandautomachining.example.com"
+    },
+    "timestamp": "2026-11-02T20:52:13.020Z",
+    "updatedAt": "2026-11-02T20:52:13.020Z",
+    "createdAt": "2026-11-02T20:52:13.020Z"
+  },
+  {
+    "id": "audit_1793652733021_3f8pdy",
+    "entityType": "negotiation_message",
+    "entityId": "MSG-MVZQIYCD-56F1AB",
+    "action": "OUTBOUND_MESSAGE_DISPATCHED",
+    "actor": "buyer@example.com",
+    "details": {
+      "negotiationId": "NEG-MVZQIYC8-711519",
+      "recipient": "rfq@sanandautomachining.example.com",
+      "mode": "MOCK_SIMULATED"
+    },
+    "timestamp": "2026-11-02T20:52:13.021Z",
+    "updatedAt": "2026-11-02T20:52:13.021Z",
+    "createdAt": "2026-11-02T20:52:13.021Z"
+  },
+  {
+    "id": "audit_1793652733022_4grdrx",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQIYC8-711519",
+    "action": "COUNTEROFFER_RECORDED",
+    "actor": "supplier_inbound",
+    "details": {
+      "proposedUnitPrice": 475,
+      "verdict": "HIGHLY_FAVORABLE"
+    },
+    "timestamp": "2026-11-02T20:52:13.022Z",
+    "updatedAt": "2026-11-02T20:52:13.022Z",
+    "createdAt": "2026-11-02T20:52:13.022Z"
+  },
+  {
+    "id": "audit_1793652733023_3qzzyf",
+    "entityType": "negotiation",
+    "entityId": "NEG-MVZQIYC8-711519",
+    "action": "NEGOTIATION_COMPLETED_AGREEMENT",
+    "actor": "buyer@example.com",
+    "details": {
+      "decision": "AGREED",
+      "agreedUnitPrice": 475,
+      "agreedLeadTimeDays": 30,
+      "currency": "INR",
+      "completedAt": "2026-11-02T20:52:13.023Z",
+      "buyerSignedBy": "buyer@example.com",
+      "remarks": "Agreed terms accepted by buyer"
+    },
+    "timestamp": "2026-11-02T20:52:13.023Z",
+    "updatedAt": "2026-11-02T20:52:13.023Z",
+    "createdAt": "2026-11-02T20:52:13.023Z"
+  },
+  {
+    "id": "audit_1793726085547_bs1den",
+    "entityType": "negotiation",
+    "entityId": "NEG-MW0Y75IE-A537C4",
+    "action": "NEGOTIATION_SESSION_CREATED",
+    "actor": "buyer@example.com",
+    "details": {
+      "supplierId": "SUP-IND-010",
+      "requirementId": "REQ-E2E-1793652733011"
+    },
+    "timestamp": "2026-11-03T17:14:45.547Z",
+    "updatedAt": "2026-11-03T17:14:45.547Z",
+    "createdAt": "2026-11-03T17:14:45.547Z"
+  },
+  {
+    "id": "audit_1793726089242_qv13as",
+    "entityType": "negotiation",
+    "entityId": "NEG-MW0Y75IE-A537C4",
+    "action": "STRATEGY_AND_DRAFT_GENERATED",
+    "actor": "buyer@example.com",
+    "details": {
+      "proposedOpeningOffer": 461
+    },
+    "timestamp": "2026-11-03T17:14:49.242Z",
+    "updatedAt": "2026-11-03T17:14:49.242Z",
+    "createdAt": "2026-11-03T17:14:49.242Z"
+  },
+  {
+    "id": "audit_1793726131459_rhnvgf",
+    "entityType": "negotiation",
+    "entityId": "NEG-MW0Y75IE-A537C4",
+    "action": "STRATEGY_APPROVED_BY_BUYER",
+    "actor": "buyer@example.com",
+    "details": {
+      "commercialParameters": {
+        "supplierIndicativePrice": 455,
+        "buyerTargetPrice": 480,
+        "authorizedReservationLimit": 499,
+        "proposedOpeningOffer": 461,
+        "currency": "INR",
+        "batchQuantity": 5000
+      }
+    },
+    "timestamp": "2026-11-03T17:15:31.459Z",
+    "updatedAt": "2026-11-03T17:15:31.459Z",
+    "createdAt": "2026-11-03T17:15:31.459Z"
+  },
+  {
+    "id": "audit_1793726135117_7tpy9b",
+    "entityType": "negotiation",
+    "entityId": "NEG-MW0Y75IE-A537C4",
+    "action": "MESSAGE_DRAFT_APPROVED_FOR_SEND",
+    "actor": "buyer@example.com",
+    "details": {
+      "recipientEmail": "rfq@sanandautomachining.example.com"
+    },
+    "timestamp": "2026-11-03T17:15:35.118Z",
+    "updatedAt": "2026-11-03T17:15:35.118Z",
+    "createdAt": "2026-11-03T17:15:35.118Z"
+  },
+  {
+    "id": "audit_1793783584222_pxgmhj",
+    "entityType": "negotiation",
+    "entityId": "NEG-MW1WFJRR-923069",
+    "action": "NEGOTIATION_SESSION_CREATED",
+    "actor": "buyer@example.com",
+    "details": {
+      "supplierId": "SUP-IND-010",
+      "requirementId": "REQ-E2E-1793652411343"
+    },
+    "timestamp": "2026-11-04T09:13:04.222Z",
+    "updatedAt": "2026-11-04T09:13:04.222Z",
+    "createdAt": "2026-11-04T09:13:04.222Z"
+  },
+  {
+    "id": "audit_1793783586966_373ugq",
+    "entityType": "negotiation",
+    "entityId": "NEG-MW1WFJRR-923069",
+    "action": "STRATEGY_AND_DRAFT_GENERATED",
+    "actor": "buyer@example.com",
+    "details": {
+      "proposedOpeningOffer": 461
+    },
+    "timestamp": "2026-11-04T09:13:06.966Z",
+    "updatedAt": "2026-11-04T09:13:06.966Z",
+    "createdAt": "2026-11-04T09:13:06.966Z"
+  },
+  {
+    "id": "audit_1793783591812_5h3yfe",
+    "entityType": "negotiation",
+    "entityId": "NEG-MW1WFJRR-923069",
+    "action": "STRATEGY_APPROVED_BY_BUYER",
+    "actor": "buyer@example.com",
+    "details": {
+      "commercialParameters": {
+        "supplierIndicativePrice": 455,
+        "buyerTargetPrice": 480,
+        "authorizedReservationLimit": 499,
+        "proposedOpeningOffer": 461,
+        "currency": "INR",
+        "batchQuantity": 5000
+      }
+    },
+    "timestamp": "2026-11-04T09:13:11.813Z",
+    "updatedAt": "2026-11-04T09:13:11.813Z",
+    "createdAt": "2026-11-04T09:13:11.813Z"
+  },
+  {
+    "id": "audit_1793783594457_x55cmp",
+    "entityType": "negotiation",
+    "entityId": "NEG-MW1WFJRR-923069",
+    "action": "MESSAGE_DRAFT_APPROVED_FOR_SEND",
+    "actor": "buyer@example.com",
+    "details": {
+      "recipientEmail": "rfq@sanandautomachining.example.com"
+    },
+    "timestamp": "2026-11-04T09:13:14.457Z",
+    "updatedAt": "2026-11-04T09:13:14.457Z",
+    "createdAt": "2026-11-04T09:13:14.457Z"
+  }
+]

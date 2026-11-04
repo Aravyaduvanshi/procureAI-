@@ -1,0 +1,733 @@
+[
+  {
+    "id": "NEG-UNAPPROVED-TEST",
+    "status": "DRAFT",
+    "supplierEmail": "supplier@example.com",
+    "updatedAt": "2026-11-02T20:52:12.672Z",
+    "createdAt": "2026-11-02T20:52:12.672Z"
+  },
+  {
+    "id": "NEG-MVZQC25O-89BB6B",
+    "supplierId": "SUP-IND-010",
+    "supplierName": "Sanand Auto Machining Cluster Co",
+    "supplierEmail": "rfq@sanandautomachining.example.com",
+    "contactPerson": {
+      "name": "Bhavin Goswami",
+      "role": "Key Account Manager",
+      "phonePlaceholder": "+91-97270-XXXXX"
+    },
+    "requirementId": "REQ-E2E-1793652411343",
+    "requirementTitle": "Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)",
+    "requirementQuantity": 5000,
+    "requirementLeadTimeDays": 30,
+    "buyerObjective": "BALANCED",
+    "commercialParameters": {
+      "supplierIndicativePrice": 455,
+      "buyerTargetPrice": 480,
+      "authorizedReservationLimit": 499,
+      "proposedOpeningOffer": 461,
+      "currency": "INR",
+      "batchQuantity": 5000
+    },
+    "status": "COMPLETED",
+    "statusHistory": [
+      {
+        "status": "DRAFT",
+        "timestamp": "2026-11-02T20:46:51.372Z",
+        "actor": "buyer@example.com"
+      },
+      {
+        "status": "AWAITING_STRATEGY_APPROVAL",
+        "timestamp": "2026-11-02T20:46:51.375Z",
+        "actor": "buyer@example.com"
+      },
+      {
+        "status": "READY_FOR_MESSAGE_APPROVAL",
+        "timestamp": "2026-11-02T20:46:51.380Z",
+        "actor": "buyer@example.com",
+        "notes": "Strategy confirmed"
+      },
+      {
+        "status": "APPROVED_TO_SEND",
+        "timestamp": "2026-11-02T20:46:51.384Z",
+        "actor": "buyer@example.com",
+        "notes": "Outbound draft text authorized"
+      },
+      {
+        "status": "MESSAGE_SENT",
+        "timestamp": "2026-11-02T20:46:51.389Z",
+        "actor": "buyer@example.com"
+      },
+      {
+        "status": "WAITING_FOR_SUPPLIER",
+        "timestamp": "2026-11-02T20:46:51.389Z",
+        "actor": "system"
+      },
+      {
+        "status": "AWAITING_COUNTEROFFER_APPROVAL",
+        "timestamp": "2026-11-02T20:46:51.395Z",
+        "actor": "supplier_inbound",
+        "notes": "Supplier counteroffer ₹475 recorded. Recommendation: RECOMMEND_ACCEPTANCE"
+      },
+      {
+        "status": "COMPLETED",
+        "timestamp": "2026-11-02T20:46:51.403Z",
+        "actor": "buyer@example.com",
+        "notes": "Agreed terms accepted by buyer"
+      }
+    ],
+    "strategy": {
+      "agent": "Negotiation Agent",
+      "mode": "DETERMINISTIC_LOCAL_MODE",
+      "strategyType": "BALANCED",
+      "commercialParameters": {
+        "supplierIndicativePrice": 455,
+        "proposedOpeningOffer": 461,
+        "buyerTargetPrice": 480,
+        "authorizedReservationLimit": 499,
+        "currency": "INR",
+        "batchQuantity": 5000
+      },
+      "negotiationTactics": [
+        "Leverage guaranteed 5,000 piece batch volume for unit price concession",
+        "Request tiered pricing schedule for recurring quarterly replenishment lots",
+        "Offer prompt Net 30 payment terms in exchange for committed 25-day delivery window"
+      ],
+      "draftMessage": {
+        "recipientEmail": "rfq@sanandautomachining.example.com",
+        "recipientName": "Bhavin Goswami",
+        "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+        "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd."
+      },
+      "requiresHumanApproval": true
+    },
+    "messageDraft": {
+      "recipientEmail": "rfq@sanandautomachining.example.com",
+      "recipientName": "Bhavin Goswami",
+      "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+      "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd."
+    },
+    "messageHistory": [
+      {
+        "id": "MSG-MVZQC263-B0A11C",
+        "negotiationId": "NEG-MVZQC25O-89BB6B",
+        "sender": "buyer@example.com",
+        "recipient": "rfq@sanandautomachining.example.com",
+        "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+        "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd.",
+        "status": "SENT",
+        "providerResult": {
+          "success": true,
+          "mode": "MOCK_SIMULATED",
+          "providerDisabled": true,
+          "messageId": "mock_msg_1793652411387_ibdi8r",
+          "recipient": "rfq@sanandautomachining.example.com",
+          "dispatchedAt": "2026-11-02T20:46:51.387Z",
+          "note": "External email provider is disabled (ENABLE_EXTERNAL_EMAIL=false). Message recorded and simulated locally without real external network transmission."
+        },
+        "timestamp": "2026-11-02T20:46:51.387Z"
+      }
+    ],
+    "counteroffers": [
+      {
+        "counterofferId": "CO-MVZQC26B",
+        "evaluatedAt": "2026-11-02T20:46:51.395Z",
+        "proposedUnitPrice": 475,
+        "proposedLeadTimeDays": 28,
+        "proposedPaymentTerms": "Net 30 Days",
+        "targetPrice": 480,
+        "maxLimit": 499,
+        "priceVariance": -5,
+        "priceVariancePercent": -1,
+        "deliveryFeasible": true,
+        "outcomeVerdict": "HIGHLY_FAVORABLE",
+        "recommendedNextAction": "RECOMMEND_ACCEPTANCE",
+        "rationale": "Supplier quoted ₹475, which meets or beats the buyer target of ₹480. Recommend closing subject to final buyer signoff.",
+        "requiresHumanDecision": true
+      }
+    ],
+    "finalOutcome": {
+      "decision": "AGREED",
+      "agreedUnitPrice": 475,
+      "agreedLeadTimeDays": 30,
+      "currency": "INR",
+      "completedAt": "2026-11-02T20:46:51.403Z",
+      "buyerSignedBy": "buyer@example.com",
+      "remarks": "Agreed terms accepted by buyer"
+    },
+    "createdAt": "2026-11-02T20:46:51.372Z",
+    "updatedAt": "2026-11-02T20:46:51.403Z",
+    "strategyApproval": {
+      "approvedBy": "buyer@example.com",
+      "timestamp": "2026-11-02T20:46:51.380Z",
+      "reason": "Strategy confirmed"
+    },
+    "messageApproval": {
+      "approvedBy": "buyer@example.com",
+      "timestamp": "2026-11-02T20:46:51.384Z",
+      "reason": "Outbound draft text authorized"
+    },
+    "latestCounteroffer": {
+      "counterofferId": "CO-MVZQC26B",
+      "evaluatedAt": "2026-11-02T20:46:51.395Z",
+      "proposedUnitPrice": 475,
+      "proposedLeadTimeDays": 28,
+      "proposedPaymentTerms": "Net 30 Days",
+      "targetPrice": 480,
+      "maxLimit": 499,
+      "priceVariance": -5,
+      "priceVariancePercent": -1,
+      "deliveryFeasible": true,
+      "outcomeVerdict": "HIGHLY_FAVORABLE",
+      "recommendedNextAction": "RECOMMEND_ACCEPTANCE",
+      "rationale": "Supplier quoted ₹475, which meets or beats the buyer target of ₹480. Recommend closing subject to final buyer signoff.",
+      "requiresHumanDecision": true
+    }
+  },
+  {
+    "id": "NEG-MVZQIJCI-AF6EC0",
+    "supplierId": "SUP-IND-010",
+    "supplierName": "Sanand Auto Machining Cluster Co",
+    "supplierEmail": "rfq@sanandautomachining.example.com",
+    "contactPerson": {
+      "name": "Bhavin Goswami",
+      "role": "Key Account Manager",
+      "phonePlaceholder": "+91-97270-XXXXX"
+    },
+    "requirementId": "REQ-E2E-1793652713580",
+    "requirementTitle": "Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)",
+    "requirementQuantity": 5000,
+    "requirementLeadTimeDays": 30,
+    "buyerObjective": "BALANCED",
+    "commercialParameters": {
+      "supplierIndicativePrice": 455,
+      "buyerTargetPrice": 480,
+      "authorizedReservationLimit": 499,
+      "proposedOpeningOffer": 461,
+      "currency": "INR",
+      "batchQuantity": 5000
+    },
+    "status": "COMPLETED",
+    "statusHistory": [
+      {
+        "status": "DRAFT",
+        "timestamp": "2026-11-02T20:51:53.586Z",
+        "actor": "buyer@example.com"
+      },
+      {
+        "status": "AWAITING_STRATEGY_APPROVAL",
+        "timestamp": "2026-11-02T20:51:53.587Z",
+        "actor": "buyer@example.com"
+      },
+      {
+        "status": "READY_FOR_MESSAGE_APPROVAL",
+        "timestamp": "2026-11-02T20:51:53.588Z",
+        "actor": "buyer@example.com",
+        "notes": "Strategy confirmed"
+      },
+      {
+        "status": "APPROVED_TO_SEND",
+        "timestamp": "2026-11-02T20:51:53.589Z",
+        "actor": "buyer@example.com",
+        "notes": "Outbound draft text authorized"
+      },
+      {
+        "status": "MESSAGE_SENT",
+        "timestamp": "2026-11-02T20:51:53.591Z",
+        "actor": "buyer@example.com"
+      },
+      {
+        "status": "WAITING_FOR_SUPPLIER",
+        "timestamp": "2026-11-02T20:51:53.591Z",
+        "actor": "system"
+      },
+      {
+        "status": "AWAITING_COUNTEROFFER_APPROVAL",
+        "timestamp": "2026-11-02T20:51:53.592Z",
+        "actor": "supplier_inbound",
+        "notes": "Supplier counteroffer ₹475 recorded. Recommendation: RECOMMEND_ACCEPTANCE"
+      },
+      {
+        "status": "COMPLETED",
+        "timestamp": "2026-11-02T20:51:53.593Z",
+        "actor": "buyer@example.com",
+        "notes": "Agreed terms accepted by buyer"
+      }
+    ],
+    "strategy": {
+      "agent": "Negotiation Agent",
+      "mode": "DETERMINISTIC_LOCAL_MODE",
+      "strategyType": "BALANCED",
+      "commercialParameters": {
+        "supplierIndicativePrice": 455,
+        "proposedOpeningOffer": 461,
+        "buyerTargetPrice": 480,
+        "authorizedReservationLimit": 499,
+        "currency": "INR",
+        "batchQuantity": 5000
+      },
+      "negotiationTactics": [
+        "Leverage guaranteed 5,000 piece batch volume for unit price concession",
+        "Request tiered pricing schedule for recurring quarterly replenishment lots",
+        "Offer prompt Net 30 payment terms in exchange for committed 25-day delivery window"
+      ],
+      "draftMessage": {
+        "recipientEmail": "rfq@sanandautomachining.example.com",
+        "recipientName": "Bhavin Goswami",
+        "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+        "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd."
+      },
+      "requiresHumanApproval": true
+    },
+    "messageDraft": {
+      "recipientEmail": "rfq@sanandautomachining.example.com",
+      "recipientName": "Bhavin Goswami",
+      "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+      "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd."
+    },
+    "messageHistory": [
+      {
+        "id": "MSG-MVZQIJCM-C946F7",
+        "negotiationId": "NEG-MVZQIJCI-AF6EC0",
+        "sender": "buyer@example.com",
+        "recipient": "rfq@sanandautomachining.example.com",
+        "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+        "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd.",
+        "status": "SENT",
+        "providerResult": {
+          "success": true,
+          "mode": "MOCK_SIMULATED",
+          "providerDisabled": true,
+          "messageId": "mock_msg_1793652713590_mdpv51",
+          "recipient": "rfq@sanandautomachining.example.com",
+          "dispatchedAt": "2026-11-02T20:51:53.590Z",
+          "note": "External email provider is disabled (ENABLE_EXTERNAL_EMAIL=false). Message recorded and simulated locally without real external network transmission."
+        },
+        "timestamp": "2026-11-02T20:51:53.590Z"
+      }
+    ],
+    "counteroffers": [
+      {
+        "counterofferId": "CO-MVZQIJCO",
+        "evaluatedAt": "2026-11-02T20:51:53.592Z",
+        "proposedUnitPrice": 475,
+        "proposedLeadTimeDays": 28,
+        "proposedPaymentTerms": "Net 30 Days",
+        "targetPrice": 480,
+        "maxLimit": 499,
+        "priceVariance": -5,
+        "priceVariancePercent": -1,
+        "deliveryFeasible": true,
+        "outcomeVerdict": "HIGHLY_FAVORABLE",
+        "recommendedNextAction": "RECOMMEND_ACCEPTANCE",
+        "rationale": "Supplier quoted ₹475, which meets or beats the buyer target of ₹480. Recommend closing subject to final buyer signoff.",
+        "requiresHumanDecision": true
+      }
+    ],
+    "finalOutcome": {
+      "decision": "AGREED",
+      "agreedUnitPrice": 475,
+      "agreedLeadTimeDays": 30,
+      "currency": "INR",
+      "completedAt": "2026-11-02T20:51:53.593Z",
+      "buyerSignedBy": "buyer@example.com",
+      "remarks": "Agreed terms accepted by buyer"
+    },
+    "createdAt": "2026-11-02T20:51:53.586Z",
+    "updatedAt": "2026-11-02T20:51:53.593Z",
+    "strategyApproval": {
+      "approvedBy": "buyer@example.com",
+      "timestamp": "2026-11-02T20:51:53.588Z",
+      "reason": "Strategy confirmed"
+    },
+    "messageApproval": {
+      "approvedBy": "buyer@example.com",
+      "timestamp": "2026-11-02T20:51:53.589Z",
+      "reason": "Outbound draft text authorized"
+    },
+    "latestCounteroffer": {
+      "counterofferId": "CO-MVZQIJCO",
+      "evaluatedAt": "2026-11-02T20:51:53.592Z",
+      "proposedUnitPrice": 475,
+      "proposedLeadTimeDays": 28,
+      "proposedPaymentTerms": "Net 30 Days",
+      "targetPrice": 480,
+      "maxLimit": 499,
+      "priceVariance": -5,
+      "priceVariancePercent": -1,
+      "deliveryFeasible": true,
+      "outcomeVerdict": "HIGHLY_FAVORABLE",
+      "recommendedNextAction": "RECOMMEND_ACCEPTANCE",
+      "rationale": "Supplier quoted ₹475, which meets or beats the buyer target of ₹480. Recommend closing subject to final buyer signoff.",
+      "requiresHumanDecision": true
+    }
+  },
+  {
+    "id": "NEG-MVZQIYC8-711519",
+    "supplierId": "SUP-IND-010",
+    "supplierName": "Sanand Auto Machining Cluster Co",
+    "supplierEmail": "rfq@sanandautomachining.example.com",
+    "contactPerson": {
+      "name": "Bhavin Goswami",
+      "role": "Key Account Manager",
+      "phonePlaceholder": "+91-97270-XXXXX"
+    },
+    "requirementId": "REQ-E2E-1793652733011",
+    "requirementTitle": "Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)",
+    "requirementQuantity": 5000,
+    "requirementLeadTimeDays": 30,
+    "buyerObjective": "BALANCED",
+    "commercialParameters": {
+      "supplierIndicativePrice": 455,
+      "buyerTargetPrice": 480,
+      "authorizedReservationLimit": 499,
+      "proposedOpeningOffer": 461,
+      "currency": "INR",
+      "batchQuantity": 5000
+    },
+    "status": "COMPLETED",
+    "statusHistory": [
+      {
+        "status": "DRAFT",
+        "timestamp": "2026-11-02T20:52:13.016Z",
+        "actor": "buyer@example.com"
+      },
+      {
+        "status": "AWAITING_STRATEGY_APPROVAL",
+        "timestamp": "2026-11-02T20:52:13.018Z",
+        "actor": "buyer@example.com"
+      },
+      {
+        "status": "READY_FOR_MESSAGE_APPROVAL",
+        "timestamp": "2026-11-02T20:52:13.019Z",
+        "actor": "buyer@example.com",
+        "notes": "Strategy confirmed"
+      },
+      {
+        "status": "APPROVED_TO_SEND",
+        "timestamp": "2026-11-02T20:52:13.020Z",
+        "actor": "buyer@example.com",
+        "notes": "Outbound draft text authorized"
+      },
+      {
+        "status": "MESSAGE_SENT",
+        "timestamp": "2026-11-02T20:52:13.021Z",
+        "actor": "buyer@example.com"
+      },
+      {
+        "status": "WAITING_FOR_SUPPLIER",
+        "timestamp": "2026-11-02T20:52:13.021Z",
+        "actor": "system"
+      },
+      {
+        "status": "AWAITING_COUNTEROFFER_APPROVAL",
+        "timestamp": "2026-11-02T20:52:13.022Z",
+        "actor": "supplier_inbound",
+        "notes": "Supplier counteroffer ₹475 recorded. Recommendation: RECOMMEND_ACCEPTANCE"
+      },
+      {
+        "status": "COMPLETED",
+        "timestamp": "2026-11-02T20:52:13.023Z",
+        "actor": "buyer@example.com",
+        "notes": "Agreed terms accepted by buyer"
+      }
+    ],
+    "strategy": {
+      "agent": "Negotiation Agent",
+      "mode": "DETERMINISTIC_LOCAL_MODE",
+      "strategyType": "BALANCED",
+      "commercialParameters": {
+        "supplierIndicativePrice": 455,
+        "proposedOpeningOffer": 461,
+        "buyerTargetPrice": 480,
+        "authorizedReservationLimit": 499,
+        "currency": "INR",
+        "batchQuantity": 5000
+      },
+      "negotiationTactics": [
+        "Leverage guaranteed 5,000 piece batch volume for unit price concession",
+        "Request tiered pricing schedule for recurring quarterly replenishment lots",
+        "Offer prompt Net 30 payment terms in exchange for committed 25-day delivery window"
+      ],
+      "draftMessage": {
+        "recipientEmail": "rfq@sanandautomachining.example.com",
+        "recipientName": "Bhavin Goswami",
+        "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+        "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd."
+      },
+      "requiresHumanApproval": true
+    },
+    "messageDraft": {
+      "recipientEmail": "rfq@sanandautomachining.example.com",
+      "recipientName": "Bhavin Goswami",
+      "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+      "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd."
+    },
+    "messageHistory": [
+      {
+        "id": "MSG-MVZQIYCD-56F1AB",
+        "negotiationId": "NEG-MVZQIYC8-711519",
+        "sender": "buyer@example.com",
+        "recipient": "rfq@sanandautomachining.example.com",
+        "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+        "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd.",
+        "status": "SENT",
+        "providerResult": {
+          "success": true,
+          "mode": "MOCK_SIMULATED",
+          "providerDisabled": true,
+          "messageId": "mock_msg_1793652733021_woexaf",
+          "recipient": "rfq@sanandautomachining.example.com",
+          "dispatchedAt": "2026-11-02T20:52:13.021Z",
+          "note": "External email provider is disabled (ENABLE_EXTERNAL_EMAIL=false). Message recorded and simulated locally without real external network transmission."
+        },
+        "timestamp": "2026-11-02T20:52:13.021Z"
+      }
+    ],
+    "counteroffers": [
+      {
+        "counterofferId": "CO-MVZQIYCE",
+        "evaluatedAt": "2026-11-02T20:52:13.022Z",
+        "proposedUnitPrice": 475,
+        "proposedLeadTimeDays": 28,
+        "proposedPaymentTerms": "Net 30 Days",
+        "targetPrice": 480,
+        "maxLimit": 499,
+        "priceVariance": -5,
+        "priceVariancePercent": -1,
+        "deliveryFeasible": true,
+        "outcomeVerdict": "HIGHLY_FAVORABLE",
+        "recommendedNextAction": "RECOMMEND_ACCEPTANCE",
+        "rationale": "Supplier quoted ₹475, which meets or beats the buyer target of ₹480. Recommend closing subject to final buyer signoff.",
+        "requiresHumanDecision": true
+      }
+    ],
+    "finalOutcome": {
+      "decision": "AGREED",
+      "agreedUnitPrice": 475,
+      "agreedLeadTimeDays": 30,
+      "currency": "INR",
+      "completedAt": "2026-11-02T20:52:13.023Z",
+      "buyerSignedBy": "buyer@example.com",
+      "remarks": "Agreed terms accepted by buyer"
+    },
+    "createdAt": "2026-11-02T20:52:13.016Z",
+    "updatedAt": "2026-11-02T20:52:13.023Z",
+    "strategyApproval": {
+      "approvedBy": "buyer@example.com",
+      "timestamp": "2026-11-02T20:52:13.019Z",
+      "reason": "Strategy confirmed"
+    },
+    "messageApproval": {
+      "approvedBy": "buyer@example.com",
+      "timestamp": "2026-11-02T20:52:13.020Z",
+      "reason": "Outbound draft text authorized"
+    },
+    "latestCounteroffer": {
+      "counterofferId": "CO-MVZQIYCE",
+      "evaluatedAt": "2026-11-02T20:52:13.022Z",
+      "proposedUnitPrice": 475,
+      "proposedLeadTimeDays": 28,
+      "proposedPaymentTerms": "Net 30 Days",
+      "targetPrice": 480,
+      "maxLimit": 499,
+      "priceVariance": -5,
+      "priceVariancePercent": -1,
+      "deliveryFeasible": true,
+      "outcomeVerdict": "HIGHLY_FAVORABLE",
+      "recommendedNextAction": "RECOMMEND_ACCEPTANCE",
+      "rationale": "Supplier quoted ₹475, which meets or beats the buyer target of ₹480. Recommend closing subject to final buyer signoff.",
+      "requiresHumanDecision": true
+    }
+  },
+  {
+    "id": "NEG-MW0Y75IE-A537C4",
+    "supplierId": "SUP-IND-010",
+    "supplierName": "Sanand Auto Machining Cluster Co",
+    "supplierEmail": "rfq@sanandautomachining.example.com",
+    "contactPerson": {
+      "name": "Bhavin Goswami",
+      "role": "Key Account Manager",
+      "phonePlaceholder": "+91-97270-XXXXX"
+    },
+    "requirementId": "REQ-E2E-1793652733011",
+    "requirementTitle": "Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)",
+    "requirementQuantity": 5000,
+    "requirementLeadTimeDays": 30,
+    "buyerObjective": "BALANCED",
+    "commercialParameters": {
+      "supplierIndicativePrice": 455,
+      "buyerTargetPrice": 480,
+      "authorizedReservationLimit": 499,
+      "proposedOpeningOffer": 461,
+      "currency": "INR",
+      "batchQuantity": 5000
+    },
+    "status": "APPROVED_TO_SEND",
+    "statusHistory": [
+      {
+        "status": "DRAFT",
+        "timestamp": "2026-11-03T17:14:45.544Z",
+        "actor": "buyer@example.com"
+      },
+      {
+        "status": "AWAITING_STRATEGY_APPROVAL",
+        "timestamp": "2026-11-03T17:14:49.240Z",
+        "actor": "buyer@example.com"
+      },
+      {
+        "status": "READY_FOR_MESSAGE_APPROVAL",
+        "timestamp": "2026-11-03T17:15:31.445Z",
+        "actor": "buyer@example.com",
+        "notes": "Commercial parameters confirmed by Lead Buyer"
+      },
+      {
+        "status": "APPROVED_TO_SEND",
+        "timestamp": "2026-11-03T17:15:35.116Z",
+        "actor": "buyer@example.com",
+        "notes": "Outbound supplier message text verified and authorized"
+      }
+    ],
+    "strategy": {
+      "agent": "Negotiation Agent",
+      "mode": "DETERMINISTIC_LOCAL_MODE",
+      "strategyType": "BALANCED",
+      "commercialParameters": {
+        "supplierIndicativePrice": 455,
+        "proposedOpeningOffer": 461,
+        "buyerTargetPrice": 480,
+        "authorizedReservationLimit": 499,
+        "currency": "INR",
+        "batchQuantity": 5000
+      },
+      "negotiationTactics": [
+        "Leverage guaranteed 5,000 piece batch volume for unit price concession",
+        "Request tiered pricing schedule for recurring quarterly replenishment lots",
+        "Offer prompt Net 30 payment terms in exchange for committed 25-day delivery window"
+      ],
+      "draftMessage": {
+        "recipientEmail": "rfq@sanandautomachining.example.com",
+        "recipientName": "Bhavin Goswami",
+        "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+        "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd."
+      },
+      "requiresHumanApproval": true
+    },
+    "messageDraft": {
+      "recipientEmail": "rfq@sanandautomachining.example.com",
+      "recipientName": "Bhavin Goswami",
+      "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+      "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd."
+    },
+    "messageHistory": [],
+    "counteroffers": [],
+    "finalOutcome": null,
+    "createdAt": "2026-11-03T17:14:45.544Z",
+    "updatedAt": "2026-11-03T17:15:35.116Z",
+    "strategyApproval": {
+      "approvedBy": "buyer@example.com",
+      "timestamp": "2026-11-03T17:15:31.444Z",
+      "reason": "Commercial parameters confirmed by Lead Buyer"
+    },
+    "messageApproval": {
+      "approvedBy": "buyer@example.com",
+      "timestamp": "2026-11-03T17:15:35.115Z",
+      "reason": "Outbound supplier message text verified and authorized"
+    }
+  },
+  {
+    "id": "NEG-MW1WFJRR-923069",
+    "supplierId": "SUP-IND-010",
+    "supplierName": "Sanand Auto Machining Cluster Co",
+    "supplierEmail": "rfq@sanandautomachining.example.com",
+    "contactPerson": {
+      "name": "Bhavin Goswami",
+      "role": "Key Account Manager",
+      "phonePlaceholder": "+91-97270-XXXXX"
+    },
+    "requirementId": "REQ-E2E-1793652411343",
+    "requirementTitle": "Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)",
+    "requirementQuantity": 5000,
+    "requirementLeadTimeDays": 30,
+    "buyerObjective": "BALANCED",
+    "commercialParameters": {
+      "supplierIndicativePrice": 455,
+      "buyerTargetPrice": 480,
+      "authorizedReservationLimit": 499,
+      "proposedOpeningOffer": 461,
+      "currency": "INR",
+      "batchQuantity": 5000
+    },
+    "status": "APPROVED_TO_SEND",
+    "statusHistory": [
+      {
+        "status": "DRAFT",
+        "timestamp": "2026-11-04T09:13:04.219Z",
+        "actor": "buyer@example.com"
+      },
+      {
+        "status": "AWAITING_STRATEGY_APPROVAL",
+        "timestamp": "2026-11-04T09:13:06.964Z",
+        "actor": "buyer@example.com"
+      },
+      {
+        "status": "READY_FOR_MESSAGE_APPROVAL",
+        "timestamp": "2026-11-04T09:13:11.810Z",
+        "actor": "buyer@example.com",
+        "notes": "Commercial parameters confirmed by Lead Buyer"
+      },
+      {
+        "status": "APPROVED_TO_SEND",
+        "timestamp": "2026-11-04T09:13:14.454Z",
+        "actor": "buyer@example.com",
+        "notes": "Outbound supplier message text verified and authorized"
+      }
+    ],
+    "strategy": {
+      "agent": "Negotiation Agent",
+      "mode": "DETERMINISTIC_LOCAL_MODE",
+      "strategyType": "BALANCED",
+      "commercialParameters": {
+        "supplierIndicativePrice": 455,
+        "proposedOpeningOffer": 461,
+        "buyerTargetPrice": 480,
+        "authorizedReservationLimit": 499,
+        "currency": "INR",
+        "batchQuantity": 5000
+      },
+      "negotiationTactics": [
+        "Leverage guaranteed 5,000 piece batch volume for unit price concession",
+        "Request tiered pricing schedule for recurring quarterly replenishment lots",
+        "Offer prompt Net 30 payment terms in exchange for committed 25-day delivery window"
+      ],
+      "draftMessage": {
+        "recipientEmail": "rfq@sanandautomachining.example.com",
+        "recipientName": "Bhavin Goswami",
+        "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+        "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd."
+      },
+      "requiresHumanApproval": true
+    },
+    "messageDraft": {
+      "recipientEmail": "rfq@sanandautomachining.example.com",
+      "recipientName": "Bhavin Goswami",
+      "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+      "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd."
+    },
+    "messageHistory": [],
+    "counteroffers": [],
+    "finalOutcome": null,
+    "createdAt": "2026-11-04T09:13:04.219Z",
+    "updatedAt": "2026-11-04T09:13:14.454Z",
+    "strategyApproval": {
+      "approvedBy": "buyer@example.com",
+      "timestamp": "2026-11-04T09:13:11.810Z",
+      "reason": "Commercial parameters confirmed by Lead Buyer"
+    },
+    "messageApproval": {
+      "approvedBy": "buyer@example.com",
+      "timestamp": "2026-11-04T09:13:14.454Z",
+      "reason": "Outbound supplier message text verified and authorized"
+    }
+  }
+]

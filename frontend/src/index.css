@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* MANTLE — Signal Propagation foundation */
+:root {
+  color-scheme: dark;
+  --signal-bg: #07090b;
+  --signal-bg-elevated: #0c1114;
+  --signal-surface: #101619;
+  --signal-line: rgba(220, 230, 226, 0.16);
+  --signal-line-soft: rgba(220, 230, 226, 0.075);
+  --signal-node: rgba(238, 243, 240, 0.92);
+  --signal-active: #a5bdb1;
+  --signal-text: #e6ece7;
+  --signal-muted: #899795;
+}
+
+html {
+  min-height: 100%;
+  background: var(--signal-bg);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--signal-text);
+  background:
+    radial-gradient(ellipse at 52% 0%, rgba(47, 68, 67, 0.13), transparent 43%),
+    radial-gradient(ellipse at 8% 72%, rgba(29, 48, 47, 0.10), transparent 38%),
+    var(--signal-bg);
+  font-family: 'Geist Sans', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', 'Outfit', sans-serif;
+}
+
+/* The shell creates a quiet, almost-black field for the signal network. */
+.signal-shell {
+  isolation: isolate;
+  position: relative;
+  min-height: 100vh;
+  overflow: clip;
+  background:
+    radial-gradient(ellipse at 50% 8%, rgba(61, 83, 78, 0.105), transparent 42%),
+    radial-gradient(ellipse at 88% 58%, rgba(35, 57, 55, 0.075), transparent 36%),
+    linear-gradient(180deg, #07090b 0%, #090d0f 52%, #07090b 100%);
+}
+
+.signal-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.32;
+  background-image:
+    linear-gradient(rgba(220, 230, 226, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(220, 230, 226, 0.018) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+/* Neutral glass surfaces: keep existing components functional while
+   removing the previous purple-tinted atmosphere. */
+.glass-panel {
+  background: rgba(13, 19, 21, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--signal-line-soft);
+}
+
+.glass-panel-hover {
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.glass-panel-hover:hover {
+  background: rgba(20, 29, 30, 0.88);
+  border-color: rgba(165, 189, 177, 0.22);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px -18px rgba(0, 0, 0, 0.72);
+}
+
+/* Quiet neutral scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080b0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(165, 189, 177, 0.28);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(165, 189, 177, 0.48);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "MSG-MVZQC263-B0A11C",
+    "negotiationId": "NEG-MVZQC25O-89BB6B",
+    "sender": "buyer@example.com",
+    "recipient": "rfq@sanandautomachining.example.com",
+    "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+    "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd.",
+    "status": "SENT",
+    "providerResult": {
+      "success": true,
+      "mode": "MOCK_SIMULATED",
+      "providerDisabled": true,
+      "messageId": "mock_msg_1793652411387_ibdi8r",
+      "recipient": "rfq@sanandautomachining.example.com",
+      "dispatchedAt": "2026-11-02T20:46:51.387Z",
+      "note": "External email provider is disabled (ENABLE_EXTERNAL_EMAIL=false). Message recorded and simulated locally without real external network transmission."
+    },
+    "timestamp": "2026-11-02T20:46:51.387Z",
+    "updatedAt": "2026-11-02T20:46:51.387Z",
+    "createdAt": "2026-11-02T20:46:51.387Z"
+  },
+  {
+    "id": "MSG-MVZQIJCM-C946F7",
+    "negotiationId": "NEG-MVZQIJCI-AF6EC0",
+    "sender": "buyer@example.com",
+    "recipient": "rfq@sanandautomachining.example.com",
+    "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+    "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd.",
+    "status": "SENT",
+    "providerResult": {
+      "success": true,
+      "mode": "MOCK_SIMULATED",
+      "providerDisabled": true,
+      "messageId": "mock_msg_1793652713590_mdpv51",
+      "recipient": "rfq@sanandautomachining.example.com",
+      "dispatchedAt": "2026-11-02T20:51:53.590Z",
+      "note": "External email provider is disabled (ENABLE_EXTERNAL_EMAIL=false). Message recorded and simulated locally without real external network transmission."
+    },
+    "timestamp": "2026-11-02T20:51:53.590Z",
+    "updatedAt": "2026-11-02T20:51:53.590Z",
+    "createdAt": "2026-11-02T20:51:53.590Z"
+  },
+  {
+    "id": "MSG-MVZQIYCD-56F1AB",
+    "negotiationId": "NEG-MVZQIYC8-711519",
+    "sender": "buyer@example.com",
+    "recipient": "rfq@sanandautomachining.example.com",
+    "subject": "RFQ & Commercial Discussion: Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) [Qty: 5000]",
+    "body": "Dear Bhavin Goswami,\n\nWe are evaluating suppliers for the procurement of 5000 units of Precision CNC Machined Aluminium Mounting Bracket (Housing Mount) for our Vadodara manufacturing facility.\n\nReviewing Sanand Auto Machining Cluster Co's manufacturing capabilities and quality certifications, we would like to invite your formal quotation. Based on our volume commitment of 5000 pieces and scheduled delivery within 30 days, our target price is INR 461.00 per piece under standard Net 30 payment terms.\n\nPlease confirm manufacturing feasibility against our drawing specifications and your earliest delivery schedule.\n\nSincerely,\nProcurement Lead, Gujarat Precision Electro-Mech Pvt. Ltd.",
+    "status": "SENT",
+    "providerResult": {
+      "success": true,
+      "mode": "MOCK_SIMULATED",
+      "providerDisabled": true,
+      "messageId": "mock_msg_1793652733021_woexaf",
+      "recipient": "rfq@sanandautomachining.example.com",
+      "dispatchedAt": "2026-11-02T20:52:13.021Z",
+      "note": "External email provider is disabled (ENABLE_EXTERNAL_EMAIL=false). Message recorded and simulated locally without real external network transmission."
+    },
+    "timestamp": "2026-11-02T20:52:13.021Z",
+    "updatedAt": "2026-11-02T20:52:13.021Z",
+    "createdAt": "2026-11-02T20:52:13.021Z"
+  }
+]

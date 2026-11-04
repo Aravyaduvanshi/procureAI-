@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "ProcureAI Microservices Backend Platform",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start:gateway": "node gateway/index.js",
+    "start:auth": "node services/auth/index.js",
+    "start:supplier": "node services/supplier/index.js",
+    "start:requirement": "node services/requirement/index.js",
+    "start:rating": "node services/vendor-rating/index.js",
+    "start:matching": "node services/matching/index.js",
+    "start:approval": "node services/approval/index.js",
+    "start:negotiation": "node services/negotiation/index.js",
+    "start:communication": "node services/communication/index.js",
+    "start:billing": "node services/billing/index.js",
+    "dev": "concurrently --kill-others-on-fail -n \"gate,auth,supp,req,rate,matc,appr,nego,comm,bill\" -c \"cyan,green,blue,magenta,yellow,red,gray,white,bgCyan,blue\" \"node gateway/index.js\" \"node services/auth/index.js\" \"node services/supplier/index.js\" \"node services/requirement/index.js\" \"node services/vendor-rating/index.js\" \"node services/matching/index.js\" \"node services/approval/index.js\" \"node services/negotiation/index.js\" \"node services/communication/index.js\" \"node services/billing/index.js\"",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-http-proxy": "^2.1.2",
+    "express-rate-limit": "^7.5.0",
+    "ioredis": "^6.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^1.1.1",
+    "pg": "^8.13.1"
+  }
+}

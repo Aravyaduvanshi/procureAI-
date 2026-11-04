@@ -1,0 +1,133 @@
+[
+  {
+    "id": "REQ-E2E-1793652411343",
+    "title": "Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)",
+    "originalFilename": "Sample_Procurement_Requirement_Vadodara.pdf",
+    "targetQuantity": 5000,
+    "requestedLeadTimeDays": 30,
+    "targetUnitPrice": 480,
+    "priceCurrency": "INR",
+    "materials": [
+      "Aluminium 6061-T6"
+    ],
+    "mandatoryProcesses": [
+      "CNC Milling",
+      "CNC Turning"
+    ],
+    "requiredCertifications": [
+      "ISO 9001:2015",
+      "IATF 16949"
+    ],
+    "qualityRequirements": {
+      "cmmInspectionRequired": true,
+      "traceabilityRequired": true,
+      "drawingApprovalRequired": true
+    },
+    "buyerLocation": "Vadodara, Gujarat, India",
+    "deliveryDestination": "Vadodara Plant, Gujarat",
+    "unspecifiedFields": [
+      {
+        "field": "machiningTolerance",
+        "description": "General dimensional tolerance class not explicitly specified",
+        "suggestedValue": "ISO 2768-m (Medium Precision: ±0.1mm)",
+        "importance": "medium"
+      }
+    ],
+    "requiresBuyerConfirmation": false,
+    "status": "MATCHED",
+    "aiExtractionMode": "deterministic_rule_based",
+    "createdAt": "2026-11-02T20:46:51.343Z",
+    "updatedAt": "2026-11-04T09:12:38.552Z",
+    "surfaceTreatment": "Hard Anodizing (Type III) Black",
+    "machiningTolerance": "ISO 2768-m (±0.1mm)",
+    "paymentTerms": "Net 30 Days",
+    "latestMatchRunId": "MATCH-MW1WEZYB-393F9B"
+  },
+  {
+    "id": "REQ-E2E-1793652713580",
+    "title": "Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)",
+    "originalFilename": "Sample_Procurement_Requirement_Vadodara.pdf",
+    "targetQuantity": 5000,
+    "requestedLeadTimeDays": 30,
+    "targetUnitPrice": 480,
+    "priceCurrency": "INR",
+    "materials": [
+      "Aluminium 6061-T6"
+    ],
+    "mandatoryProcesses": [
+      "CNC Milling",
+      "CNC Turning"
+    ],
+    "requiredCertifications": [
+      "ISO 9001:2015",
+      "IATF 16949"
+    ],
+    "qualityRequirements": {
+      "cmmInspectionRequired": true,
+      "traceabilityRequired": true,
+      "drawingApprovalRequired": true
+    },
+    "buyerLocation": "Vadodara, Gujarat, India",
+    "deliveryDestination": "Vadodara Plant, Gujarat",
+    "unspecifiedFields": [
+      {
+        "field": "machiningTolerance",
+        "description": "General dimensional tolerance class not explicitly specified",
+        "suggestedValue": "ISO 2768-m (Medium Precision: ±0.1mm)",
+        "importance": "medium"
+      }
+    ],
+    "requiresBuyerConfirmation": false,
+    "status": "BUYER_CONFIRMED",
+    "aiExtractionMode": "deterministic_rule_based",
+    "createdAt": "2026-11-02T20:51:53.580Z",
+    "updatedAt": "2026-11-02T20:51:53.581Z",
+    "surfaceTreatment": "Hard Anodizing (Type III) Black",
+    "machiningTolerance": "ISO 2768-m (±0.1mm)",
+    "paymentTerms": "Net 30 Days"
+  },
+  {
+    "id": "REQ-E2E-1793652733011",
+    "title": "Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)",
+    "originalFilename": "Sample_Procurement_Requirement_Vadodara.pdf",
+    "targetQuantity": 5000,
+    "requestedLeadTimeDays": 30,
+    "targetUnitPrice": 480,
+    "priceCurrency": "INR",
+    "materials": [
+      "Aluminium 6061-T6"
+    ],
+    "mandatoryProcesses": [
+      "CNC Milling",
+      "CNC Turning"
+    ],
+    "requiredCertifications": [
+      "ISO 9001:2015",
+      "IATF 16949"
+    ],
+    "qualityRequirements": {
+      "cmmInspectionRequired": true,
+      "traceabilityRequired": true,
+      "drawingApprovalRequired": true
+    },
+    "buyerLocation": "Vadodara, Gujarat, India",
+    "deliveryDestination": "Vadodara Plant, Gujarat",
+    "unspecifiedFields": [
+      {
+        "field": "machiningTolerance",
+        "description": "General dimensional tolerance class not explicitly specified",
+        "suggestedValue": "ISO 2768-m (Medium Precision: ±0.1mm)",
+        "importance": "medium"
+      }
+    ],
+    "requiresBuyerConfirmation": false,
+    "status": "MATCHED",
+    "aiExtractionMode": "deterministic_rule_based",
+    "createdAt": "2026-11-02T20:52:13.011Z",
+    "updatedAt": "2026-11-03T17:13:10.454Z",
+    "surfaceTreatment": "Hard Anodizing (Type III) Black",
+    "machiningTolerance": "ISO 2768-m (±0.1mm)",
+    "paymentTerms": "Net 30 Days",
+    "latestMatchRunId": "MATCH-MW0Y544N-D47432"
+  }
+]

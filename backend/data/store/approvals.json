@@ -1,0 +1,189 @@
+[
+  {
+    "id": "APP-MVZQC1PW-3244D3",
+    "proposalId": "MATCH-TEST-PROPOSAL-01",
+    "proposalVersion": 1,
+    "actionType": "SHORTLIST_APPROVAL",
+    "decision": "APPROVED",
+    "reason": "Approved shortlist for commercial discussions",
+    "selectedSupplierIds": [
+      "SUP-IND-001",
+      "SUP-IND-002"
+    ],
+    "approver": {
+      "id": "usr_buyer_1",
+      "email": "leadbuyer@example.com",
+      "role": "buyer"
+    },
+    "timestamp": "2026-11-02T20:46:50.805Z",
+    "updatedAt": "2026-11-02T20:46:50.806Z",
+    "createdAt": "2026-11-02T20:46:50.806Z"
+  },
+  {
+    "id": "APP-MVZQC1Q0-0E7A74",
+    "proposalId": "MATCH-REJECT-02",
+    "proposalVersion": 1,
+    "actionType": "SHORTLIST_APPROVAL",
+    "decision": "REJECTED",
+    "reason": "Budget variance exceeded allowable limit",
+    "selectedSupplierIds": [],
+    "approver": {
+      "email": "buyer@example.com",
+      "role": "buyer"
+    },
+    "timestamp": "2026-11-02T20:46:50.808Z",
+    "updatedAt": "2026-11-02T20:46:50.808Z",
+    "createdAt": "2026-11-02T20:46:50.808Z"
+  },
+  {
+    "id": "APP-MVZQC25I-0A1087",
+    "proposalId": "MATCH-E2E-1793652411362",
+    "proposalVersion": 1,
+    "actionType": "SHORTLIST_APPROVAL",
+    "decision": "APPROVED",
+    "reason": "Approved shortlist for direct supplier RFQ negotiation",
+    "selectedSupplierIds": [
+      "SUP-IND-010"
+    ],
+    "approver": {
+      "id": "usr_buyer_1",
+      "email": "leadbuyer@example.com",
+      "role": "buyer"
+    },
+    "timestamp": "2026-11-02T20:46:51.368Z",
+    "updatedAt": "2026-11-02T20:46:51.368Z",
+    "createdAt": "2026-11-02T20:46:51.368Z"
+  },
+  {
+    "id": "APP-MVZQIIX4-286856",
+    "proposalId": "MATCH-REJECT-02",
+    "proposalVersion": 1,
+    "actionType": "SHORTLIST_APPROVAL",
+    "decision": "REJECTED",
+    "reason": "Budget variance exceeded allowable limit",
+    "selectedSupplierIds": [],
+    "approver": {
+      "email": "buyer@example.com",
+      "role": "buyer"
+    },
+    "timestamp": "2026-11-02T20:51:53.033Z",
+    "updatedAt": "2026-11-02T20:51:53.033Z",
+    "createdAt": "2026-11-02T20:51:53.033Z"
+  },
+  {
+    "id": "APP-MVZQIJCG-19E699",
+    "proposalId": "MATCH-E2E-1793652713583",
+    "proposalVersion": 1,
+    "actionType": "SHORTLIST_APPROVAL",
+    "decision": "APPROVED",
+    "reason": "Approved shortlist for direct supplier RFQ negotiation",
+    "selectedSupplierIds": [
+      "SUP-IND-010"
+    ],
+    "approver": {
+      "id": "usr_buyer_1",
+      "email": "leadbuyer@example.com",
+      "role": "buyer"
+    },
+    "timestamp": "2026-11-02T20:51:53.584Z",
+    "updatedAt": "2026-11-02T20:51:53.584Z",
+    "createdAt": "2026-11-02T20:51:53.584Z"
+  },
+  {
+    "id": "APP-MVZQIY2J-7A3B38",
+    "proposalId": "MATCH-TEST-PROPOSAL-1793652732665",
+    "proposalVersion": 1,
+    "actionType": "SHORTLIST_APPROVAL",
+    "decision": "APPROVED",
+    "reason": "Approved shortlist for commercial discussions",
+    "selectedSupplierIds": [
+      "SUP-IND-001",
+      "SUP-IND-002"
+    ],
+    "approver": {
+      "id": "usr_buyer_1",
+      "email": "leadbuyer@example.com",
+      "role": "buyer"
+    },
+    "timestamp": "2026-11-02T20:52:12.668Z",
+    "updatedAt": "2026-11-02T20:52:12.668Z",
+    "createdAt": "2026-11-02T20:52:12.668Z"
+  },
+  {
+    "id": "APP-MVZQIY2M-64573C",
+    "proposalId": "MATCH-REJECT-02",
+    "proposalVersion": 1,
+    "actionType": "SHORTLIST_APPROVAL",
+    "decision": "REJECTED",
+    "reason": "Budget variance exceeded allowable limit",
+    "selectedSupplierIds": [],
+    "approver": {
+      "email": "buyer@example.com",
+      "role": "buyer"
+    },
+    "timestamp": "2026-11-02T20:52:12.670Z",
+    "updatedAt": "2026-11-02T20:52:12.670Z",
+    "createdAt": "2026-11-02T20:52:12.670Z"
+  },
+  {
+    "id": "APP-MVZQIYC7-7AAE7B",
+    "proposalId": "MATCH-E2E-1793652733014",
+    "proposalVersion": 1,
+    "actionType": "SHORTLIST_APPROVAL",
+    "decision": "APPROVED",
+    "reason": "Approved shortlist for direct supplier RFQ negotiation",
+    "selectedSupplierIds": [
+      "SUP-IND-010"
+    ],
+    "approver": {
+      "id": "usr_buyer_1",
+      "email": "leadbuyer@example.com",
+      "role": "buyer"
+    },
+    "timestamp": "2026-11-02T20:52:13.015Z",
+    "updatedAt": "2026-11-02T20:52:13.015Z",
+    "createdAt": "2026-11-02T20:52:13.015Z"
+  },
+  {
+    "id": "APP-MW0Y62P6-C616A7",
+    "proposalId": "MATCH-MW0Y544N-D47432",
+    "proposalVersion": 1,
+    "actionType": "SHORTLIST_APPROVAL",
+    "decision": "APPROVED",
+    "reason": "Buyer approved top-ranking suppliers for commercial negotiation",
+    "selectedSupplierIds": [
+      "SUP-IND-010",
+      "SUP-IND-001"
+    ],
+    "approver": {
+      "id": "usr_dev_buyer_01",
+      "name": "ProcureAI Lead Buyer",
+      "email": "buyer@example.com",
+      "role": "buyer"
+    },
+    "timestamp": "2026-11-03T17:13:55.243Z",
+    "updatedAt": "2026-11-03T17:13:55.244Z",
+    "createdAt": "2026-11-03T17:13:55.244Z"
+  },
+  {
+    "id": "APP-MW1WFESH-56D338",
+    "proposalId": "MATCH-MW1WEZYB-393F9B",
+    "proposalVersion": 1,
+    "actionType": "SHORTLIST_APPROVAL",
+    "decision": "APPROVED",
+    "reason": "Buyer approved top-ranking suppliers for commercial negotiation",
+    "selectedSupplierIds": [
+      "SUP-IND-010",
+      "SUP-IND-005"
+    ],
+    "approver": {
+      "id": "usr_dev_buyer_01",
+      "name": "ProcureAI Lead Buyer",
+      "email": "buyer@example.com",
+      "role": "buyer"
+    },
+    "timestamp": "2026-11-04T09:12:57.763Z",
+    "updatedAt": "2026-11-04T09:12:57.763Z",
+    "createdAt": "2026-11-04T09:12:57.763Z"
+  }
+]

@@ -1,0 +1,26 @@
+services:
+  redis:
+    image: redis:latest
+    container_name: procureai-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: procureai-postgres
+    environment:
+      POSTGRES_USER: procureai
+      POSTGRES_PASSWORD: procureai_dev_password
+      POSTGRES_DB: procureai
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+  pg_data:

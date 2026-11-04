@@ -1,0 +1,4271 @@
+[
+  {
+    "id": "MATCH-E2E-1793652411362",
+    "requirementId": "REQ-E2E-1793652411343",
+    "proposalVersion": 1,
+    "status": "BUYER_APPROVED",
+    "matchingModelVersion": "v1.2.0-deterministic-hybrid",
+    "totalEvaluated": 20,
+    "eligibleCount": 6,
+    "excludedCount": 14,
+    "shortlistCount": 5,
+    "recommendedShortlist": [
+      {
+        "supplierId": "SUP-IND-010",
+        "companyName": "Sanand Auto Machining Cluster Co",
+        "location": "Sanand, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 99.5,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.95,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.97,
+          "sampleSizeOrders": 92
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 95,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Makino Horizontal Machining Center, Carl Zeiss CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Highly competitive unit price (₹455 vs target ₹480)",
+            "Favorable credit terms (Net 45 Days)",
+            "Committed lead time (30d) within requested window (30d)",
+            "High production buffer (12x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-010",
+          "companyName": "Sanand Auto Machining Cluster Co",
+          "businessEmail": "rfq@sanandautomachining.example.com",
+          "contactPerson": {
+            "name": "Bhavin Goswami",
+            "role": "Key Account Manager",
+            "phonePlaceholder": "+91-97270-XXXXX"
+          },
+          "location": {
+            "city": "Sanand",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Sanand GIDC II"
+          },
+          "productCategories": [
+            "Automotive Chassis Mounts",
+            "Suspension Brackets",
+            "Engine Mounts"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "CNC Turning",
+            "Automated Deburring"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium ADC12",
+            "Forged Steel 42CrMo4"
+          ],
+          "equipmentCapabilities": [
+            "Makino Horizontal Machining Center",
+            "Toyoda CNC Grinding",
+            "Carl Zeiss CMM"
+          ],
+          "minimumOrderQuantity": 5000,
+          "indicativeUnitPrice": 455,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 30,
+          "monthlyCapacity": {
+            "quantity": 60000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 45 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-10-31"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-07-22"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "Full Laser QR Traceability per Automotive Norms",
+            "rejectionRatePpm": 95,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.97,
+            "sampleSizeOrders": 92,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.95,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Sanand Auto Machining Cluster Co scored 99.5/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Makino Horizontal Machining Center, Carl Zeiss CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-001",
+        "companyName": "AeroPrecision Dynamics Pvt Ltd",
+        "location": "Vadodara, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.5,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.95,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.98,
+          "sampleSizeOrders": 42
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 95,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 5-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: DMG Mori 5-Axis Milling, Zeiss CMM Inspection",
+            "Audited certifications: ISO 9001:2015, AS9100D, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹485 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (25d) within requested window (30d)",
+            "High production buffer (5x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-001",
+          "companyName": "AeroPrecision Dynamics Pvt Ltd",
+          "businessEmail": "contact@aeroprecision.example.com",
+          "contactPerson": {
+            "name": "Rajesh Mehta",
+            "role": "VP Operations",
+            "phonePlaceholder": "+91-98250-XXXXX"
+          },
+          "location": {
+            "city": "Vadodara",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Makarpura GIDC"
+          },
+          "productCategories": [
+            "CNC Precision Machining",
+            "Aerospace Mounts",
+            "Automotive Housings"
+          ],
+          "manufacturingProcesses": [
+            "5-Axis CNC Milling",
+            "CNC Turning",
+            "Anodizing",
+            "Coordinate Measuring Machine (CMM)"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium 7075",
+            "Stainless Steel 304",
+            "Brass"
+          ],
+          "equipmentCapabilities": [
+            "DMG Mori 5-Axis Milling",
+            "Doosan Puma Turning Center",
+            "Zeiss CMM Inspection"
+          ],
+          "minimumOrderQuantity": 500,
+          "indicativeUnitPrice": 485,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 25,
+          "monthlyCapacity": {
+            "quantity": 25000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-12-31"
+            },
+            {
+              "name": "AS9100D",
+              "status": "verified_certificate",
+              "validUntil": "2026-11-30"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-06-15"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "ERP Batch Serialization",
+            "rejectionRatePpm": 120,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.98,
+            "sampleSizeOrders": 42,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.95,
+          "isSynthetic": true
+        },
+        "aiCommentary": "AeroPrecision Dynamics Pvt Ltd scored 97.5/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 5-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: DMG Mori 5-Axis Milling, Zeiss CMM Inspection"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-005",
+        "companyName": "Zenith Precision Components",
+        "location": "Rajkot, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.4,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.94,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.96,
+          "sampleSizeOrders": 75
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 94,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Hexagon Global CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹475 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (30d) within requested window (30d)",
+            "High production buffer (6x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-005",
+          "companyName": "Zenith Precision Components",
+          "businessEmail": "bids@zenithprecision.example.com",
+          "contactPerson": {
+            "name": "Pranav Trivedi",
+            "role": "Technical Director",
+            "phonePlaceholder": "+91-94260-XXXXX"
+          },
+          "location": {
+            "city": "Rajkot",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Aji GIDC"
+          },
+          "productCategories": [
+            "CNC Machined Castings",
+            "Aluminium Brackets",
+            "Transmission Housings"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "High Speed Machining",
+            "Shot Blasting",
+            "Chromate Conversion"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium A356",
+            "Aluminium 6082"
+          ],
+          "equipmentCapabilities": [
+            "Brother Speedio VMC",
+            "Chiron CNC Milling",
+            "Hexagon Global CMM"
+          ],
+          "minimumOrderQuantity": 1500,
+          "indicativeUnitPrice": 475,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 30,
+          "monthlyCapacity": {
+            "quantity": 30000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-11-25"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-02-18"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "Barcoded Work Travelers",
+            "rejectionRatePpm": 150,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.96,
+            "sampleSizeOrders": 75,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.94,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Zenith Precision Components scored 97.4/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Hexagon Global CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-017",
+        "companyName": "Gurgaon Advanced Tooling Systems",
+        "location": "Gurugram, Haryana",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.4,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.94,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.97,
+          "sampleSizeOrders": 81
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 94,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 5-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Haas UMC-750 5-Axis, Accurate Spectra CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹495 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (25d) within requested window (30d)",
+            "High production buffer (4x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-017",
+          "companyName": "Gurgaon Advanced Tooling Systems",
+          "businessEmail": "tenders@gurgaontooling.example.com",
+          "contactPerson": {
+            "name": "Anil Agarwal",
+            "role": "Senior Estimator",
+            "phonePlaceholder": "+91-98100-XXXXX"
+          },
+          "location": {
+            "city": "Gurugram",
+            "state": "Haryana",
+            "country": "India",
+            "industrialArea": "Manesar Sector 8"
+          },
+          "productCategories": [
+            "CNC Aluminium Assemblies",
+            "EV Battery Mounting Brackets",
+            "Sensor Housings"
+          ],
+          "manufacturingProcesses": [
+            "5-Axis CNC Milling",
+            "CNC Turning",
+            "Thermal Deburring",
+            "Laser Engraving"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium 5052",
+            "Stainless Steel 316L"
+          ],
+          "equipmentCapabilities": [
+            "Haas UMC-750 5-Axis",
+            "Mazak Integrex Multi-Tasking",
+            "Accurate Spectra CMM"
+          ],
+          "minimumOrderQuantity": 1000,
+          "indicativeUnitPrice": 495,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 25,
+          "monthlyCapacity": {
+            "quantity": 20000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-10-18"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-04-20"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "100% CMM Batch Inspection Record & QR Traceability",
+            "rejectionRatePpm": 105,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.97,
+            "sampleSizeOrders": 81,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.94,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Gurgaon Advanced Tooling Systems scored 97.4/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 5-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Haas UMC-750 5-Axis, Accurate Spectra CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-002",
+        "companyName": "Apex CNC Technologies India",
+        "location": "Pune, Maharashtra",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.2,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.92,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.95,
+          "sampleSizeOrders": 68
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 92,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Haas VF-4 4-Axis VMC",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹460 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (28d) within requested window (30d)",
+            "High production buffer (8x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-002",
+          "companyName": "Apex CNC Technologies India",
+          "businessEmail": "sales@apexcnctech.example.com",
+          "contactPerson": {
+            "name": "Vikram Shinde",
+            "role": "Commercial Director",
+            "phonePlaceholder": "+91-98220-XXXXX"
+          },
+          "location": {
+            "city": "Pune",
+            "state": "Maharashtra",
+            "country": "India",
+            "industrialArea": "Bhosari MIDC"
+          },
+          "productCategories": [
+            "CNC Milling",
+            "Automotive Brackets",
+            "Engine Components"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "CNC Turning",
+            "Ultrasonic Cleaning"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium ADC12",
+            "Mild Steel",
+            "Alloy Steel"
+          ],
+          "equipmentCapabilities": [
+            "Haas VF-4 4-Axis VMC",
+            "Mazak Quick Turn",
+            "Mitutoyo Profile Projector"
+          ],
+          "minimumOrderQuantity": 1000,
+          "indicativeUnitPrice": 460,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 28,
+          "monthlyCapacity": {
+            "quantity": 40000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-08-20"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-03-10"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "2D DataMatrix Laser Marking",
+            "rejectionRatePpm": 180,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.95,
+            "sampleSizeOrders": 68,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.92,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Apex CNC Technologies India scored 97.2/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Haas VF-4 4-Axis VMC"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      }
+    ],
+    "excludedSuppliers": [
+      {
+        "supplierId": "SUP-IND-003",
+        "companyName": "Baroda Machining Solutions LLP",
+        "location": "Vadodara, Gujarat",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 430,
+        "moq": 2000
+      },
+      {
+        "supplierId": "SUP-IND-004",
+        "companyName": "Gujarat Stamping & Sheetmetal Works",
+        "location": "Ahmedabad, Gujarat",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 210,
+        "moq": 5000
+      },
+      {
+        "supplierId": "SUP-IND-006",
+        "companyName": "Peenya Precision Engineering Works",
+        "location": "Bengaluru, Karnataka",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 560,
+        "moq": 500
+      },
+      {
+        "supplierId": "SUP-IND-007",
+        "companyName": "Sardar Foundry & Heavy Castings",
+        "location": "Ludhiana, Punjab",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (10000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: ISO 9001:2015",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 110,
+        "moq": 10000
+      },
+      {
+        "supplierId": "SUP-IND-008",
+        "companyName": "Kovai Precision Machining Ltd",
+        "location": "Coimbatore, Tamil Nadu",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 470,
+        "moq": 2000
+      },
+      {
+        "supplierId": "SUP-IND-009",
+        "companyName": "Vapi Precision Extrusions & Turning",
+        "location": "Vapi, Gujarat",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 440,
+        "moq": 3000
+      },
+      {
+        "supplierId": "SUP-IND-011",
+        "companyName": "PlastoMould Industrial Polymer Products",
+        "location": "Faridabad, Haryana",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (10000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 85,
+        "moq": 10000
+      },
+      {
+        "supplierId": "SUP-IND-012",
+        "companyName": "Marathwada Precision Tech",
+        "location": "Chhatrapati Sambhajinagar (Aurangabad), Maharashtra",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 465,
+        "moq": 2500
+      },
+      {
+        "supplierId": "SUP-IND-014",
+        "companyName": "Pune Heavy Press Stamping Corp",
+        "location": "Pune, Maharashtra",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (15000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: ISO 9001:2015"
+        ],
+        "indicativePrice": 320,
+        "moq": 15000
+      },
+      {
+        "supplierId": "SUP-IND-015",
+        "companyName": "Shree Ram Precision Alloys & CNC",
+        "location": "Rajkot, Gujarat",
+        "disqualificationReasons": [
+          "Does not handle required material: Aluminium 6061-T6",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 520,
+        "moq": 1000
+      },
+      {
+        "supplierId": "SUP-IND-016",
+        "companyName": "Apex Die Casting & Machining Ltd",
+        "location": "Bengaluru, Karnataka",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6"
+        ],
+        "indicativePrice": 395,
+        "moq": 5000
+      },
+      {
+        "supplierId": "SUP-IND-018",
+        "companyName": "Nashik Fasteners & Precision Turned Components",
+        "location": "Nashik, Maharashtra",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (25000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 18.5,
+        "moq": 25000
+      },
+      {
+        "supplierId": "SUP-IND-019",
+        "companyName": "Panchmahal Machined Components (PMC)",
+        "location": "Halol, Gujarat",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 445,
+        "moq": 3000
+      },
+      {
+        "supplierId": "SUP-IND-020",
+        "companyName": "Deccan Prototype & Production Machining",
+        "location": "Hyderabad, Telangana",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 620,
+        "moq": 100
+      }
+    ],
+    "executiveSummary": {
+      "agent": "Supplier Matching Agent",
+      "mode": "DETERMINISTIC_LOCAL_MODE",
+      "timestamp": "2026-11-02T20:46:51.362Z",
+      "headline": "Evaluated 20 suppliers: 5 qualified candidates recommended; 14 excluded by mandatory criteria.",
+      "leadCandidate": "Sanand Auto Machining Cluster Co (99.5/100)",
+      "summaryParagraph": "Based on requirement specifications for \"Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)\" (Lot: 5000 pcs, Target: ₹480), the deterministic matching engine identified 5 eligible suppliers with verified 4/5-Axis CNC capability and valid ISO certifications. 14 suppliers were disqualified due to process incompatibility, excessive MOQs, or missing quality certifications.",
+      "recommendedNextStep": "Buyer review and approval required before preparing negotiation strategies."
+    },
+    "timestamp": "2026-11-02T20:46:51.362Z",
+    "updatedAt": "2026-11-02T20:46:51.369Z",
+    "createdAt": "2026-11-02T20:46:51.363Z",
+    "approvalId": "APP-MVZQC25I-0A1087",
+    "approvedSupplierIds": [
+      "SUP-IND-010"
+    ]
+  },
+  {
+    "id": "MATCH-E2E-1793652713583",
+    "requirementId": "REQ-E2E-1793652713580",
+    "proposalVersion": 1,
+    "status": "BUYER_APPROVED",
+    "matchingModelVersion": "v1.2.0-deterministic-hybrid",
+    "totalEvaluated": 20,
+    "eligibleCount": 6,
+    "excludedCount": 14,
+    "shortlistCount": 5,
+    "recommendedShortlist": [
+      {
+        "supplierId": "SUP-IND-010",
+        "companyName": "Sanand Auto Machining Cluster Co",
+        "location": "Sanand, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 99.5,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.95,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.97,
+          "sampleSizeOrders": 92
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 95,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Makino Horizontal Machining Center, Carl Zeiss CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Highly competitive unit price (₹455 vs target ₹480)",
+            "Favorable credit terms (Net 45 Days)",
+            "Committed lead time (30d) within requested window (30d)",
+            "High production buffer (12x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-010",
+          "companyName": "Sanand Auto Machining Cluster Co",
+          "businessEmail": "rfq@sanandautomachining.example.com",
+          "contactPerson": {
+            "name": "Bhavin Goswami",
+            "role": "Key Account Manager",
+            "phonePlaceholder": "+91-97270-XXXXX"
+          },
+          "location": {
+            "city": "Sanand",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Sanand GIDC II"
+          },
+          "productCategories": [
+            "Automotive Chassis Mounts",
+            "Suspension Brackets",
+            "Engine Mounts"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "CNC Turning",
+            "Automated Deburring"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium ADC12",
+            "Forged Steel 42CrMo4"
+          ],
+          "equipmentCapabilities": [
+            "Makino Horizontal Machining Center",
+            "Toyoda CNC Grinding",
+            "Carl Zeiss CMM"
+          ],
+          "minimumOrderQuantity": 5000,
+          "indicativeUnitPrice": 455,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 30,
+          "monthlyCapacity": {
+            "quantity": 60000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 45 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-10-31"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-07-22"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "Full Laser QR Traceability per Automotive Norms",
+            "rejectionRatePpm": 95,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.97,
+            "sampleSizeOrders": 92,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.95,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Sanand Auto Machining Cluster Co scored 99.5/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Makino Horizontal Machining Center, Carl Zeiss CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-001",
+        "companyName": "AeroPrecision Dynamics Pvt Ltd",
+        "location": "Vadodara, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.5,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.95,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.98,
+          "sampleSizeOrders": 42
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 95,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 5-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: DMG Mori 5-Axis Milling, Zeiss CMM Inspection",
+            "Audited certifications: ISO 9001:2015, AS9100D, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹485 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (25d) within requested window (30d)",
+            "High production buffer (5x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-001",
+          "companyName": "AeroPrecision Dynamics Pvt Ltd",
+          "businessEmail": "contact@aeroprecision.example.com",
+          "contactPerson": {
+            "name": "Rajesh Mehta",
+            "role": "VP Operations",
+            "phonePlaceholder": "+91-98250-XXXXX"
+          },
+          "location": {
+            "city": "Vadodara",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Makarpura GIDC"
+          },
+          "productCategories": [
+            "CNC Precision Machining",
+            "Aerospace Mounts",
+            "Automotive Housings"
+          ],
+          "manufacturingProcesses": [
+            "5-Axis CNC Milling",
+            "CNC Turning",
+            "Anodizing",
+            "Coordinate Measuring Machine (CMM)"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium 7075",
+            "Stainless Steel 304",
+            "Brass"
+          ],
+          "equipmentCapabilities": [
+            "DMG Mori 5-Axis Milling",
+            "Doosan Puma Turning Center",
+            "Zeiss CMM Inspection"
+          ],
+          "minimumOrderQuantity": 500,
+          "indicativeUnitPrice": 485,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 25,
+          "monthlyCapacity": {
+            "quantity": 25000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-12-31"
+            },
+            {
+              "name": "AS9100D",
+              "status": "verified_certificate",
+              "validUntil": "2026-11-30"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-06-15"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "ERP Batch Serialization",
+            "rejectionRatePpm": 120,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.98,
+            "sampleSizeOrders": 42,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.95,
+          "isSynthetic": true
+        },
+        "aiCommentary": "AeroPrecision Dynamics Pvt Ltd scored 97.5/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 5-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: DMG Mori 5-Axis Milling, Zeiss CMM Inspection"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-005",
+        "companyName": "Zenith Precision Components",
+        "location": "Rajkot, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.4,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.94,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.96,
+          "sampleSizeOrders": 75
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 94,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Hexagon Global CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹475 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (30d) within requested window (30d)",
+            "High production buffer (6x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-005",
+          "companyName": "Zenith Precision Components",
+          "businessEmail": "bids@zenithprecision.example.com",
+          "contactPerson": {
+            "name": "Pranav Trivedi",
+            "role": "Technical Director",
+            "phonePlaceholder": "+91-94260-XXXXX"
+          },
+          "location": {
+            "city": "Rajkot",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Aji GIDC"
+          },
+          "productCategories": [
+            "CNC Machined Castings",
+            "Aluminium Brackets",
+            "Transmission Housings"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "High Speed Machining",
+            "Shot Blasting",
+            "Chromate Conversion"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium A356",
+            "Aluminium 6082"
+          ],
+          "equipmentCapabilities": [
+            "Brother Speedio VMC",
+            "Chiron CNC Milling",
+            "Hexagon Global CMM"
+          ],
+          "minimumOrderQuantity": 1500,
+          "indicativeUnitPrice": 475,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 30,
+          "monthlyCapacity": {
+            "quantity": 30000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-11-25"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-02-18"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "Barcoded Work Travelers",
+            "rejectionRatePpm": 150,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.96,
+            "sampleSizeOrders": 75,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.94,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Zenith Precision Components scored 97.4/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Hexagon Global CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-017",
+        "companyName": "Gurgaon Advanced Tooling Systems",
+        "location": "Gurugram, Haryana",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.4,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.94,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.97,
+          "sampleSizeOrders": 81
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 94,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 5-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Haas UMC-750 5-Axis, Accurate Spectra CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹495 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (25d) within requested window (30d)",
+            "High production buffer (4x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-017",
+          "companyName": "Gurgaon Advanced Tooling Systems",
+          "businessEmail": "tenders@gurgaontooling.example.com",
+          "contactPerson": {
+            "name": "Anil Agarwal",
+            "role": "Senior Estimator",
+            "phonePlaceholder": "+91-98100-XXXXX"
+          },
+          "location": {
+            "city": "Gurugram",
+            "state": "Haryana",
+            "country": "India",
+            "industrialArea": "Manesar Sector 8"
+          },
+          "productCategories": [
+            "CNC Aluminium Assemblies",
+            "EV Battery Mounting Brackets",
+            "Sensor Housings"
+          ],
+          "manufacturingProcesses": [
+            "5-Axis CNC Milling",
+            "CNC Turning",
+            "Thermal Deburring",
+            "Laser Engraving"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium 5052",
+            "Stainless Steel 316L"
+          ],
+          "equipmentCapabilities": [
+            "Haas UMC-750 5-Axis",
+            "Mazak Integrex Multi-Tasking",
+            "Accurate Spectra CMM"
+          ],
+          "minimumOrderQuantity": 1000,
+          "indicativeUnitPrice": 495,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 25,
+          "monthlyCapacity": {
+            "quantity": 20000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-10-18"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-04-20"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "100% CMM Batch Inspection Record & QR Traceability",
+            "rejectionRatePpm": 105,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.97,
+            "sampleSizeOrders": 81,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.94,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Gurgaon Advanced Tooling Systems scored 97.4/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 5-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Haas UMC-750 5-Axis, Accurate Spectra CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-002",
+        "companyName": "Apex CNC Technologies India",
+        "location": "Pune, Maharashtra",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.2,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.92,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.95,
+          "sampleSizeOrders": 68
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 92,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Haas VF-4 4-Axis VMC",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹460 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (28d) within requested window (30d)",
+            "High production buffer (8x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-002",
+          "companyName": "Apex CNC Technologies India",
+          "businessEmail": "sales@apexcnctech.example.com",
+          "contactPerson": {
+            "name": "Vikram Shinde",
+            "role": "Commercial Director",
+            "phonePlaceholder": "+91-98220-XXXXX"
+          },
+          "location": {
+            "city": "Pune",
+            "state": "Maharashtra",
+            "country": "India",
+            "industrialArea": "Bhosari MIDC"
+          },
+          "productCategories": [
+            "CNC Milling",
+            "Automotive Brackets",
+            "Engine Components"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "CNC Turning",
+            "Ultrasonic Cleaning"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium ADC12",
+            "Mild Steel",
+            "Alloy Steel"
+          ],
+          "equipmentCapabilities": [
+            "Haas VF-4 4-Axis VMC",
+            "Mazak Quick Turn",
+            "Mitutoyo Profile Projector"
+          ],
+          "minimumOrderQuantity": 1000,
+          "indicativeUnitPrice": 460,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 28,
+          "monthlyCapacity": {
+            "quantity": 40000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-08-20"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-03-10"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "2D DataMatrix Laser Marking",
+            "rejectionRatePpm": 180,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.95,
+            "sampleSizeOrders": 68,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.92,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Apex CNC Technologies India scored 97.2/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Haas VF-4 4-Axis VMC"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      }
+    ],
+    "excludedSuppliers": [
+      {
+        "supplierId": "SUP-IND-003",
+        "companyName": "Baroda Machining Solutions LLP",
+        "location": "Vadodara, Gujarat",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 430,
+        "moq": 2000
+      },
+      {
+        "supplierId": "SUP-IND-004",
+        "companyName": "Gujarat Stamping & Sheetmetal Works",
+        "location": "Ahmedabad, Gujarat",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 210,
+        "moq": 5000
+      },
+      {
+        "supplierId": "SUP-IND-006",
+        "companyName": "Peenya Precision Engineering Works",
+        "location": "Bengaluru, Karnataka",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 560,
+        "moq": 500
+      },
+      {
+        "supplierId": "SUP-IND-007",
+        "companyName": "Sardar Foundry & Heavy Castings",
+        "location": "Ludhiana, Punjab",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (10000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: ISO 9001:2015",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 110,
+        "moq": 10000
+      },
+      {
+        "supplierId": "SUP-IND-008",
+        "companyName": "Kovai Precision Machining Ltd",
+        "location": "Coimbatore, Tamil Nadu",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 470,
+        "moq": 2000
+      },
+      {
+        "supplierId": "SUP-IND-009",
+        "companyName": "Vapi Precision Extrusions & Turning",
+        "location": "Vapi, Gujarat",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 440,
+        "moq": 3000
+      },
+      {
+        "supplierId": "SUP-IND-011",
+        "companyName": "PlastoMould Industrial Polymer Products",
+        "location": "Faridabad, Haryana",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (10000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 85,
+        "moq": 10000
+      },
+      {
+        "supplierId": "SUP-IND-012",
+        "companyName": "Marathwada Precision Tech",
+        "location": "Chhatrapati Sambhajinagar (Aurangabad), Maharashtra",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 465,
+        "moq": 2500
+      },
+      {
+        "supplierId": "SUP-IND-014",
+        "companyName": "Pune Heavy Press Stamping Corp",
+        "location": "Pune, Maharashtra",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (15000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: ISO 9001:2015"
+        ],
+        "indicativePrice": 320,
+        "moq": 15000
+      },
+      {
+        "supplierId": "SUP-IND-015",
+        "companyName": "Shree Ram Precision Alloys & CNC",
+        "location": "Rajkot, Gujarat",
+        "disqualificationReasons": [
+          "Does not handle required material: Aluminium 6061-T6",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 520,
+        "moq": 1000
+      },
+      {
+        "supplierId": "SUP-IND-016",
+        "companyName": "Apex Die Casting & Machining Ltd",
+        "location": "Bengaluru, Karnataka",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6"
+        ],
+        "indicativePrice": 395,
+        "moq": 5000
+      },
+      {
+        "supplierId": "SUP-IND-018",
+        "companyName": "Nashik Fasteners & Precision Turned Components",
+        "location": "Nashik, Maharashtra",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (25000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 18.5,
+        "moq": 25000
+      },
+      {
+        "supplierId": "SUP-IND-019",
+        "companyName": "Panchmahal Machined Components (PMC)",
+        "location": "Halol, Gujarat",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 445,
+        "moq": 3000
+      },
+      {
+        "supplierId": "SUP-IND-020",
+        "companyName": "Deccan Prototype & Production Machining",
+        "location": "Hyderabad, Telangana",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 620,
+        "moq": 100
+      }
+    ],
+    "executiveSummary": {
+      "agent": "Supplier Matching Agent",
+      "mode": "DETERMINISTIC_LOCAL_MODE",
+      "timestamp": "2026-11-02T20:51:53.583Z",
+      "headline": "Evaluated 20 suppliers: 5 qualified candidates recommended; 14 excluded by mandatory criteria.",
+      "leadCandidate": "Sanand Auto Machining Cluster Co (99.5/100)",
+      "summaryParagraph": "Based on requirement specifications for \"Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)\" (Lot: 5000 pcs, Target: ₹480), the deterministic matching engine identified 5 eligible suppliers with verified 4/5-Axis CNC capability and valid ISO certifications. 14 suppliers were disqualified due to process incompatibility, excessive MOQs, or missing quality certifications.",
+      "recommendedNextStep": "Buyer review and approval required before preparing negotiation strategies."
+    },
+    "timestamp": "2026-11-02T20:51:53.583Z",
+    "updatedAt": "2026-11-02T20:51:53.585Z",
+    "createdAt": "2026-11-02T20:51:53.583Z",
+    "approvalId": "APP-MVZQIJCG-19E699",
+    "approvedSupplierIds": [
+      "SUP-IND-010"
+    ]
+  },
+  {
+    "id": "MATCH-E2E-1793652733014",
+    "requirementId": "REQ-E2E-1793652733011",
+    "proposalVersion": 1,
+    "status": "BUYER_APPROVED",
+    "matchingModelVersion": "v1.2.0-deterministic-hybrid",
+    "totalEvaluated": 20,
+    "eligibleCount": 6,
+    "excludedCount": 14,
+    "shortlistCount": 5,
+    "recommendedShortlist": [
+      {
+        "supplierId": "SUP-IND-010",
+        "companyName": "Sanand Auto Machining Cluster Co",
+        "location": "Sanand, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 99.5,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.95,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.97,
+          "sampleSizeOrders": 92
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 95,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Makino Horizontal Machining Center, Carl Zeiss CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Highly competitive unit price (₹455 vs target ₹480)",
+            "Favorable credit terms (Net 45 Days)",
+            "Committed lead time (30d) within requested window (30d)",
+            "High production buffer (12x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-010",
+          "companyName": "Sanand Auto Machining Cluster Co",
+          "businessEmail": "rfq@sanandautomachining.example.com",
+          "contactPerson": {
+            "name": "Bhavin Goswami",
+            "role": "Key Account Manager",
+            "phonePlaceholder": "+91-97270-XXXXX"
+          },
+          "location": {
+            "city": "Sanand",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Sanand GIDC II"
+          },
+          "productCategories": [
+            "Automotive Chassis Mounts",
+            "Suspension Brackets",
+            "Engine Mounts"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "CNC Turning",
+            "Automated Deburring"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium ADC12",
+            "Forged Steel 42CrMo4"
+          ],
+          "equipmentCapabilities": [
+            "Makino Horizontal Machining Center",
+            "Toyoda CNC Grinding",
+            "Carl Zeiss CMM"
+          ],
+          "minimumOrderQuantity": 5000,
+          "indicativeUnitPrice": 455,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 30,
+          "monthlyCapacity": {
+            "quantity": 60000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 45 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-10-31"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-07-22"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "Full Laser QR Traceability per Automotive Norms",
+            "rejectionRatePpm": 95,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.97,
+            "sampleSizeOrders": 92,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.95,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Sanand Auto Machining Cluster Co scored 99.5/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Makino Horizontal Machining Center, Carl Zeiss CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-001",
+        "companyName": "AeroPrecision Dynamics Pvt Ltd",
+        "location": "Vadodara, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.5,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.95,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.98,
+          "sampleSizeOrders": 42
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 95,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 5-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: DMG Mori 5-Axis Milling, Zeiss CMM Inspection",
+            "Audited certifications: ISO 9001:2015, AS9100D, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹485 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (25d) within requested window (30d)",
+            "High production buffer (5x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-001",
+          "companyName": "AeroPrecision Dynamics Pvt Ltd",
+          "businessEmail": "contact@aeroprecision.example.com",
+          "contactPerson": {
+            "name": "Rajesh Mehta",
+            "role": "VP Operations",
+            "phonePlaceholder": "+91-98250-XXXXX"
+          },
+          "location": {
+            "city": "Vadodara",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Makarpura GIDC"
+          },
+          "productCategories": [
+            "CNC Precision Machining",
+            "Aerospace Mounts",
+            "Automotive Housings"
+          ],
+          "manufacturingProcesses": [
+            "5-Axis CNC Milling",
+            "CNC Turning",
+            "Anodizing",
+            "Coordinate Measuring Machine (CMM)"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium 7075",
+            "Stainless Steel 304",
+            "Brass"
+          ],
+          "equipmentCapabilities": [
+            "DMG Mori 5-Axis Milling",
+            "Doosan Puma Turning Center",
+            "Zeiss CMM Inspection"
+          ],
+          "minimumOrderQuantity": 500,
+          "indicativeUnitPrice": 485,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 25,
+          "monthlyCapacity": {
+            "quantity": 25000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-12-31"
+            },
+            {
+              "name": "AS9100D",
+              "status": "verified_certificate",
+              "validUntil": "2026-11-30"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-06-15"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "ERP Batch Serialization",
+            "rejectionRatePpm": 120,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.98,
+            "sampleSizeOrders": 42,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.95,
+          "isSynthetic": true
+        },
+        "aiCommentary": "AeroPrecision Dynamics Pvt Ltd scored 97.5/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 5-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: DMG Mori 5-Axis Milling, Zeiss CMM Inspection"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-005",
+        "companyName": "Zenith Precision Components",
+        "location": "Rajkot, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.4,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.94,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.96,
+          "sampleSizeOrders": 75
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 94,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Hexagon Global CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹475 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (30d) within requested window (30d)",
+            "High production buffer (6x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-005",
+          "companyName": "Zenith Precision Components",
+          "businessEmail": "bids@zenithprecision.example.com",
+          "contactPerson": {
+            "name": "Pranav Trivedi",
+            "role": "Technical Director",
+            "phonePlaceholder": "+91-94260-XXXXX"
+          },
+          "location": {
+            "city": "Rajkot",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Aji GIDC"
+          },
+          "productCategories": [
+            "CNC Machined Castings",
+            "Aluminium Brackets",
+            "Transmission Housings"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "High Speed Machining",
+            "Shot Blasting",
+            "Chromate Conversion"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium A356",
+            "Aluminium 6082"
+          ],
+          "equipmentCapabilities": [
+            "Brother Speedio VMC",
+            "Chiron CNC Milling",
+            "Hexagon Global CMM"
+          ],
+          "minimumOrderQuantity": 1500,
+          "indicativeUnitPrice": 475,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 30,
+          "monthlyCapacity": {
+            "quantity": 30000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-11-25"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-02-18"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "Barcoded Work Travelers",
+            "rejectionRatePpm": 150,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.96,
+            "sampleSizeOrders": 75,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.94,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Zenith Precision Components scored 97.4/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Hexagon Global CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-017",
+        "companyName": "Gurgaon Advanced Tooling Systems",
+        "location": "Gurugram, Haryana",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.4,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.94,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.97,
+          "sampleSizeOrders": 81
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 94,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 5-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Haas UMC-750 5-Axis, Accurate Spectra CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹495 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (25d) within requested window (30d)",
+            "High production buffer (4x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-017",
+          "companyName": "Gurgaon Advanced Tooling Systems",
+          "businessEmail": "tenders@gurgaontooling.example.com",
+          "contactPerson": {
+            "name": "Anil Agarwal",
+            "role": "Senior Estimator",
+            "phonePlaceholder": "+91-98100-XXXXX"
+          },
+          "location": {
+            "city": "Gurugram",
+            "state": "Haryana",
+            "country": "India",
+            "industrialArea": "Manesar Sector 8"
+          },
+          "productCategories": [
+            "CNC Aluminium Assemblies",
+            "EV Battery Mounting Brackets",
+            "Sensor Housings"
+          ],
+          "manufacturingProcesses": [
+            "5-Axis CNC Milling",
+            "CNC Turning",
+            "Thermal Deburring",
+            "Laser Engraving"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium 5052",
+            "Stainless Steel 316L"
+          ],
+          "equipmentCapabilities": [
+            "Haas UMC-750 5-Axis",
+            "Mazak Integrex Multi-Tasking",
+            "Accurate Spectra CMM"
+          ],
+          "minimumOrderQuantity": 1000,
+          "indicativeUnitPrice": 495,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 25,
+          "monthlyCapacity": {
+            "quantity": 20000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-10-18"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-04-20"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "100% CMM Batch Inspection Record & QR Traceability",
+            "rejectionRatePpm": 105,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.97,
+            "sampleSizeOrders": 81,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.94,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Gurgaon Advanced Tooling Systems scored 97.4/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 5-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Haas UMC-750 5-Axis, Accurate Spectra CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-002",
+        "companyName": "Apex CNC Technologies India",
+        "location": "Pune, Maharashtra",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.2,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.92,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.95,
+          "sampleSizeOrders": 68
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 92,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Haas VF-4 4-Axis VMC",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹460 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (28d) within requested window (30d)",
+            "High production buffer (8x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-002",
+          "companyName": "Apex CNC Technologies India",
+          "businessEmail": "sales@apexcnctech.example.com",
+          "contactPerson": {
+            "name": "Vikram Shinde",
+            "role": "Commercial Director",
+            "phonePlaceholder": "+91-98220-XXXXX"
+          },
+          "location": {
+            "city": "Pune",
+            "state": "Maharashtra",
+            "country": "India",
+            "industrialArea": "Bhosari MIDC"
+          },
+          "productCategories": [
+            "CNC Milling",
+            "Automotive Brackets",
+            "Engine Components"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "CNC Turning",
+            "Ultrasonic Cleaning"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium ADC12",
+            "Mild Steel",
+            "Alloy Steel"
+          ],
+          "equipmentCapabilities": [
+            "Haas VF-4 4-Axis VMC",
+            "Mazak Quick Turn",
+            "Mitutoyo Profile Projector"
+          ],
+          "minimumOrderQuantity": 1000,
+          "indicativeUnitPrice": 460,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 28,
+          "monthlyCapacity": {
+            "quantity": 40000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-08-20"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-03-10"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "2D DataMatrix Laser Marking",
+            "rejectionRatePpm": 180,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.95,
+            "sampleSizeOrders": 68,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.92,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Apex CNC Technologies India scored 97.2/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Haas VF-4 4-Axis VMC"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      }
+    ],
+    "excludedSuppliers": [
+      {
+        "supplierId": "SUP-IND-003",
+        "companyName": "Baroda Machining Solutions LLP",
+        "location": "Vadodara, Gujarat",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 430,
+        "moq": 2000
+      },
+      {
+        "supplierId": "SUP-IND-004",
+        "companyName": "Gujarat Stamping & Sheetmetal Works",
+        "location": "Ahmedabad, Gujarat",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 210,
+        "moq": 5000
+      },
+      {
+        "supplierId": "SUP-IND-006",
+        "companyName": "Peenya Precision Engineering Works",
+        "location": "Bengaluru, Karnataka",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 560,
+        "moq": 500
+      },
+      {
+        "supplierId": "SUP-IND-007",
+        "companyName": "Sardar Foundry & Heavy Castings",
+        "location": "Ludhiana, Punjab",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (10000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: ISO 9001:2015",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 110,
+        "moq": 10000
+      },
+      {
+        "supplierId": "SUP-IND-008",
+        "companyName": "Kovai Precision Machining Ltd",
+        "location": "Coimbatore, Tamil Nadu",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 470,
+        "moq": 2000
+      },
+      {
+        "supplierId": "SUP-IND-009",
+        "companyName": "Vapi Precision Extrusions & Turning",
+        "location": "Vapi, Gujarat",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 440,
+        "moq": 3000
+      },
+      {
+        "supplierId": "SUP-IND-011",
+        "companyName": "PlastoMould Industrial Polymer Products",
+        "location": "Faridabad, Haryana",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (10000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 85,
+        "moq": 10000
+      },
+      {
+        "supplierId": "SUP-IND-012",
+        "companyName": "Marathwada Precision Tech",
+        "location": "Chhatrapati Sambhajinagar (Aurangabad), Maharashtra",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 465,
+        "moq": 2500
+      },
+      {
+        "supplierId": "SUP-IND-014",
+        "companyName": "Pune Heavy Press Stamping Corp",
+        "location": "Pune, Maharashtra",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (15000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: ISO 9001:2015"
+        ],
+        "indicativePrice": 320,
+        "moq": 15000
+      },
+      {
+        "supplierId": "SUP-IND-015",
+        "companyName": "Shree Ram Precision Alloys & CNC",
+        "location": "Rajkot, Gujarat",
+        "disqualificationReasons": [
+          "Does not handle required material: Aluminium 6061-T6",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 520,
+        "moq": 1000
+      },
+      {
+        "supplierId": "SUP-IND-016",
+        "companyName": "Apex Die Casting & Machining Ltd",
+        "location": "Bengaluru, Karnataka",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6"
+        ],
+        "indicativePrice": 395,
+        "moq": 5000
+      },
+      {
+        "supplierId": "SUP-IND-018",
+        "companyName": "Nashik Fasteners & Precision Turned Components",
+        "location": "Nashik, Maharashtra",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (25000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 18.5,
+        "moq": 25000
+      },
+      {
+        "supplierId": "SUP-IND-019",
+        "companyName": "Panchmahal Machined Components (PMC)",
+        "location": "Halol, Gujarat",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 445,
+        "moq": 3000
+      },
+      {
+        "supplierId": "SUP-IND-020",
+        "companyName": "Deccan Prototype & Production Machining",
+        "location": "Hyderabad, Telangana",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 620,
+        "moq": 100
+      }
+    ],
+    "executiveSummary": {
+      "agent": "Supplier Matching Agent",
+      "mode": "DETERMINISTIC_LOCAL_MODE",
+      "timestamp": "2026-11-02T20:52:13.014Z",
+      "headline": "Evaluated 20 suppliers: 5 qualified candidates recommended; 14 excluded by mandatory criteria.",
+      "leadCandidate": "Sanand Auto Machining Cluster Co (99.5/100)",
+      "summaryParagraph": "Based on requirement specifications for \"Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)\" (Lot: 5000 pcs, Target: ₹480), the deterministic matching engine identified 5 eligible suppliers with verified 4/5-Axis CNC capability and valid ISO certifications. 14 suppliers were disqualified due to process incompatibility, excessive MOQs, or missing quality certifications.",
+      "recommendedNextStep": "Buyer review and approval required before preparing negotiation strategies."
+    },
+    "timestamp": "2026-11-02T20:52:13.014Z",
+    "updatedAt": "2026-11-02T20:52:13.015Z",
+    "createdAt": "2026-11-02T20:52:13.014Z",
+    "approvalId": "APP-MVZQIYC7-7AAE7B",
+    "approvedSupplierIds": [
+      "SUP-IND-010"
+    ]
+  },
+  {
+    "id": "MATCH-MW0Y544N-D47432",
+    "requirementId": "REQ-E2E-1793652733011",
+    "requirementTitle": "Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)",
+    "proposalVersion": 1,
+    "status": "AWAITING_BUYER_APPROVAL",
+    "matchingModelVersion": "v1.2.0-deterministic-hybrid",
+    "totalEvaluated": 20,
+    "eligibleCount": 6,
+    "excludedCount": 14,
+    "shortlistCount": 5,
+    "recommendedShortlist": [
+      {
+        "supplierId": "SUP-IND-010",
+        "companyName": "Sanand Auto Machining Cluster Co",
+        "location": "Sanand, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 99.5,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.95,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.97,
+          "sampleSizeOrders": 92
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 95,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Makino Horizontal Machining Center, Carl Zeiss CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Highly competitive unit price (₹455 vs target ₹480)",
+            "Favorable credit terms (Net 45 Days)",
+            "Committed lead time (30d) within requested window (30d)",
+            "High production buffer (12x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-010",
+          "companyName": "Sanand Auto Machining Cluster Co",
+          "businessEmail": "rfq@sanandautomachining.example.com",
+          "contactPerson": {
+            "name": "Bhavin Goswami",
+            "role": "Key Account Manager",
+            "phonePlaceholder": "+91-97270-XXXXX"
+          },
+          "location": {
+            "city": "Sanand",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Sanand GIDC II"
+          },
+          "productCategories": [
+            "Automotive Chassis Mounts",
+            "Suspension Brackets",
+            "Engine Mounts"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "CNC Turning",
+            "Automated Deburring"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium ADC12",
+            "Forged Steel 42CrMo4"
+          ],
+          "equipmentCapabilities": [
+            "Makino Horizontal Machining Center",
+            "Toyoda CNC Grinding",
+            "Carl Zeiss CMM"
+          ],
+          "minimumOrderQuantity": 5000,
+          "indicativeUnitPrice": 455,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 30,
+          "monthlyCapacity": {
+            "quantity": 60000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 45 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-10-31"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-07-22"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "Full Laser QR Traceability per Automotive Norms",
+            "rejectionRatePpm": 95,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.97,
+            "sampleSizeOrders": 92,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.95,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Sanand Auto Machining Cluster Co scored 99.5/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Makino Horizontal Machining Center, Carl Zeiss CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-001",
+        "companyName": "AeroPrecision Dynamics Pvt Ltd",
+        "location": "Vadodara, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.5,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.95,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.98,
+          "sampleSizeOrders": 42
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 95,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 5-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: DMG Mori 5-Axis Milling, Zeiss CMM Inspection",
+            "Audited certifications: ISO 9001:2015, AS9100D, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹485 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (25d) within requested window (30d)",
+            "High production buffer (5x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-001",
+          "companyName": "AeroPrecision Dynamics Pvt Ltd",
+          "businessEmail": "contact@aeroprecision.example.com",
+          "contactPerson": {
+            "name": "Rajesh Mehta",
+            "role": "VP Operations",
+            "phonePlaceholder": "+91-98250-XXXXX"
+          },
+          "location": {
+            "city": "Vadodara",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Makarpura GIDC"
+          },
+          "productCategories": [
+            "CNC Precision Machining",
+            "Aerospace Mounts",
+            "Automotive Housings"
+          ],
+          "manufacturingProcesses": [
+            "5-Axis CNC Milling",
+            "CNC Turning",
+            "Anodizing",
+            "Coordinate Measuring Machine (CMM)"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium 7075",
+            "Stainless Steel 304",
+            "Brass"
+          ],
+          "equipmentCapabilities": [
+            "DMG Mori 5-Axis Milling",
+            "Doosan Puma Turning Center",
+            "Zeiss CMM Inspection"
+          ],
+          "minimumOrderQuantity": 500,
+          "indicativeUnitPrice": 485,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 25,
+          "monthlyCapacity": {
+            "quantity": 25000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-12-31"
+            },
+            {
+              "name": "AS9100D",
+              "status": "verified_certificate",
+              "validUntil": "2026-11-30"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-06-15"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "ERP Batch Serialization",
+            "rejectionRatePpm": 120,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.98,
+            "sampleSizeOrders": 42,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.95,
+          "isSynthetic": true
+        },
+        "aiCommentary": "AeroPrecision Dynamics Pvt Ltd scored 97.5/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 5-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: DMG Mori 5-Axis Milling, Zeiss CMM Inspection"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-005",
+        "companyName": "Zenith Precision Components",
+        "location": "Rajkot, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.4,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.94,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.96,
+          "sampleSizeOrders": 75
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 94,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Hexagon Global CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹475 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (30d) within requested window (30d)",
+            "High production buffer (6x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-005",
+          "companyName": "Zenith Precision Components",
+          "businessEmail": "bids@zenithprecision.example.com",
+          "contactPerson": {
+            "name": "Pranav Trivedi",
+            "role": "Technical Director",
+            "phonePlaceholder": "+91-94260-XXXXX"
+          },
+          "location": {
+            "city": "Rajkot",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Aji GIDC"
+          },
+          "productCategories": [
+            "CNC Machined Castings",
+            "Aluminium Brackets",
+            "Transmission Housings"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "High Speed Machining",
+            "Shot Blasting",
+            "Chromate Conversion"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium A356",
+            "Aluminium 6082"
+          ],
+          "equipmentCapabilities": [
+            "Brother Speedio VMC",
+            "Chiron CNC Milling",
+            "Hexagon Global CMM"
+          ],
+          "minimumOrderQuantity": 1500,
+          "indicativeUnitPrice": 475,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 30,
+          "monthlyCapacity": {
+            "quantity": 30000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-11-25"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-02-18"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "Barcoded Work Travelers",
+            "rejectionRatePpm": 150,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.96,
+            "sampleSizeOrders": 75,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.94,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Zenith Precision Components scored 97.4/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Hexagon Global CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-017",
+        "companyName": "Gurgaon Advanced Tooling Systems",
+        "location": "Gurugram, Haryana",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.4,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.94,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.97,
+          "sampleSizeOrders": 81
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 94,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 5-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Haas UMC-750 5-Axis, Accurate Spectra CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹495 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (25d) within requested window (30d)",
+            "High production buffer (4x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-017",
+          "companyName": "Gurgaon Advanced Tooling Systems",
+          "businessEmail": "tenders@gurgaontooling.example.com",
+          "contactPerson": {
+            "name": "Anil Agarwal",
+            "role": "Senior Estimator",
+            "phonePlaceholder": "+91-98100-XXXXX"
+          },
+          "location": {
+            "city": "Gurugram",
+            "state": "Haryana",
+            "country": "India",
+            "industrialArea": "Manesar Sector 8"
+          },
+          "productCategories": [
+            "CNC Aluminium Assemblies",
+            "EV Battery Mounting Brackets",
+            "Sensor Housings"
+          ],
+          "manufacturingProcesses": [
+            "5-Axis CNC Milling",
+            "CNC Turning",
+            "Thermal Deburring",
+            "Laser Engraving"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium 5052",
+            "Stainless Steel 316L"
+          ],
+          "equipmentCapabilities": [
+            "Haas UMC-750 5-Axis",
+            "Mazak Integrex Multi-Tasking",
+            "Accurate Spectra CMM"
+          ],
+          "minimumOrderQuantity": 1000,
+          "indicativeUnitPrice": 495,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 25,
+          "monthlyCapacity": {
+            "quantity": 20000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-10-18"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-04-20"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "100% CMM Batch Inspection Record & QR Traceability",
+            "rejectionRatePpm": 105,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.97,
+            "sampleSizeOrders": 81,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.94,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Gurgaon Advanced Tooling Systems scored 97.4/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 5-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Haas UMC-750 5-Axis, Accurate Spectra CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-002",
+        "companyName": "Apex CNC Technologies India",
+        "location": "Pune, Maharashtra",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.2,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.92,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.95,
+          "sampleSizeOrders": 68
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 92,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Haas VF-4 4-Axis VMC",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹460 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (28d) within requested window (30d)",
+            "High production buffer (8x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-002",
+          "companyName": "Apex CNC Technologies India",
+          "businessEmail": "sales@apexcnctech.example.com",
+          "contactPerson": {
+            "name": "Vikram Shinde",
+            "role": "Commercial Director",
+            "phonePlaceholder": "+91-98220-XXXXX"
+          },
+          "location": {
+            "city": "Pune",
+            "state": "Maharashtra",
+            "country": "India",
+            "industrialArea": "Bhosari MIDC"
+          },
+          "productCategories": [
+            "CNC Milling",
+            "Automotive Brackets",
+            "Engine Components"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "CNC Turning",
+            "Ultrasonic Cleaning"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium ADC12",
+            "Mild Steel",
+            "Alloy Steel"
+          ],
+          "equipmentCapabilities": [
+            "Haas VF-4 4-Axis VMC",
+            "Mazak Quick Turn",
+            "Mitutoyo Profile Projector"
+          ],
+          "minimumOrderQuantity": 1000,
+          "indicativeUnitPrice": 460,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 28,
+          "monthlyCapacity": {
+            "quantity": 40000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-08-20"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-03-10"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "2D DataMatrix Laser Marking",
+            "rejectionRatePpm": 180,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.95,
+            "sampleSizeOrders": 68,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.92,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Apex CNC Technologies India scored 97.2/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Haas VF-4 4-Axis VMC"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      }
+    ],
+    "excludedSuppliers": [
+      {
+        "supplierId": "SUP-IND-003",
+        "companyName": "Baroda Machining Solutions LLP",
+        "location": "Vadodara, Gujarat",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 430,
+        "moq": 2000
+      },
+      {
+        "supplierId": "SUP-IND-004",
+        "companyName": "Gujarat Stamping & Sheetmetal Works",
+        "location": "Ahmedabad, Gujarat",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 210,
+        "moq": 5000
+      },
+      {
+        "supplierId": "SUP-IND-006",
+        "companyName": "Peenya Precision Engineering Works",
+        "location": "Bengaluru, Karnataka",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 560,
+        "moq": 500
+      },
+      {
+        "supplierId": "SUP-IND-007",
+        "companyName": "Sardar Foundry & Heavy Castings",
+        "location": "Ludhiana, Punjab",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (10000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: ISO 9001:2015",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 110,
+        "moq": 10000
+      },
+      {
+        "supplierId": "SUP-IND-008",
+        "companyName": "Kovai Precision Machining Ltd",
+        "location": "Coimbatore, Tamil Nadu",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 470,
+        "moq": 2000
+      },
+      {
+        "supplierId": "SUP-IND-009",
+        "companyName": "Vapi Precision Extrusions & Turning",
+        "location": "Vapi, Gujarat",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 440,
+        "moq": 3000
+      },
+      {
+        "supplierId": "SUP-IND-011",
+        "companyName": "PlastoMould Industrial Polymer Products",
+        "location": "Faridabad, Haryana",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (10000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 85,
+        "moq": 10000
+      },
+      {
+        "supplierId": "SUP-IND-012",
+        "companyName": "Marathwada Precision Tech",
+        "location": "Chhatrapati Sambhajinagar (Aurangabad), Maharashtra",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 465,
+        "moq": 2500
+      },
+      {
+        "supplierId": "SUP-IND-014",
+        "companyName": "Pune Heavy Press Stamping Corp",
+        "location": "Pune, Maharashtra",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (15000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: ISO 9001:2015"
+        ],
+        "indicativePrice": 320,
+        "moq": 15000
+      },
+      {
+        "supplierId": "SUP-IND-015",
+        "companyName": "Shree Ram Precision Alloys & CNC",
+        "location": "Rajkot, Gujarat",
+        "disqualificationReasons": [
+          "Does not handle required material: Aluminium 6061-T6",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 520,
+        "moq": 1000
+      },
+      {
+        "supplierId": "SUP-IND-016",
+        "companyName": "Apex Die Casting & Machining Ltd",
+        "location": "Bengaluru, Karnataka",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6"
+        ],
+        "indicativePrice": 395,
+        "moq": 5000
+      },
+      {
+        "supplierId": "SUP-IND-018",
+        "companyName": "Nashik Fasteners & Precision Turned Components",
+        "location": "Nashik, Maharashtra",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (25000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 18.5,
+        "moq": 25000
+      },
+      {
+        "supplierId": "SUP-IND-019",
+        "companyName": "Panchmahal Machined Components (PMC)",
+        "location": "Halol, Gujarat",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 445,
+        "moq": 3000
+      },
+      {
+        "supplierId": "SUP-IND-020",
+        "companyName": "Deccan Prototype & Production Machining",
+        "location": "Hyderabad, Telangana",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 620,
+        "moq": 100
+      }
+    ],
+    "executiveSummary": {
+      "agent": "Supplier Matching Agent",
+      "mode": "DETERMINISTIC_LOCAL_MODE",
+      "timestamp": "2026-11-03T17:13:10.439Z",
+      "headline": "Evaluated 20 suppliers: 5 qualified candidates recommended; 14 excluded by mandatory criteria.",
+      "leadCandidate": "Sanand Auto Machining Cluster Co (99.5/100)",
+      "summaryParagraph": "Based on requirement specifications for \"Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)\" (Lot: 5000 pcs, Target: ₹480), the deterministic matching engine identified 5 eligible suppliers with verified 4/5-Axis CNC capability and valid ISO certifications. 14 suppliers were disqualified due to process incompatibility, excessive MOQs, or missing quality certifications.",
+      "recommendedNextStep": "Buyer review and approval required before preparing negotiation strategies."
+    },
+    "timestamp": "2026-11-03T17:13:10.439Z",
+    "createdAt": "2026-11-03T17:13:10.446Z",
+    "updatedAt": "2026-11-03T17:13:10.446Z"
+  },
+  {
+    "id": "MATCH-MW1WEZYB-393F9B",
+    "requirementId": "REQ-E2E-1793652411343",
+    "requirementTitle": "Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)",
+    "proposalVersion": 1,
+    "status": "AWAITING_BUYER_APPROVAL",
+    "matchingModelVersion": "v1.2.0-deterministic-hybrid",
+    "totalEvaluated": 20,
+    "eligibleCount": 6,
+    "excludedCount": 14,
+    "shortlistCount": 5,
+    "recommendedShortlist": [
+      {
+        "supplierId": "SUP-IND-010",
+        "companyName": "Sanand Auto Machining Cluster Co",
+        "location": "Sanand, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 99.5,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.95,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.97,
+          "sampleSizeOrders": 92
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 95,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Makino Horizontal Machining Center, Carl Zeiss CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Highly competitive unit price (₹455 vs target ₹480)",
+            "Favorable credit terms (Net 45 Days)",
+            "Committed lead time (30d) within requested window (30d)",
+            "High production buffer (12x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-010",
+          "companyName": "Sanand Auto Machining Cluster Co",
+          "businessEmail": "rfq@sanandautomachining.example.com",
+          "contactPerson": {
+            "name": "Bhavin Goswami",
+            "role": "Key Account Manager",
+            "phonePlaceholder": "+91-97270-XXXXX"
+          },
+          "location": {
+            "city": "Sanand",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Sanand GIDC II"
+          },
+          "productCategories": [
+            "Automotive Chassis Mounts",
+            "Suspension Brackets",
+            "Engine Mounts"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "CNC Turning",
+            "Automated Deburring"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium ADC12",
+            "Forged Steel 42CrMo4"
+          ],
+          "equipmentCapabilities": [
+            "Makino Horizontal Machining Center",
+            "Toyoda CNC Grinding",
+            "Carl Zeiss CMM"
+          ],
+          "minimumOrderQuantity": 5000,
+          "indicativeUnitPrice": 455,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 30,
+          "monthlyCapacity": {
+            "quantity": 60000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 45 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-10-31"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-07-22"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "Full Laser QR Traceability per Automotive Norms",
+            "rejectionRatePpm": 95,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.97,
+            "sampleSizeOrders": 92,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.95,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Sanand Auto Machining Cluster Co scored 99.5/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Makino Horizontal Machining Center, Carl Zeiss CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-001",
+        "companyName": "AeroPrecision Dynamics Pvt Ltd",
+        "location": "Vadodara, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.5,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.95,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.98,
+          "sampleSizeOrders": 42
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 95,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 5-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: DMG Mori 5-Axis Milling, Zeiss CMM Inspection",
+            "Audited certifications: ISO 9001:2015, AS9100D, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹485 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (25d) within requested window (30d)",
+            "High production buffer (5x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-001",
+          "companyName": "AeroPrecision Dynamics Pvt Ltd",
+          "businessEmail": "contact@aeroprecision.example.com",
+          "contactPerson": {
+            "name": "Rajesh Mehta",
+            "role": "VP Operations",
+            "phonePlaceholder": "+91-98250-XXXXX"
+          },
+          "location": {
+            "city": "Vadodara",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Makarpura GIDC"
+          },
+          "productCategories": [
+            "CNC Precision Machining",
+            "Aerospace Mounts",
+            "Automotive Housings"
+          ],
+          "manufacturingProcesses": [
+            "5-Axis CNC Milling",
+            "CNC Turning",
+            "Anodizing",
+            "Coordinate Measuring Machine (CMM)"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium 7075",
+            "Stainless Steel 304",
+            "Brass"
+          ],
+          "equipmentCapabilities": [
+            "DMG Mori 5-Axis Milling",
+            "Doosan Puma Turning Center",
+            "Zeiss CMM Inspection"
+          ],
+          "minimumOrderQuantity": 500,
+          "indicativeUnitPrice": 485,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 25,
+          "monthlyCapacity": {
+            "quantity": 25000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-12-31"
+            },
+            {
+              "name": "AS9100D",
+              "status": "verified_certificate",
+              "validUntil": "2026-11-30"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-06-15"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "ERP Batch Serialization",
+            "rejectionRatePpm": 120,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.98,
+            "sampleSizeOrders": 42,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.95,
+          "isSynthetic": true
+        },
+        "aiCommentary": "AeroPrecision Dynamics Pvt Ltd scored 97.5/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 5-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: DMG Mori 5-Axis Milling, Zeiss CMM Inspection"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-005",
+        "companyName": "Zenith Precision Components",
+        "location": "Rajkot, Gujarat",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.4,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.94,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.96,
+          "sampleSizeOrders": 75
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 94,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Hexagon Global CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹475 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (30d) within requested window (30d)",
+            "High production buffer (6x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-005",
+          "companyName": "Zenith Precision Components",
+          "businessEmail": "bids@zenithprecision.example.com",
+          "contactPerson": {
+            "name": "Pranav Trivedi",
+            "role": "Technical Director",
+            "phonePlaceholder": "+91-94260-XXXXX"
+          },
+          "location": {
+            "city": "Rajkot",
+            "state": "Gujarat",
+            "country": "India",
+            "industrialArea": "Aji GIDC"
+          },
+          "productCategories": [
+            "CNC Machined Castings",
+            "Aluminium Brackets",
+            "Transmission Housings"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "High Speed Machining",
+            "Shot Blasting",
+            "Chromate Conversion"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium A356",
+            "Aluminium 6082"
+          ],
+          "equipmentCapabilities": [
+            "Brother Speedio VMC",
+            "Chiron CNC Milling",
+            "Hexagon Global CMM"
+          ],
+          "minimumOrderQuantity": 1500,
+          "indicativeUnitPrice": 475,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 30,
+          "monthlyCapacity": {
+            "quantity": 30000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-11-25"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-02-18"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "Barcoded Work Travelers",
+            "rejectionRatePpm": 150,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.96,
+            "sampleSizeOrders": 75,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.94,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Zenith Precision Components scored 97.4/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Hexagon Global CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-017",
+        "companyName": "Gurgaon Advanced Tooling Systems",
+        "location": "Gurugram, Haryana",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.4,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.94,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.97,
+          "sampleSizeOrders": 81
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 94,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 5-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Haas UMC-750 5-Axis, Accurate Spectra CMM",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹495 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (25d) within requested window (30d)",
+            "High production buffer (4x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-017",
+          "companyName": "Gurgaon Advanced Tooling Systems",
+          "businessEmail": "tenders@gurgaontooling.example.com",
+          "contactPerson": {
+            "name": "Anil Agarwal",
+            "role": "Senior Estimator",
+            "phonePlaceholder": "+91-98100-XXXXX"
+          },
+          "location": {
+            "city": "Gurugram",
+            "state": "Haryana",
+            "country": "India",
+            "industrialArea": "Manesar Sector 8"
+          },
+          "productCategories": [
+            "CNC Aluminium Assemblies",
+            "EV Battery Mounting Brackets",
+            "Sensor Housings"
+          ],
+          "manufacturingProcesses": [
+            "5-Axis CNC Milling",
+            "CNC Turning",
+            "Thermal Deburring",
+            "Laser Engraving"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium 5052",
+            "Stainless Steel 316L"
+          ],
+          "equipmentCapabilities": [
+            "Haas UMC-750 5-Axis",
+            "Mazak Integrex Multi-Tasking",
+            "Accurate Spectra CMM"
+          ],
+          "minimumOrderQuantity": 1000,
+          "indicativeUnitPrice": 495,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 25,
+          "monthlyCapacity": {
+            "quantity": 20000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-10-18"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-04-20"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "100% CMM Batch Inspection Record & QR Traceability",
+            "rejectionRatePpm": 105,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.97,
+            "sampleSizeOrders": 81,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.94,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Gurgaon Advanced Tooling Systems scored 97.4/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 5-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Haas UMC-750 5-Axis, Accurate Spectra CMM"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      },
+      {
+        "supplierId": "SUP-IND-002",
+        "companyName": "Apex CNC Technologies India",
+        "location": "Pune, Maharashtra",
+        "isEligible": true,
+        "disqualifications": [],
+        "overallScore": 97.2,
+        "confidenceLevel": "HIGH",
+        "evidenceConfidenceScore": 0.92,
+        "historicalPerformance": {
+          "onTimeDeliveryRate": 0.95,
+          "sampleSizeOrders": 68
+        },
+        "scoringBreakdown": {
+          "dimensions": {
+            "technicalCapability": {
+              "score": 100,
+              "weight": 0.35
+            },
+            "qualityCertifications": {
+              "score": 100,
+              "weight": 0.2
+            },
+            "commercialCompetitiveness": {
+              "score": 90,
+              "weight": 0.2
+            },
+            "deliveryFeasibility": {
+              "score": 100,
+              "weight": 0.15
+            },
+            "evidenceCompleteness": {
+              "score": 92,
+              "weight": 0.1
+            }
+          },
+          "positiveFactors": [
+            "Verified processes: 4-Axis CNC Milling, CNC Turning",
+            "Material compatibility: Aluminium 6061-T6",
+            "Advanced machinery: Haas VF-4 4-Axis VMC",
+            "Audited certifications: ISO 9001:2015, IATF 16949",
+            "In-house CMM inspection available",
+            "Aligned unit price (₹460 vs target ₹480)",
+            "Favorable credit terms (Net 30 Days)",
+            "Committed lead time (28d) within requested window (30d)",
+            "High production buffer (8x batch quantity)"
+          ],
+          "riskFactors": [],
+          "missingInformation": [],
+          "scoringModelVersion": "v1.2.0-deterministic"
+        },
+        "fullSupplierProfile": {
+          "supplierId": "SUP-IND-002",
+          "companyName": "Apex CNC Technologies India",
+          "businessEmail": "sales@apexcnctech.example.com",
+          "contactPerson": {
+            "name": "Vikram Shinde",
+            "role": "Commercial Director",
+            "phonePlaceholder": "+91-98220-XXXXX"
+          },
+          "location": {
+            "city": "Pune",
+            "state": "Maharashtra",
+            "country": "India",
+            "industrialArea": "Bhosari MIDC"
+          },
+          "productCategories": [
+            "CNC Milling",
+            "Automotive Brackets",
+            "Engine Components"
+          ],
+          "manufacturingProcesses": [
+            "4-Axis CNC Milling",
+            "CNC Turning",
+            "Ultrasonic Cleaning"
+          ],
+          "materials": [
+            "Aluminium 6061-T6",
+            "Aluminium ADC12",
+            "Mild Steel",
+            "Alloy Steel"
+          ],
+          "equipmentCapabilities": [
+            "Haas VF-4 4-Axis VMC",
+            "Mazak Quick Turn",
+            "Mitutoyo Profile Projector"
+          ],
+          "minimumOrderQuantity": 1000,
+          "indicativeUnitPrice": 460,
+          "priceType": "supplier_declared_estimate",
+          "currency": "INR",
+          "leadTimeDays": 28,
+          "monthlyCapacity": {
+            "quantity": 40000,
+            "unit": "pieces"
+          },
+          "paymentTerms": "Net 30 Days",
+          "certifications": [
+            {
+              "name": "ISO 9001:2015",
+              "status": "verified_certificate",
+              "validUntil": "2027-08-20"
+            },
+            {
+              "name": "IATF 16949",
+              "status": "verified_certificate",
+              "validUntil": "2027-03-10"
+            }
+          ],
+          "qualityControl": {
+            "cmmInspection": true,
+            "traceabilitySystem": "2D DataMatrix Laser Marking",
+            "rejectionRatePpm": 180,
+            "evidenceStatus": "verified"
+          },
+          "deliveryPerformance": {
+            "onTimeDeliveryRate": 0.95,
+            "sampleSizeOrders": 68,
+            "hasHistoricalEvidence": true
+          },
+          "evidenceConfidenceScore": 0.92,
+          "isSynthetic": true
+        },
+        "aiCommentary": "Apex CNC Technologies India scored 97.2/100. High technical and operational alignment with robust quality certification evidence.",
+        "keyStrengths": [
+          "Verified processes: 4-Axis CNC Milling, CNC Turning",
+          "Material compatibility: Aluminium 6061-T6",
+          "Advanced machinery: Haas VF-4 4-Axis VMC"
+        ],
+        "keyRisks": [],
+        "recommendationVerdict": "RECOMMENDED_FOR_SHORTLIST"
+      }
+    ],
+    "excludedSuppliers": [
+      {
+        "supplierId": "SUP-IND-003",
+        "companyName": "Baroda Machining Solutions LLP",
+        "location": "Vadodara, Gujarat",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 430,
+        "moq": 2000
+      },
+      {
+        "supplierId": "SUP-IND-004",
+        "companyName": "Gujarat Stamping & Sheetmetal Works",
+        "location": "Ahmedabad, Gujarat",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 210,
+        "moq": 5000
+      },
+      {
+        "supplierId": "SUP-IND-006",
+        "companyName": "Peenya Precision Engineering Works",
+        "location": "Bengaluru, Karnataka",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 560,
+        "moq": 500
+      },
+      {
+        "supplierId": "SUP-IND-007",
+        "companyName": "Sardar Foundry & Heavy Castings",
+        "location": "Ludhiana, Punjab",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (10000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: ISO 9001:2015",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 110,
+        "moq": 10000
+      },
+      {
+        "supplierId": "SUP-IND-008",
+        "companyName": "Kovai Precision Machining Ltd",
+        "location": "Coimbatore, Tamil Nadu",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 470,
+        "moq": 2000
+      },
+      {
+        "supplierId": "SUP-IND-009",
+        "companyName": "Vapi Precision Extrusions & Turning",
+        "location": "Vapi, Gujarat",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 440,
+        "moq": 3000
+      },
+      {
+        "supplierId": "SUP-IND-011",
+        "companyName": "PlastoMould Industrial Polymer Products",
+        "location": "Faridabad, Haryana",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (10000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 85,
+        "moq": 10000
+      },
+      {
+        "supplierId": "SUP-IND-012",
+        "companyName": "Marathwada Precision Tech",
+        "location": "Chhatrapati Sambhajinagar (Aurangabad), Maharashtra",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 465,
+        "moq": 2500
+      },
+      {
+        "supplierId": "SUP-IND-014",
+        "companyName": "Pune Heavy Press Stamping Corp",
+        "location": "Pune, Maharashtra",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (15000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: ISO 9001:2015"
+        ],
+        "indicativePrice": 320,
+        "moq": 15000
+      },
+      {
+        "supplierId": "SUP-IND-015",
+        "companyName": "Shree Ram Precision Alloys & CNC",
+        "location": "Rajkot, Gujarat",
+        "disqualificationReasons": [
+          "Does not handle required material: Aluminium 6061-T6",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 520,
+        "moq": 1000
+      },
+      {
+        "supplierId": "SUP-IND-016",
+        "companyName": "Apex Die Casting & Machining Ltd",
+        "location": "Bengaluru, Karnataka",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6"
+        ],
+        "indicativePrice": 395,
+        "moq": 5000
+      },
+      {
+        "supplierId": "SUP-IND-018",
+        "companyName": "Nashik Fasteners & Precision Turned Components",
+        "location": "Nashik, Maharashtra",
+        "disqualificationReasons": [
+          "Missing mandatory manufacturing process: CNC Milling, CNC Turning",
+          "Does not handle required material: Aluminium 6061-T6",
+          "Supplier MOQ (25000) exceeds batch quantity (5000) by more than 1.5x",
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 18.5,
+        "moq": 25000
+      },
+      {
+        "supplierId": "SUP-IND-019",
+        "companyName": "Panchmahal Machined Components (PMC)",
+        "location": "Halol, Gujarat",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 445,
+        "moq": 3000
+      },
+      {
+        "supplierId": "SUP-IND-020",
+        "companyName": "Deccan Prototype & Production Machining",
+        "location": "Hyderabad, Telangana",
+        "disqualificationReasons": [
+          "Lacks required valid certification: IATF 16949"
+        ],
+        "indicativePrice": 620,
+        "moq": 100
+      }
+    ],
+    "executiveSummary": {
+      "agent": "Supplier Matching Agent",
+      "mode": "DETERMINISTIC_LOCAL_MODE",
+      "timestamp": "2026-11-04T09:12:38.531Z",
+      "headline": "Evaluated 20 suppliers: 5 qualified candidates recommended; 14 excluded by mandatory criteria.",
+      "leadCandidate": "Sanand Auto Machining Cluster Co (99.5/100)",
+      "summaryParagraph": "Based on requirement specifications for \"Precision CNC Machined Aluminium Mounting Bracket (Housing Mount)\" (Lot: 5000 pcs, Target: ₹480), the deterministic matching engine identified 5 eligible suppliers with verified 4/5-Axis CNC capability and valid ISO certifications. 14 suppliers were disqualified due to process incompatibility, excessive MOQs, or missing quality certifications.",
+      "recommendedNextStep": "Buyer review and approval required before preparing negotiation strategies."
+    },
+    "timestamp": "2026-11-04T09:12:38.531Z",
+    "createdAt": "2026-11-04T09:12:38.545Z",
+    "updatedAt": "2026-11-04T09:12:38.546Z"
+  }
+]

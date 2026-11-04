@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProcureAI Supplier Schema",
+  "description": "Validation schema for industrial manufacturing suppliers in India",
+  "type": "object",
+  "required": [
+    "supplierId",
+    "companyName",
+    "businessEmail",
+    "location",
+    "productCategories",
+    "manufacturingProcesses",
+    "materials",
+    "minimumOrderQuantity",
+    "leadTimeDays",
+    "currency",
+    "certifications",
+    "isSynthetic"
+  ],
+  "properties": {
+    "supplierId": { "type": "string", "pattern": "^SUP-[A-Z0-9-]+$" },
+    "companyName": { "type": "string", "minLength": 2 },
+    "businessEmail": { "type": "string", "format": "email" },
+    "contactPerson": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "phonePlaceholder": { "type": "string" }
+      }
+    },
+    "websitePlaceholder": { "type": "string" },
+    "location": {
+      "type": "object",
+      "required": ["city", "state", "country"],
+      "properties": {
+        "city": { "type": "string" },
+        "state": { "type": "string" },
+        "country": { "type": "string" },
+        "industrialArea": { "type": "string" }
+      }
+    },
+    "productCategories": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "manufacturingProcesses": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "materials": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "equipmentCapabilities": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "minimumOrderQuantity": { "type": "integer", "minimum": 1 },
+    "indicativeUnitPrice": {
+      "type": ["number", "null"],
+      "minimum": 0
+    },
+    "priceType": {
+      "type": "string",
+      "enum": ["supplier_declared_estimate", "historical_average", "not_provided"]
+    },
+    "currency": { "type": "string", "default": "INR" },
+    "leadTimeDays": { "type": "integer", "minimum": 1 },
+    "monthlyCapacity": {
+      "type": "object",
+      "properties": {
+        "quantity": { "type": ["integer", "null"] },
+        "unit": { "type": "string" }
+      }
+    },
+    "paymentTerms": { "type": "string" },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "status"],
+        "properties": {
+          "name": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["verified_certificate", "self_declared", "expired", "pending_audit", "none"]
+          },
+          "validUntil": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "qualityControl": {
+      "type": "object",
+      "properties": {
+        "cmmInspection": { "type": "boolean" },
+        "traceabilitySystem": { "type": "string" },
+        "rejectionRatePpm": { "type": ["number", "null"] },
+        "evidenceStatus": { "type": "string", "enum": ["verified", "self_reported", "unverified"] }
+      }
+    },
+    "deliveryPerformance": {
+      "type": "object",
+      "properties": {
+        "onTimeDeliveryRate": { "type": ["number", "null"] },
+        "sampleSizeOrders": { "type": ["integer", "null"] },
+        "hasHistoricalEvidence": { "type": "boolean" }
+      }
+    },
+    "industriesServed": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "supportingDocuments": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "dataSource": { "type": "string", "default": "synthetic_benchmark_catalogue" },
+    "lastVerificationDate": { "type": ["string", "null"] },
+    "evidenceConfidenceScore": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "isSynthetic": { "type": "boolean", "enum": [true] }
+  }
+}
