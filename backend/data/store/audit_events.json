@@ -570,5 +570,50 @@
     "timestamp": "2026-11-04T09:13:14.457Z",
     "updatedAt": "2026-11-04T09:13:14.457Z",
     "createdAt": "2026-11-04T09:13:14.457Z"
+  },
+  {
+    "id": "audit_1793880421748_sqpp40",
+    "entityType": "matching_run",
+    "entityId": "MATCH-MW3I342Y-505B38",
+    "action": "MATCHING_RUN_EXECUTED",
+    "actor": "buyer@example.com",
+    "details": {
+      "requirementId": "REQ-E2E-1793652733011",
+      "eligibleCount": 6,
+      "shortlistCount": 5
+    },
+    "timestamp": "2026-11-05T12:07:01.748Z",
+    "updatedAt": "2026-11-05T12:07:01.748Z",
+    "createdAt": "2026-11-05T12:07:01.748Z"
+  },
+  {
+    "id": "audit_1794025261753_o3nmva",
+    "entityType": "matching_run",
+    "entityId": "MATCH-MW5WBJC2-774CE6",
+    "action": "MATCHING_RUN_EXECUTED",
+    "actor": "buyer@example.com",
+    "details": {
+      "requirementId": "REQ-E2E-1793652733011",
+      "eligibleCount": 6,
+      "shortlistCount": 5
+    },
+    "timestamp": "2026-11-07T04:21:01.753Z",
+    "updatedAt": "2026-11-07T04:21:01.753Z",
+    "createdAt": "2026-11-07T04:21:01.753Z"
+  },
+  {
+    "id": "audit_1794025845447_6hjdmk",
+    "entityType": "matching_run",
+    "entityId": "MATCH-MW5WO1Q2-9CBEC3",
+    "action": "MATCHING_RUN_EXECUTED",
+    "actor": "buyer@example.com",
+    "details": {
+      "requirementId": "REQ-E2E-1793652733011",
+      "eligibleCount": 6,
+      "shortlistCount": 5
+    },
+    "timestamp": "2026-11-07T04:30:45.447Z",
+    "updatedAt": "2026-11-07T04:30:45.447Z",
+    "createdAt": "2026-11-07T04:30:45.447Z"
   }
 ]

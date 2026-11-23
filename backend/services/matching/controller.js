@@ -3,6 +3,7 @@ import { matchSuppliers } from './matchingEngine.js';
 import supplierRepo from '../supplier/supplierRepository.js';
 import db from '../../shared/db.js';
 import { NotFoundError, ValidationError } from '../../shared/errors.js';
+import { emitRealtimeEvent } from '../../shared/realtime.js';
 
 export const runMatching = async (req, res, next) => {
   try {
@@ -20,7 +21,11 @@ export const runMatching = async (req, res, next) => {
       throw new ValidationError('Either requirementId or requirement object must be provided');
     }
 
-    const suppliers = supplierRepo.findAll({ limit: 100 }).items;
+    const reqId = targetRequirement.id || requirementId || 'ad_hoc';
+    console.log(`[MATCHING] Starting matching run for requirement ${reqId}`);
+    await emitRealtimeEvent('MATCHING_STARTED', 'matching_run', reqId, { requirementId: reqId });
+
+    const suppliers = supplierRepo.findAll();
     const matchResult = await matchSuppliers(targetRequirement, suppliers, {
       weights: customWeights,
       limit: limit || 5
@@ -29,18 +34,23 @@ export const runMatching = async (req, res, next) => {
     const runId = `MATCH-${Date.now().toString(36).toUpperCase()}-${crypto.randomBytes(3).toString('hex').toUpperCase()}`;
     const record = {
       id: runId,
-      requirementId: targetRequirement.id || requirementId || 'ad_hoc',
+      requirementId: reqId,
       requirementTitle: targetRequirement.title,
       proposalVersion: 1,
       status: 'AWAITING_BUYER_APPROVAL',
       ...matchResult,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
     };
 
     await db.matchingRuns.save(record);
 
     if (targetRequirement.id) {
       await db.requirements.update(targetRequirement.id, {
+        status: 'MATCHED',
+        latestMatchRunId: runId
+      });
+      await emitRealtimeEvent('REQUIREMENT_UPDATED', 'requirement', targetRequirement.id, {
         status: 'MATCHED',
         latestMatchRunId: runId
       });
@@ -57,6 +67,9 @@ export const runMatching = async (req, res, next) => {
         shortlistCount: record.shortlistCount
       }
     });
+
+    console.log(`[MATCHING] Matching run ${runId} completed (${record.shortlistCount} shortlisted)`);
+    await emitRealtimeEvent('MATCHING_COMPLETED', 'matching_run', runId, record);
 
     res.status(201).json({
       success: true,

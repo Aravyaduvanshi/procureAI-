@@ -11,16 +11,18 @@ export async function matchSuppliers(requirement, suppliers, options = {}) {
   const maxRecommendations = options.limit || 5;
   const customWeights = options.weights || {};
 
+  const supplierList = Array.isArray(suppliers) ? suppliers : (suppliers?.items || []);
+
   const evaluated = [];
   const excluded = [];
 
-  for (const supplier of suppliers) {
+  for (const supplier of supplierList) {
     const eligibility = checkHardEligibility(supplier, requirement);
     if (!eligibility.isEligible) {
       excluded.push({
         supplierId: supplier.supplierId,
         companyName: supplier.companyName,
-        location: `${supplier.location.city}, ${supplier.location.state}`,
+        location: `${supplier.location?.city || 'Unknown'}, ${supplier.location?.state || 'Unknown'}`,
         disqualificationReasons: eligibility.disqualifications,
         indicativePrice: supplier.indicativeUnitPrice,
         moq: supplier.minimumOrderQuantity
@@ -77,7 +79,7 @@ export async function matchSuppliers(requirement, suppliers, options = {}) {
 
   return {
     matchingModelVersion: MATCHING_MODEL_VERSION,
-    totalEvaluated: suppliers.length,
+    totalEvaluated: supplierList.length,
     eligibleCount: evaluated.length,
     excludedCount: excluded.length,
     shortlistCount: recommendedShortlist.length,

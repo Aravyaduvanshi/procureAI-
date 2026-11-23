@@ -27,10 +27,129 @@ export default function App() {
   const [healthStatus, setHealthStatus] = useState('checking');
   const [recentActivity, setRecentActivity] = useState([]);
 
-  // Check health and load initial data
+  // Check health and load initial authoritative data from PostgreSQL
   useEffect(() => {
     fetchInitialData();
+
+    // Establish persistent Real-Time Server-Sent Events (SSE) connection
+    const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:8000';
+    let eventSource;
+
+    try {
+      eventSource = new EventSource(`${serverUrl}/api/events`, { withCredentials: true });
+
+      eventSource.onopen = () => {
+        console.log('[SSE] Connected to ProcureAI realtime event stream');
+      };
+
+      eventSource.onmessage = (event) => {
+        try {
+          const payload = JSON.parse(event.data);
+          handleRealtimeEvent(payload);
+        } catch (e) {
+          // Keep-alive or comment frame
+        }
+      };
+
+      eventSource.onerror = (err) => {
+        console.warn('[SSE] Stream disconnected or waiting for gateway reconnect:', err);
+      };
+    } catch (e) {
+      console.warn('[SSE] Could not establish EventSource:', e.message);
+    }
+
+    return () => {
+      if (eventSource) {
+        eventSource.close();
+      }
+    };
   }, []);
+
+  const handleRealtimeEvent = (payload) => {
+    if (!payload?.event) return;
+    console.log('[REALTIME:Frontend]', payload.event, payload);
+
+    const { event, entityType, entityId, data, timestamp } = payload;
+
+    // Track activity log in frontend state
+    setRecentActivity(prev => [
+      {
+        id: `act_${Date.now()}_${Math.random().toString(36).substr(2, 4)}`,
+        action: event,
+        entityType,
+        entityId,
+        actor: 'system',
+        timestamp: timestamp || new Date().toISOString()
+      },
+      ...prev.slice(0, 19)
+    ]);
+
+    switch (event) {
+      case 'REQUIREMENT_CREATED':
+        if (data) {
+          setRequirements(prev => [data, ...prev.filter(r => r.id !== data.id)]);
+          setActiveRequirement(data);
+        }
+        break;
+
+      case 'REQUIREMENT_UPDATED':
+        if (data) {
+          setRequirements(prev => prev.map(r => r.id === entityId ? { ...r, ...data } : r));
+          setActiveRequirement(prev => (prev?.id === entityId ? { ...prev, ...data } : prev));
+        }
+        break;
+
+      case 'MATCHING_STARTED':
+        break;
+
+      case 'MATCHING_COMPLETED':
+        if (data) {
+          setMatchingResult(data);
+          setRequirements(prev => prev.map(r => r.id === data.requirementId ? { ...r, status: 'MATCHED' } : r));
+        }
+        break;
+
+      case 'APPROVAL_RECORDED':
+        if (data) {
+          setApprovals(prev => [data, ...prev.filter(a => a.id !== data.id)]);
+        }
+        break;
+
+      case 'NEGOTIATION_CREATED':
+        if (data) {
+          setNegotiations(prev => [data, ...prev.filter(n => n.id !== data.id)]);
+          setActiveNegotiation(data);
+        }
+        break;
+
+      case 'DEV_RESET_COMPLETED':
+        setRequirements([]);
+        setActiveRequirement(null);
+        setMatchingResult(null);
+        setApprovals([]);
+        setNegotiations([]);
+        setActiveNegotiation(null);
+        fetchInitialData();
+        break;
+
+      case 'STRATEGY_GENERATED':
+      case 'STRATEGY_APPROVED':
+      case 'MESSAGE_DRAFTED':
+      case 'MESSAGE_APPROVED':
+      case 'MESSAGE_SENT':
+      case 'EMAIL_FAILED':
+      case 'SUPPLIER_RESPONSE_RECEIVED':
+      case 'COUNTEROFFER_RECEIVED':
+      case 'COUNTEROFFER_EVALUATED':
+      case 'NEGOTIATION_UPDATED':
+      case 'NEGOTIATION_COMPLETED':
+        refreshNegotiationSession(entityId);
+        break;
+
+      default:
+        break;
+    }
+  };
 
   const fetchInitialData = async () => {
     try {
@@ -39,7 +158,7 @@ export default function App() {
         const { data: healthData } = await api.get('/health');
         setHealthStatus(healthData?.gateway === 'healthy' ? 'healthy' : 'degraded');
       } catch (e) {
-        setHealthStatus('healthy'); // In local dev mode with mock fallback
+        setHealthStatus('healthy');
       }
 
       // 2. Auth check
@@ -48,21 +167,19 @@ export default function App() {
         if (authData?.user) {
           setUser(authData.user);
         }
-      } catch (e) {
-        // Dev buyer remains active
-      }
+      } catch (e) {}
 
-      // 3. Load suppliers
+      // 3. Load suppliers (Fixed mapping for both .suppliers and .items)
       try {
         const { data: suppData } = await api.get('/api/suppliers');
-        if (suppData?.items) {
-          setSuppliers(suppData.items);
-        }
+        const list = suppData?.suppliers || suppData?.items || (Array.isArray(suppData) ? suppData : []);
+        console.log(`[FRONTEND] Loaded ${list.length} suppliers from backend API`);
+        setSuppliers(list);
       } catch (e) {
         console.warn('Could not load suppliers:', e.message);
       }
 
-      // 4. Load requirements
+      // 4. Load requirements from PostgreSQL
       try {
         const { data: reqData } = await api.get('/api/requirements');
         if (reqData?.requirements) {
@@ -75,7 +192,7 @@ export default function App() {
         console.warn('Could not load requirements:', e.message);
       }
 
-      // 5. Load approvals
+      // 5. Load approvals from PostgreSQL
       try {
         const { data: apprData } = await api.get('/api/approvals');
         if (apprData?.approvals) {
@@ -85,7 +202,7 @@ export default function App() {
         console.warn('Could not load approvals:', e.message);
       }
 
-      // 6. Load negotiations
+      // 6. Load negotiations from PostgreSQL
       try {
         const { data: negData } = await api.get('/api/negotiations');
         if (negData?.negotiations) {
@@ -102,7 +219,24 @@ export default function App() {
     }
   };
 
-  // Preserved Firebase Google Login implementation
+  const handleDevReset = async () => {
+    try {
+      const { data } = await api.post('/api/dev/reset');
+      if (data.success) {
+        setRequirements([]);
+        setActiveRequirement(null);
+        setMatchingResult(null);
+        setApprovals([]);
+        setNegotiations([]);
+        setActiveNegotiation(null);
+        await fetchInitialData();
+        alert('Development database successfully wiped! Master supplier catalog retained.');
+      }
+    } catch (err) {
+      alert('Reset failed: ' + (err.response?.data?.error?.message || err.message));
+    }
+  };
+
   async function handleGoogleLogin() {
     try {
       const result = await signInWithPopup(auth, provider);
@@ -141,6 +275,8 @@ export default function App() {
     setRequirements((prev) => [req, ...prev.filter(r => r.id !== req.id)]);
     if (triggerMatch) {
       await executeMatching(req);
+    } else {
+      setActiveTab('requirements');
     }
   };
 
@@ -164,18 +300,33 @@ export default function App() {
   };
 
   const handleShortlistApproved = async (approvalRecord, selectedSupplierIds) => {
-    setApprovals(prev => [approvalRecord, ...prev]);
+    setApprovals(prev => [approvalRecord, ...prev.filter(a => a.id !== approvalRecord.id)]);
     setActiveTab('approvals');
   };
 
-  const handleStartNegotiation = async (approvalRecord) => {
+  const handleStartNegotiation = async (supplierIdOrRecord, proposalIdArg) => {
     try {
-      const supplierId = approvalRecord.selectedSupplierIds?.[0] || 'SUP-IND-001';
-      const requirementId = activeRequirement?.id || approvalRecord.proposalId;
+      let supplierId = 'SUP-IND-010';
+      let proposalId = null;
+
+      if (typeof supplierIdOrRecord === 'object' && supplierIdOrRecord !== null) {
+        supplierId = supplierIdOrRecord.selectedSupplierIds?.[0] || supplierIdOrRecord.supplierId || 'SUP-IND-010';
+        proposalId = supplierIdOrRecord.proposalId || supplierIdOrRecord.id;
+      } else if (typeof supplierIdOrRecord === 'string') {
+        supplierId = supplierIdOrRecord;
+        proposalId = proposalIdArg;
+      }
+
+      const requirementId = activeRequirement?.id || (requirements.length > 0 ? requirements[0].id : null);
+      if (!requirementId) {
+        alert('Please create or select a requirement first.');
+        return;
+      }
 
       const { data } = await api.post('/api/negotiations', {
         supplierId,
         requirementId,
+        matchingRunId: proposalId || matchingResult?.id || null,
         buyerObjective: 'BALANCED'
       });
 
@@ -202,7 +353,7 @@ export default function App() {
   };
 
   return (
-    <div className="signal-shell min-h-screen text-slate-100 flex flex-col font-sans">
+    <div className="terminal-grid-bg min-h-screen text-slate-100 flex flex-col font-sans">
       <Navbar 
         activeTab={activeTab} 
         setActiveTab={setActiveTab} 
@@ -210,9 +361,10 @@ export default function App() {
         onLogout={handleLogout} 
         onDevLogin={handleDevLogin}
         healthStatus={healthStatus}
+        onDevReset={handleDevReset}
       />
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 pb-16">
         {activeTab === 'dashboard' && (
           <Dashboard 
             stats={{
@@ -224,6 +376,7 @@ export default function App() {
             }}
             setActiveTab={setActiveTab}
             recentActivity={recentActivity}
+            requirements={requirements}
             onLoadSampleRequirement={() => {
               setActiveTab('requirements');
             }}
@@ -233,6 +386,7 @@ export default function App() {
         {activeTab === 'suppliers' && (
           <SupplierDirectory 
             suppliers={suppliers} 
+            activeRequirement={activeRequirement}
             onSelectForMatching={(s) => {
               setActiveTab('matching');
             }}
@@ -275,9 +429,9 @@ export default function App() {
         )}
       </main>
 
-      <footer className="border-t border-slate-900 bg-slate-950/80 py-6 text-center text-xs text-slate-500">
-        <p>ProcureAI — Explainable Autonomous Manufacturing Procurement & Negotiation Platform.</p>
-        <p className="mt-1">All supplier catalogue data is synthetic benchmark data for Indian manufacturing evaluation.</p>
+      <footer className="border-t border-[#1e293b] bg-[#06090e] py-4 text-center text-[11px] font-mono text-slate-500">
+        <p>PROCUREAI // ENTERPRISE MANUFACTURING SOURCING & GOVERNANCE TERMINAL</p>
+        <p className="text-[10px] text-slate-600 mt-0.5">PostgreSQL Durable Single Source of Truth • Redis Event Bus</p>
       </footer>
     </div>
   );

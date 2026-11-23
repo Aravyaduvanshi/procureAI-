@@ -3,6 +3,7 @@ import { validateUploadFile, parsePdfDocument } from './documentParser.js';
 import { extractStructuredRequirements } from './requirementExtractor.js';
 import db from '../../shared/db.js';
 import { NotFoundError, ValidationError } from '../../shared/errors.js';
+import { emitRealtimeEvent } from '../../shared/realtime.js';
 
 export const uploadRequirement = async (req, res, next) => {
   try {
@@ -45,6 +46,9 @@ export const uploadRequirement = async (req, res, next) => {
       details: { title: record.title, quantity: record.targetQuantity }
     });
 
+    console.log(`[REQUIREMENT] ${id} created from PDF upload`);
+    await emitRealtimeEvent('REQUIREMENT_CREATED', 'requirement', id, record);
+
     res.status(201).json({
       success: true,
       requirement: record
@@ -75,9 +79,9 @@ export const createRequirement = async (req, res, next) => {
       qualityRequirements: body.qualityRequirements || { cmmInspectionRequired: true, traceabilityRequired: true },
       buyerLocation: body.buyerLocation || 'Vadodara, Gujarat, India',
       deliveryDestination: body.deliveryDestination || 'Vadodara Plant, Gujarat',
-      unspecifiedFields: [],
-      requiresBuyerConfirmation: false,
-      status: 'BUYER_CONFIRMED',
+      unspecifiedFields: body.unspecifiedFields || [],
+      requiresBuyerConfirmation: body.requiresBuyerConfirmation ?? false,
+      status: body.status || 'BUYER_CONFIRMED',
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
     };
@@ -90,6 +94,9 @@ export const createRequirement = async (req, res, next) => {
       actor: req.user?.email || 'buyer@example.com',
       details: { title: record.title }
     });
+
+    console.log(`[REQUIREMENT] ${id} created manually`);
+    await emitRealtimeEvent('REQUIREMENT_CREATED', 'requirement', id, record);
 
     res.status(201).json({
       success: true,
@@ -144,7 +151,8 @@ export const confirmRequirement = async (req, res, next) => {
       status: 'BUYER_CONFIRMED',
       requiresBuyerConfirmation: false,
       buyerConfirmedAt: new Date().toISOString(),
-      buyerConfirmedBy: req.user?.email || 'buyer@example.com'
+      buyerConfirmedBy: req.user?.email || 'buyer@example.com',
+      updatedAt: new Date().toISOString()
     };
 
     await db.requirements.update(id, confirmedRecord);
@@ -155,6 +163,9 @@ export const confirmRequirement = async (req, res, next) => {
       actor: req.user?.email || 'buyer@example.com',
       details: { confirmedFields: Object.keys(updates) }
     });
+
+    console.log(`[REQUIREMENT] ${id} confirmed by buyer`);
+    await emitRealtimeEvent('REQUIREMENT_UPDATED', 'requirement', id, confirmedRecord);
 
     res.json({
       success: true,

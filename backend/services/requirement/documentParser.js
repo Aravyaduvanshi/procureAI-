@@ -42,13 +42,18 @@ export async function parsePdfDocument(buffer) {
     let text = '';
     let numPages = 1;
 
+    // Node 20+ memory-pool-safe slice for pdfjs
+    const safeBuffer = buffer instanceof Uint8Array
+      ? new Uint8Array(buffer.buffer, buffer.byteOffset, buffer.byteLength)
+      : new Uint8Array(Buffer.from(buffer));
+
     if (pdfParseModule.PDFParse) {
-      const parser = new pdfParseModule.PDFParse({ data: buffer });
+      const parser = new pdfParseModule.PDFParse({ data: safeBuffer });
       const result = await parser.getText();
       text = result.text ? result.text.trim() : '';
       numPages = result.total || (result.pages ? result.pages.length : 1);
     } else if (typeof pdfParseModule === 'function') {
-      const result = await pdfParseModule(buffer);
+      const result = await pdfParseModule(safeBuffer);
       text = result.text ? result.text.trim() : '';
       numPages = result.numpages || 1;
     } else {

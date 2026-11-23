@@ -36,6 +36,10 @@ class InMemoryCache {
     return 'PONG';
   }
 
+  async publish() {
+    return 1;
+  }
+
   on() {
     return this;
   }
@@ -44,36 +48,36 @@ class InMemoryCache {
 let redisClient;
 const redisUrl = process.env.REDIS_URL || 'redis://localhost:6379';
 
-try {
-  const client = new Redis(redisUrl, {
-    maxRetriesPerRequest: 1,
-    retryStrategy: (times) => {
-      if (times > 2) {
-        return null; // Stop retrying to avoid spamming logs when Redis is offline
-      }
-      return 500;
-    },
-    lazyConnect: true
-  });
-
-  client.on('connect', () => {
-    console.log(`[Shared:Redis] Connected to Redis at ${redisUrl.replace(/:[^:@]+@/, ':***@')}`);
-  });
-
-  client.on('error', (err) => {
-    // Prevent unhandled errors crashing Node
-    console.warn(`[Shared:Redis] Warning: Redis error (${err.message}). In-memory fallback will handle requests.`);
-  });
-
-  // Attempt non-blocking connection
-  client.connect().catch((err) => {
-    console.warn(`[Shared:Redis] Could not connect to external Redis (${err.message}). Using resilient in-memory fallback.`);
-  });
-
-  redisClient = client;
-} catch (err) {
-  console.warn(`[Shared:Redis] Falling back to in-memory cache: ${err.message}`);
+if (process.env.NODE_ENV === 'test') {
   redisClient = new InMemoryCache();
+} else {
+  try {
+    const client = new Redis(redisUrl, {
+      maxRetriesPerRequest: 1,
+      retryStrategy: (times) => {
+        if (times > 2) return null;
+        return 500;
+      },
+      lazyConnect: true
+    });
+
+    client.on('connect', () => {
+      console.log(`[Shared:Redis] Connected to Redis at ${redisUrl.replace(/:[^:@]+@/, ':***@')}`);
+    });
+
+    client.on('error', (err) => {
+      console.warn(`[Shared:Redis] Warning: Redis error (${err.message}). In-memory fallback will handle requests.`);
+    });
+
+    client.connect().catch((err) => {
+      console.warn(`[Shared:Redis] Could not connect to external Redis (${err.message}). Using resilient in-memory fallback.`);
+    });
+
+    redisClient = client;
+  } catch (err) {
+    console.warn(`[Shared:Redis] Falling back to in-memory cache: ${err.message}`);
+    redisClient = new InMemoryCache();
+  }
 }
 
 export { InMemoryCache };

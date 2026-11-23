@@ -4,216 +4,224 @@ import {
   FileText, 
   Cpu, 
   ShieldCheck, 
-  MessageSquare, 
   ArrowRight, 
-  Sparkles, 
-  Clock, 
   CheckCircle, 
-  Info,
-  TrendingUp,
-  AlertCircle
+  AlertCircle,
+  Radio,
+  SlidersHorizontal,
+  RefreshCw,
+  Terminal,
+  Activity
 } from 'lucide-react';
 
 export default function Dashboard({ 
-  stats, 
+  stats = {}, 
   setActiveTab, 
   recentActivity = [],
-  onLoadSampleRequirement 
+  onLoadSampleRequirement,
+  requirements = []
 }) {
   const metricCards = [
     {
-      title: 'Suppliers in Catalogue',
-      value: stats.totalSuppliers || 20,
-      subtext: 'Synthetic Indian manufacturing benchmark',
+      code: 'CATALOG_SIZE',
+      title: 'Suppliers in Catalog',
+      value: stats.totalSuppliers || 0,
+      subtext: 'Master synthetic suppliers.json',
       icon: Building2,
-      color: 'from-blue-500/20 to-indigo-500/10',
-      iconColor: 'text-blue-400',
-      tab: 'suppliers'
+      tab: 'suppliers',
+      accent: 'border-l-2 border-l-amber-500'
     },
     {
+      code: 'REQ_COUNT',
       title: 'Procurement Requirements',
       value: stats.totalRequirements || 0,
-      subtext: 'Parsed engineering RFQ specifications',
+      subtext: 'Durable PostgreSQL requirements',
       icon: FileText,
-      color: 'from-purple-500/20 to-pink-500/10',
-      iconColor: 'text-purple-400',
-      tab: 'requirements'
+      tab: 'requirements',
+      accent: 'border-l-2 border-l-blue-500'
     },
     {
+      code: 'MATCH_RUNS',
       title: 'Matching Shortlists',
       value: stats.matchingRuns || 0,
-      subtext: 'Deterministic 5-dimension scoring runs',
+      subtext: 'Deterministic suitability runs',
       icon: Cpu,
-      color: 'from-cyan-500/20 to-teal-500/10',
-      iconColor: 'text-cyan-400',
-      tab: 'matching'
+      tab: 'matching',
+      accent: 'border-l-2 border-l-cyan-500'
     },
     {
+      code: 'GOVERNANCE_PENDING',
       title: 'Pending Approvals',
       value: stats.pendingApprovals || 0,
-      subtext: 'Human approval gates awaiting review',
+      subtext: 'Human approval gates',
       icon: ShieldCheck,
-      color: 'from-amber-500/20 to-orange-500/10',
-      iconColor: 'text-amber-400',
-      tab: 'approvals'
+      tab: 'approvals',
+      accent: 'border-l-2 border-l-emerald-500'
     },
     {
+      code: 'ACTIVE_DEALS',
       title: 'Active Negotiations',
       value: stats.activeNegotiations || 0,
-      subtext: 'Stateful buyer-governed negotiations',
-      icon: MessageSquare,
-      color: 'from-emerald-500/20 to-green-500/10',
-      iconColor: 'text-emerald-400',
-      tab: 'negotiations'
+      subtext: 'Governed negotiation sessions',
+      icon: SlidersHorizontal,
+      tab: 'negotiations',
+      accent: 'border-l-2 border-l-indigo-500'
     }
   ];
 
   return (
-    <div className="space-y-8 py-6">
-      {/* Hero Welcome Banner */}
-      <div className="relative overflow-hidden rounded-2xl glass-panel p-6 sm:p-8 border border-indigo-500/20 bg-gradient-to-r from-slate-900 via-indigo-950/40 to-slate-900">
-        <div className="relative z-10 max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
-            Autonomous Manufacturing Procurement Workflow
-          </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            AI-Assisted Precision Sourcing & Governed Negotiation
-          </h1>
-          <p className="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed">
-            ProcureAI matches precision engineering requirements against Indian manufacturing suppliers using deterministic suitability scoring, multi-tier evidence validation, and stateful human-in-the-loop negotiation.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <button
-              onClick={() => setActiveTab('requirements')}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/30 transition-all hover:scale-[1.02]"
-            >
-              Upload RFQ Requirement
-              <ArrowRight className="w-4 h-4" />
-            </button>
-            <button
-              onClick={onLoadSampleRequirement}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all"
-            >
-              Load Sample Vadodara RFQ
-            </button>
-            <button
-              onClick={() => setActiveTab('suppliers')}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-transparent hover:bg-slate-800/60 text-slate-300 border border-slate-800 transition-all"
-            >
-              Browse 20 Synthetic Suppliers
-            </button>
-          </div>
-        </div>
-        {/* Glow backdrop decorative accent */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
-      </div>
-
-      {/* Metrics Row */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-        {metricCards.map((card, idx) => {
+    <div className="space-y-6 py-6">
+      {/* Top Operations Telemetry Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+        {metricCards.map((card) => {
           const Icon = card.icon;
           return (
             <div
-              key={idx}
+              key={card.code}
               onClick={() => setActiveTab(card.tab)}
-              className="glass-panel glass-panel-hover p-5 rounded-xl cursor-pointer group"
+              className={`p-4 rounded bg-[#0e141f] border border-[#1e293b] hover:border-slate-600 cursor-pointer transition-colors ${card.accent}`}
             >
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-slate-400 group-hover:text-slate-200 transition-colors">{card.title}</span>
-                <div className={`p-2 rounded-lg bg-gradient-to-br ${card.color}`}>
-                  <Icon className={`w-4 h-4 ${card.iconColor}`} />
-                </div>
+              <div className="flex items-center justify-between text-slate-400 text-xs mb-1">
+                <span className="font-mono text-[10px] tracking-wider uppercase text-slate-400">{card.code}</span>
+                <Icon className="w-3.5 h-3.5 text-slate-400" />
               </div>
-              <div className="mt-3">
-                <span className="text-3xl font-extrabold text-white tracking-tight">{card.value}</span>
-                <p className="text-[11px] text-slate-400 mt-1 truncate">{card.subtext}</p>
+              <div className="text-2xl font-bold font-mono text-white mt-1">
+                {card.value}
               </div>
+              <p className="text-[11px] text-slate-400 truncate mt-1">{card.title}</p>
             </div>
           );
         })}
       </div>
 
-      {/* Workflow Process Stepper */}
-      <div className="glass-panel rounded-2xl p-6 border border-slate-800">
-        <h2 className="text-lg font-bold text-white mb-4">End-to-End Procurement Lifecycle</h2>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
-          {[
-            { step: '01', title: 'Upload & Parse RFQ', desc: 'Extracts technical processes, materials, quantity, and flags unspecified fields for confirmation.' },
-            { step: '02', title: 'Hard Filtering', desc: 'Applies mandatory eligibility rules (processes, MOQ bounds, valid ISO certifications).' },
-            { step: '03', title: 'Deterministic Rating', desc: 'Computes multi-dimensional suitability score (0-100) across technical, quality, commercial, and delivery.' },
-            { step: '04', title: 'Buyer Approval Gate', desc: 'Durable human authorization required before creating negotiation plans or external drafts.' },
-            { step: '05', title: 'Stateful Negotiation', desc: 'Develops bounded commercial offers, evaluates supplier counteroffers, and blocks unauthorized commits.' }
-          ].map((item, i) => (
-            <div key={i} className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 relative">
-              <span className="text-xs font-bold font-mono text-indigo-400">{item.step}</span>
-              <h3 className="text-sm font-semibold text-slate-200 mt-1">{item.title}</h3>
-              <p className="text-xs text-slate-400 mt-1 leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Notice & Activity Section */}
+      {/* Main Operations Split: Active Requirements & Action Console */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Synthetic Catalogue Notice */}
-        <div className="glass-panel rounded-2xl p-6 border border-slate-800 lg:col-span-1">
-          <div className="flex items-center gap-2 text-indigo-400 text-sm font-semibold mb-3">
-            <Info className="w-4 h-4" />
-            Synthetic Benchmark Grounding
-          </div>
-          <p className="text-xs text-slate-300 leading-relaxed">
-            The 20 suppliers loaded in this environment are realistic synthetic manufacturing profiles located across India (Vadodara, Pune, Rajkot, Ahmedabad, Peenya, Coimbatore, etc.).
-          </p>
-          <div className="mt-4 space-y-2 text-xs text-slate-400">
-            <div className="flex items-start gap-2">
-              <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-              <span>Prices are supplier-declared estimates, not verified quotations.</span>
+        {/* Left 2 Cols: Requirements Ledger */}
+        <div className="lg:col-span-2 space-y-4">
+          <div className="p-5 rounded bg-[#0e141f] border border-[#1e293b]">
+            <div className="flex items-center justify-between pb-3 border-b border-[#1e293b] mb-4">
+              <div>
+                <h2 className="text-sm font-bold uppercase tracking-wider text-slate-200 flex items-center gap-2">
+                  <FileText className="w-4 h-4 text-amber-400" />
+                  Active Procurement Requirements Ledger
+                </h2>
+                <p className="text-xs text-slate-400 mt-0.5">
+                  Parsed engineering RFQs and their current matching / negotiation state
+                </p>
+              </div>
+
+              <button
+                onClick={() => setActiveTab('requirements')}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-semibold bg-amber-600 hover:bg-amber-500 text-slate-950 transition-colors"
+              >
+                + New RFQ
+              </button>
             </div>
-            <div className="flex items-start gap-2">
-              <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-              <span>External email sending is safely disabled by default.</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-              <span>Hard eligibility logic strictly excludes non-qualifying vendors.</span>
-            </div>
+
+            {requirements.length === 0 ? (
+              <div className="py-12 text-center text-slate-500 text-xs">
+                <FileText className="w-8 h-8 mx-auto text-slate-700 mb-2" />
+                <p className="font-semibold text-slate-400">No procurement requirements in database.</p>
+                <p className="mt-1 text-slate-500">Upload an engineering specification PDF or load the sample RFQ.</p>
+                <div className="mt-4">
+                  <button
+                    onClick={onLoadSampleRequirement}
+                    className="px-3 py-1.5 rounded text-xs font-mono font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700"
+                  >
+                    Load Vadodara CNC Sample RFQ
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <table className="terminal-table">
+                  <thead>
+                    <tr>
+                      <th>Req ID</th>
+                      <th>Component Specification</th>
+                      <th>Quantity</th>
+                      <th>Target Unit</th>
+                      <th>Lead Time</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {requirements.map((req) => (
+                      <tr key={req.id}>
+                        <td className="font-mono text-xs text-amber-400">{req.id}</td>
+                        <td className="font-medium text-slate-200 max-w-[220px] truncate" title={req.title}>
+                          {req.title}
+                        </td>
+                        <td className="font-mono text-xs">{req.targetQuantity?.toLocaleString() || 5000} pcs</td>
+                        <td className="font-mono text-xs text-slate-300">₹{req.targetUnitPrice || 480}</td>
+                        <td className="font-mono text-xs">{req.requestedLeadTimeDays || 30}d</td>
+                        <td>
+                          <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-semibold uppercase ${
+                            req.status === 'MATCHED' ? 'badge-verified' : 'badge-pending'
+                          }`}>
+                            {req.status || 'DRAFT'}
+                          </span>
+                        </td>
+                        <td>
+                          <button
+                            onClick={() => setActiveTab('matching')}
+                            className="text-xs text-amber-400 hover:text-amber-300 font-semibold underline"
+                          >
+                            Match
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
           </div>
         </div>
 
-        {/* Live Recent Activity */}
-        <div className="glass-panel rounded-2xl p-6 border border-slate-800 lg:col-span-2">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-base font-bold text-white flex items-center gap-2">
-              <Clock className="w-4 h-4 text-slate-400" />
-              Recent Procurement Audit Log
-            </h2>
-            <span className="text-xs text-slate-500">Persisted Records</span>
-          </div>
+        {/* Right Col: Live Event Telemetry Stream */}
+        <div className="space-y-4">
+          <div className="p-5 rounded bg-[#0e141f] border border-[#1e293b]">
+            <div className="flex items-center justify-between pb-3 border-b border-[#1e293b] mb-3">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center gap-2">
+                <Terminal className="w-3.5 h-3.5 text-cyan-400" />
+                Real-Time Event Stream
+              </h3>
+              <span className="flex items-center gap-1 text-[10px] font-mono text-emerald-400">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                SSE LIVE
+              </span>
+            </div>
 
-          {recentActivity.length === 0 ? (
-            <div className="py-8 text-center text-slate-500 text-xs">
-              No recent audit events yet. Upload a requirement document to begin the workflow.
-            </div>
-          ) : (
-            <div className="space-y-3 max-h-64 overflow-y-auto pr-2">
-              {recentActivity.slice(0, 6).map((act, i) => (
-                <div key={i} className="flex items-center justify-between p-3 rounded-lg bg-slate-900/50 border border-slate-800/60 text-xs">
-                  <div className="flex items-center gap-2.5">
-                    <span className="w-2 h-2 rounded-full bg-indigo-400" />
+            {recentActivity.length === 0 ? (
+              <div className="py-8 text-center text-slate-600 text-xs font-mono">
+                [WAITING_FOR_EVENTS]
+                <p className="text-[11px] text-slate-500 mt-1">Actions in requirements, matching, or negotiations stream here in real time.</p>
+              </div>
+            ) : (
+              <div className="space-y-2 max-h-[380px] overflow-y-auto font-mono text-[11px]">
+                {recentActivity.map((act) => (
+                  <div 
+                    key={act.id} 
+                    className="p-2 rounded bg-[#080d15] border border-slate-800/80 flex items-start justify-between gap-2"
+                  >
                     <div>
-                      <p className="font-semibold text-slate-200">{act.action?.replace(/_/g, ' ')}</p>
-                      <p className="text-[11px] text-slate-400">Entity: {act.entityType} ({act.entityId})</p>
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-cyan-400 font-bold">{act.action}</span>
+                      </div>
+                      <p className="text-[10px] text-slate-400 mt-0.5 truncate max-w-[200px]">
+                        ID: {act.entityId || 'system'}
+                      </p>
                     </div>
+                    <span className="text-[9px] text-slate-500 shrink-0">
+                      {new Date(act.timestamp).toLocaleTimeString()}
+                    </span>
                   </div>
-                  <div className="text-right">
-                    <span className="text-[11px] text-slate-400">{act.actor}</span>
-                    <p className="text-[10px] text-slate-500">{new Date(act.timestamp).toLocaleTimeString()}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

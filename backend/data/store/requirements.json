@@ -124,10 +124,10 @@
     "status": "MATCHED",
     "aiExtractionMode": "deterministic_rule_based",
     "createdAt": "2026-11-02T20:52:13.011Z",
-    "updatedAt": "2026-11-03T17:13:10.454Z",
+    "updatedAt": "2026-11-07T04:30:45.445Z",
     "surfaceTreatment": "Hard Anodizing (Type III) Black",
     "machiningTolerance": "ISO 2768-m (±0.1mm)",
     "paymentTerms": "Net 30 Days",
-    "latestMatchRunId": "MATCH-MW0Y544N-D47432"
+    "latestMatchRunId": "MATCH-MW5WO1Q2-9CBEC3"
   }
 ]

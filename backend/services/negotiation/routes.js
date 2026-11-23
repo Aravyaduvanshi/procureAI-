@@ -7,7 +7,8 @@ import {
   approveStrategy,
   approveMessageDraft,
   recordCounteroffer,
-  completeNegotiation
+  completeNegotiation,
+  getNegotiationMessages
 } from './controller.js';
 import { authenticate } from '../../shared/authMiddleware.js';
 
@@ -16,6 +17,7 @@ const router = express.Router();
 router.post('/', authenticate, createNegotiationSession);
 router.get('/', authenticate, listNegotiationSessions);
 router.get('/:id', authenticate, getNegotiationSessionById);
+router.get('/:id/messages', authenticate, getNegotiationMessages);
 router.post('/:id/generate-strategy', authenticate, generateStrategyAndDraft);
 router.post('/:id/approve-strategy', authenticate, approveStrategy);
 router.post('/:id/approve-draft', authenticate, approveMessageDraft);

@@ -9,6 +9,8 @@ import http from 'http';
 import { correlationMiddleware } from '../shared/correlation.js';
 import { errorHandler } from '../shared/errors.js';
 import { createLogger } from '../shared/logger.js';
+import db from '../shared/db.js';
+import { subscribeToRealtimeEvents, emitRealtimeEvent } from '../shared/realtime.js';
 
 dotenv.config();
 
@@ -32,7 +34,7 @@ const SERVICES = {
 // Rate Limiters
 const generalLimiter = rateLimit({
   windowMs: 1 * 60 * 1000,
-  max: 300,
+  max: 600,
   standardHeaders: true,
   legacyHeaders: false,
   message: { success: false, error: { code: 'RATE_LIMIT_EXCEEDED', message: 'Too many requests, please try again later.' } }
@@ -40,7 +42,7 @@ const generalLimiter = rateLimit({
 
 const uploadLimiter = rateLimit({
   windowMs: 1 * 60 * 1000,
-  max: 30,
+  max: 50,
   standardHeaders: true,
   legacyHeaders: false,
   message: { success: false, error: { code: 'UPLOAD_RATE_LIMIT_EXCEEDED', message: 'Upload rate limit reached.' } }
@@ -54,7 +56,6 @@ app.use(cors({
 }));
 app.use(cookieParser());
 app.use(correlationMiddleware);
-app.use(generalLimiter);
 
 // Gateway Root and Health Checks
 app.get('/', (req, res) => {
@@ -63,6 +64,32 @@ app.get('/', (req, res) => {
     version: '1.0.0',
     status: 'online',
     timestamp: new Date().toISOString()
+  });
+});
+
+// Real-Time Server-Sent Events (SSE) Stream for Frontend
+app.get(['/api/events', '/events'], (req, res) => {
+  res.writeHead(200, {
+    'Content-Type': 'text/event-stream',
+    'Cache-Control': 'no-cache, no-transform',
+    'Connection': 'keep-alive',
+    'Access-Control-Allow-Origin': process.env.FRONTEND_URL || 'http://localhost:5173',
+    'Access-Control-Allow-Credentials': 'true'
+  });
+
+  res.write(`:connected ${new Date().toISOString()}\n\n`);
+
+  const unsubscribe = subscribeToRealtimeEvents((eventPayload) => {
+    res.write(`data: ${JSON.stringify(eventPayload)}\n\n`);
+  });
+
+  const heartbeatInterval = setInterval(() => {
+    res.write(`:heartbeat\n\n`);
+  }, 15000);
+
+  req.on('close', () => {
+    clearInterval(heartbeatInterval);
+    unsubscribe();
   });
 });
 
@@ -92,6 +119,31 @@ app.get('/health', async (req, res) => {
   });
 });
 
+// Development-Only Data Reset Endpoint
+app.post(['/api/dev/reset', '/dev/reset'], async (req, res) => {
+  if (process.env.NODE_ENV === 'production') {
+    return res.status(403).json({
+      success: false,
+      error: { code: 'FORBIDDEN', message: 'Development reset is prohibited in production.' }
+    });
+  }
+
+  try {
+    const stats = await db.resetDevelopmentData();
+    await emitRealtimeEvent('DEV_RESET_COMPLETED', 'system', 'system', stats);
+    res.json({
+      success: true,
+      message: 'Development database wiped successfully. Master supplier catalog preserved.',
+      stats
+    });
+  } catch (err) {
+    res.status(500).json({
+      success: false,
+      error: { code: 'DEV_RESET_FAILED', message: err.message }
+    });
+  }
+});
+
 // Proxy helper with correlation ID header decoration
 function createServiceProxy(targetUrl, options = {}) {
   return proxy(targetUrl, {
@@ -119,6 +171,7 @@ function createServiceProxy(targetUrl, options = {}) {
 }
 
 // Microservice Route Proxies
+app.use(generalLimiter);
 app.use('/auth', createServiceProxy(SERVICES.auth));
 app.use('/api/suppliers', createServiceProxy(SERVICES.supplier));
 app.use('/api/requirements/upload', uploadLimiter, createServiceProxy(SERVICES.requirement, { parseReqBody: false }));
@@ -128,6 +181,9 @@ app.use('/api/matching', createServiceProxy(SERVICES.matching));
 app.use('/api/approvals', createServiceProxy(SERVICES.approval));
 app.use('/api/negotiations', createServiceProxy(SERVICES.negotiation));
 app.use('/api/communications', createServiceProxy(SERVICES.communication));
+app.use('/webhooks/email/inbound', createServiceProxy(SERVICES.communication, {
+  proxyReqPathResolver: () => '/webhook'
+}));
 app.use('/api/billing', createServiceProxy(SERVICES.billing));
 
 app.use(errorHandler(logger));

@@ -1,6 +1,7 @@
 import crypto from 'crypto';
 import db from '../../shared/db.js';
 import { NotFoundError, ValidationError, ConflictError, ForbiddenError } from '../../shared/errors.js';
+import { emitRealtimeEvent } from '../../shared/realtime.js';
 
 export const VALID_ACTION_TYPES = [
   'SHORTLIST_APPROVAL',
@@ -67,6 +68,8 @@ export const recordApprovalDecision = async (req, res, next) => {
       reason,
       selectedSupplierIds: Array.isArray(selectedSupplierIds) ? selectedSupplierIds : [],
       approver,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
       timestamp: new Date().toISOString()
     };
 
@@ -76,11 +79,14 @@ export const recordApprovalDecision = async (req, res, next) => {
     if (actionType === 'SHORTLIST_APPROVAL') {
       const matchRun = await db.matchingRuns.findById(proposalId);
       if (matchRun) {
-        await db.matchingRuns.update(proposalId, {
+        const updatedMatchRun = {
+          ...matchRun,
           status: decision === 'APPROVED' ? 'BUYER_APPROVED' : 'BUYER_REJECTED',
           approvalId,
           approvedSupplierIds: approvalRecord.selectedSupplierIds
-        });
+        };
+        await db.matchingRuns.update(proposalId, updatedMatchRun);
+        await emitRealtimeEvent('MATCHING_COMPLETED', 'matching_run', proposalId, updatedMatchRun);
       }
     }
 
@@ -96,6 +102,9 @@ export const recordApprovalDecision = async (req, res, next) => {
         selectedSuppliers: approvalRecord.selectedSupplierIds.length
       }
     });
+
+    console.log(`[APPROVAL] ${approvalId} recorded: ${actionType} -> ${decision}`);
+    await emitRealtimeEvent('APPROVAL_RECORDED', 'approval', approvalId, approvalRecord);
 
     res.status(201).json({
       success: true,
@@ -118,7 +127,7 @@ export const listApprovals = async (req, res, next) => {
     res.json({
       success: true,
       count: list.length,
-      approvals: list.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
+      approvals: list.sort((a, b) => new Date(b.createdAt || b.timestamp) - new Date(a.createdAt || a.timestamp))
     });
   } catch (err) {
     next(err);

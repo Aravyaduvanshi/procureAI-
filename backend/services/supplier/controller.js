@@ -4,11 +4,14 @@ import { NotFoundError, ValidationError } from '../../shared/errors.js';
 
 export const listSuppliers = (req, res, next) => {
   try {
-    const filters = req.query;
-    const result = supplierRepo.findAll(filters);
+    const suppliers = supplierRepo.findAll(req.query);
+    console.log(`[SUPPLIER] listSuppliers: returning ${suppliers.length} records`);
+
     res.json({
       success: true,
-      ...result
+      count: suppliers.length,
+      suppliers,
+      items: suppliers
     });
   } catch (err) {
     next(err);
