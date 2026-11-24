@@ -78,13 +78,18 @@ export default function SupplierMatching({
   return (
     <div className="space-y-6 py-6">
       {/* Header and Controls */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-2 border-b border-[#E8EDE7]/10">
         <div>
-          <h1 className="text-xl font-bold text-white flex items-center gap-2">
-            <Cpu className="w-5 h-5 text-amber-400" />
-            Deterministic Supplier Matching Engine
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-[#A8B99A] font-semibold">
+              DETERMINISTIC SUITABILITY
+            </span>
+            <span className="w-8 h-px bg-[#E8EDE7]/20"></span>
+          </div>
+          <h1 className="font-serif text-3xl font-normal text-[#E8EDE7] mt-1 flex items-center gap-2">
+            Supplier Matching Engine
           </h1>
-          <p className="text-xs text-slate-400 mt-0.5">
+          <p className="text-xs text-[#929D92] mt-0.5">
             Evaluates 20 master suppliers against requirement criteria using 5-dimension deterministic scoring.
           </p>
         </div>
@@ -93,29 +98,29 @@ export default function SupplierMatching({
           {activeRequirement && (
             <button
               onClick={() => onRunMatching && onRunMatching(activeRequirement.id)}
-              className="px-3 py-1.5 rounded text-xs font-mono font-semibold bg-[#182233] hover:bg-slate-700 text-amber-400 border border-slate-700 flex items-center gap-1.5"
+              className="myca-btn-secondary px-3.5 py-2 text-xs font-mono flex items-center gap-1.5"
             >
-              <RefreshCw className="w-3.5 h-3.5" /> Run Matching Engine
+              <RefreshCw className="w-3.5 h-3.5 text-[#A8B99A]" /> Run Matching Engine
             </button>
           )}
 
-          <div className="flex items-center border border-[#1e293b] rounded overflow-hidden">
+          <div className="flex items-center border border-[#E8EDE7]/10 rounded-lg overflow-hidden font-mono text-xs">
             <button
               onClick={() => setActiveTab('recommended')}
-              className={`px-3 py-1.5 text-xs font-mono font-semibold transition-colors ${
+              className={`px-3.5 py-2 font-semibold transition-colors ${
                 activeTab === 'recommended'
-                  ? 'bg-amber-600 text-slate-950'
-                  : 'bg-[#080d15] text-slate-400 hover:text-slate-200'
+                  ? 'bg-[#A8B99A] text-[#0B100E]'
+                  : 'bg-[#151D18] text-[#929D92] hover:text-[#E8EDE7]'
               }`}
             >
               Shortlist ({shortlist.length})
             </button>
             <button
               onClick={() => setActiveTab('excluded')}
-              className={`px-3 py-1.5 text-xs font-mono font-semibold transition-colors ${
+              className={`px-3.5 py-2 font-semibold transition-colors ${
                 activeTab === 'excluded'
-                  ? 'bg-rose-950 text-rose-300 border-l border-rose-800'
-                  : 'bg-[#080d15] text-slate-400 hover:text-slate-200'
+                  ? 'bg-rose-950/80 text-rose-300 border-l border-rose-800'
+                  : 'bg-[#151D18] text-[#929D92] hover:text-[#E8EDE7]'
               }`}
             >
               Excluded ({excluded.length})
@@ -125,28 +130,28 @@ export default function SupplierMatching({
       </div>
 
       {actionMessage && (
-        <div className="p-3 rounded bg-emerald-950/40 border border-emerald-800 text-emerald-300 text-xs flex items-center gap-2 font-mono">
-          <CheckCircle className="w-4 h-4 shrink-0" />
+        <div className="p-3.5 rounded-lg bg-[#A8B99A]/15 border border-[#A8B99A]/30 text-[#A8B99A] text-xs flex items-center gap-2 font-mono">
+          <CheckCircle className="w-4 h-4 shrink-0 text-[#A8B99A]" />
           <span>{actionMessage}</span>
         </div>
       )}
 
       {/* Matching Result Active Container */}
       {!matchingResult ? (
-        <div className="p-12 text-center rounded bg-[#0e141f] border border-[#1e293b] text-slate-500 text-xs">
-          <Cpu className="w-10 h-10 mx-auto text-slate-700 mb-2" />
-          <p className="font-semibold text-slate-400">No matching run calculated yet.</p>
+        <div className="p-12 text-center rounded-lg bg-[#151D18] border border-[#E8EDE7]/10 text-[#929D92] text-xs">
+          <Cpu className="w-10 h-10 mx-auto text-[#929D92]/40 mb-2" />
+          <p className="font-semibold text-[#E8EDE7]">No matching run calculated yet.</p>
           <p className="mt-1">Select an active requirement and click "Run Matching Engine" to rank the 20 master suppliers.</p>
         </div>
       ) : (
         <div className="space-y-4">
           {/* Executive Summary Bar */}
-          <div className="p-4 rounded bg-[#0e141f] border border-[#1e293b] flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs">
+          <div className="p-4 rounded-lg bg-[#151D18] border border-[#E8EDE7]/10 flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs">
             <div>
-              <span className="font-mono text-[10px] uppercase text-slate-500">Matching Run ID</span>
-              <p className="font-mono text-sm font-bold text-amber-400">{matchingResult.id}</p>
-              <p className="text-slate-400 mt-0.5">
-                Evaluated: <strong>{matchingResult.totalEvaluated || 20}</strong> suppliers | Eligible: <strong className="text-emerald-400">{matchingResult.eligibleCount || shortlist.length}</strong> | Excluded: <strong className="text-rose-400">{matchingResult.excludedCount || excluded.length}</strong>
+              <span className="font-mono text-[10px] uppercase text-[#929D92]">Matching Run ID</span>
+              <p className="font-mono text-sm font-bold text-[#D1B878]">{matchingResult.id}</p>
+              <p className="text-[#929D92] mt-0.5">
+                Evaluated: <strong>{matchingResult.totalEvaluated || 20}</strong> suppliers | Eligible: <strong className="text-[#A8B99A]">{matchingResult.eligibleCount || shortlist.length}</strong> | Excluded: <strong className="text-rose-400">{matchingResult.excludedCount || excluded.length}</strong>
               </p>
             </div>
 
@@ -154,7 +159,7 @@ export default function SupplierMatching({
               <button
                 onClick={handleSubmitForApproval}
                 disabled={isSubmitting}
-                className="px-4 py-2 rounded text-xs font-mono font-semibold bg-emerald-600 hover:bg-emerald-500 text-slate-950 flex items-center gap-1.5 transition-colors self-start md:self-auto"
+                className="myca-btn-primary px-4 py-2 text-xs font-mono flex items-center gap-1.5 self-start md:self-auto"
               >
                 <ShieldCheck className="w-4 h-4" />
                 {isSubmitting ? 'Submitting to Gate...' : 'Authorize Shortlist in Governance Gate'}
@@ -164,7 +169,7 @@ export default function SupplierMatching({
 
           {/* TAB 1: RECOMMENDED SHORTLIST TABLE */}
           {activeTab === 'recommended' && (
-            <div className="rounded bg-[#0e141f] border border-[#1e293b] overflow-hidden">
+            <div className="rounded-lg bg-[#151D18] border border-[#E8EDE7]/10 overflow-hidden">
               <table className="terminal-table">
                 <thead>
                   <tr>
@@ -192,7 +197,7 @@ export default function SupplierMatching({
                     const isSelected = selectedSupplierIds.includes(item.supplierId);
                     const breakdown = item.scoringBreakdown?.dimensions || {};
                     return (
-                      <tr key={item.supplierId} className={isSelected ? 'bg-[#182233]/40' : ''}>
+                      <tr key={item.supplierId} className={isSelected ? 'bg-[#1E2922]' : 'hover:bg-[#1E2922]'}>
                         <td>
                           <input 
                             type="checkbox" 
@@ -200,19 +205,19 @@ export default function SupplierMatching({
                             onChange={() => toggleSelectSupplier(item.supplierId)} 
                           />
                         </td>
-                        <td className="font-mono font-bold text-slate-400">#{idx + 1}</td>
-                        <td className="font-mono text-xs text-amber-400 font-bold">{item.supplierId}</td>
-                        <td className="font-semibold text-slate-200">{item.companyName}</td>
-                        <td className="text-slate-400 text-xs">{item.location}</td>
-                        <td className="font-mono text-sm font-bold text-emerald-400">
-                          {item.overallScore} <span className="text-[10px] text-slate-500">/ 100</span>
+                        <td className="font-mono font-bold text-[#929D92]">#{idx + 1}</td>
+                        <td className="font-mono text-xs text-[#D1B878] font-bold">{item.supplierId}</td>
+                        <td className="font-semibold text-[#E8EDE7]">{item.companyName}</td>
+                        <td className="text-[#929D92] text-xs">{item.location}</td>
+                        <td className="font-mono text-sm font-bold text-[#A8B99A]">
+                          {item.overallScore} <span className="text-[10px] text-[#929D92]">/ 100</span>
                         </td>
-                        <td className="font-mono text-xs text-slate-300">{breakdown.technicalCapability?.score || 100}</td>
-                        <td className="font-mono text-xs text-slate-300">{breakdown.qualityCertifications?.score || 100}</td>
-                        <td className="font-mono text-xs text-slate-300">{breakdown.commercialCompetitiveness?.score || 100}</td>
-                        <td className="font-mono text-xs text-slate-300">{breakdown.deliveryFeasibility?.score || 100}</td>
+                        <td className="font-mono text-xs text-[#E8EDE7]">{breakdown.technicalCapability?.score || 100}</td>
+                        <td className="font-mono text-xs text-[#E8EDE7]">{breakdown.qualityCertifications?.score || 100}</td>
+                        <td className="font-mono text-xs text-[#E8EDE7]">{breakdown.commercialCompetitiveness?.score || 100}</td>
+                        <td className="font-mono text-xs text-[#E8EDE7]">{breakdown.deliveryFeasibility?.score || 100}</td>
                         <td>
-                          <span className="badge-verified">QUALIFIED</span>
+                          <span className="myca-badge-qualified">QUALIFIED</span>
                         </td>
                       </tr>
                     );
@@ -224,7 +229,7 @@ export default function SupplierMatching({
 
           {/* TAB 2: EXCLUDED SUPPLIERS TABLE */}
           {activeTab === 'excluded' && (
-            <div className="rounded bg-[#0e141f] border border-[#1e293b] overflow-hidden">
+            <div className="rounded-lg bg-[#151D18] border border-[#E8EDE7]/10 overflow-hidden">
               <table className="terminal-table">
                 <thead>
                   <tr>
@@ -236,13 +241,13 @@ export default function SupplierMatching({
                 </thead>
                 <tbody>
                   {excluded.map((item) => (
-                    <tr key={item.supplierId}>
+                    <tr key={item.supplierId} className="hover:bg-[#1E2922]">
                       <td className="font-mono text-xs text-rose-400 font-bold">{item.supplierId}</td>
-                      <td className="font-semibold text-slate-200">{item.companyName}</td>
+                      <td className="font-semibold text-[#E8EDE7]">{item.companyName}</td>
                       <td className="font-mono text-xs text-rose-300">
                         {(item.disqualifications || [])[0]?.rule || 'CAPABILITY_MISMATCH'}
                       </td>
-                      <td className="text-xs text-slate-400">
+                      <td className="text-xs text-[#929D92]">
                         {(item.disqualifications || [])[0]?.reason || 'Does not meet mandatory precision manufacturing tolerance or material requirement.'}
                       </td>
                     </tr>

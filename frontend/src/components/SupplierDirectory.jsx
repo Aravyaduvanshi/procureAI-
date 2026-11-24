@@ -30,7 +30,7 @@ export default function SupplierDirectory({
   const [selectedMaterial, setSelectedMaterial] = useState('');
   const [selectedCertification, setSelectedCertification] = useState('');
   const [activeSupplierDetail, setActiveSupplierDetail] = useState(null);
-  const [activeTabInDrawer, setActiveTabInDrawer] = useState('master'); // 'master' | 'rating' | 'matching'
+  const [activeTabInDrawer, setActiveTabInDrawer] = useState('master'); // 'master' | 'rating'
   const [vendorRating, setVendorRating] = useState(null);
   const [isRatingLoading, setIsRatingLoading] = useState(false);
   const [ratingError, setRatingError] = useState('');
@@ -93,41 +93,47 @@ export default function SupplierDirectory({
   return (
     <div className="space-y-6 py-6">
       {/* Header and Filter Toolbar */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-2 border-b border-[#E8EDE7]/10">
         <div>
-          <h1 className="text-xl font-bold text-white flex items-center gap-2">
-            <Building2 className="w-5 h-5 text-amber-400" />
-            Supplier Master Catalog ({filtered.length} of {suppliers.length} Records)
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-[#A8B99A] font-semibold">
+              SUPPLIER ECOSYSTEM
+            </span>
+            <span className="w-8 h-px bg-[#E8EDE7]/20"></span>
+          </div>
+          <h1 className="font-serif text-3xl font-normal text-[#E8EDE7] mt-1 flex items-center gap-2">
+            Supplier Master Catalog
+            <span className="font-mono text-sm font-normal text-[#929D92]">({filtered.length} of {suppliers.length} Records)</span>
           </h1>
-          <p className="text-xs text-slate-400 mt-0.5">
-            Verified synthetic manufacturing facilities across Indian industrial corridors (loaded from backend API).
+          <p className="text-xs text-[#929D92] mt-0.5">
+            Verified manufacturing facilities across precision corridors loaded from backend API.
           </p>
         </div>
 
         {/* Search Bar */}
         <div className="relative w-full md:w-80">
-          <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+          <Search className="w-4 h-4 text-[#929D92] absolute left-3 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search suppliers, materials, cities..."
-            className="w-full pl-9 pr-4 py-1.5 rounded bg-[#0b1017] border border-[#1e293b] text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500"
+            className="w-full pl-9 pr-4 py-2 rounded-lg bg-[#151D18] border border-[#E8EDE7]/10 text-xs text-[#E8EDE7] placeholder-[#929D92] focus:outline-none focus:border-[#A8B99A]"
           />
         </div>
       </div>
 
       {/* Filter Chips Bar */}
-      <div className="flex flex-wrap items-center gap-2 p-2.5 rounded bg-[#0e141f] border border-[#1e293b] text-xs">
-        <span className="text-slate-400 font-semibold flex items-center gap-1 mr-2 text-[11px] uppercase tracking-wider">
-          <Filter className="w-3 h-3 text-slate-400" /> Filter Criteria:
+      <div className="flex flex-wrap items-center gap-2 p-3 rounded-lg bg-[#151D18] border border-[#E8EDE7]/10 text-xs">
+        <span className="text-[#929D92] font-semibold flex items-center gap-1 mr-2 text-[11px] uppercase font-mono tracking-wider">
+          <Filter className="w-3 h-3 text-[#A8B99A]" /> Filter:
         </span>
 
         {/* Process Filter */}
         <select
           value={selectedProcess}
           onChange={(e) => setSelectedProcess(e.target.value)}
-          className="bg-[#080d15] border border-[#1e293b] text-slate-200 rounded px-2.5 py-1 text-xs focus:outline-none focus:border-amber-500"
+          className="bg-[#0B100E] border border-[#E8EDE7]/10 text-[#E8EDE7] rounded-md px-3 py-1.5 text-xs focus:outline-none focus:border-[#A8B99A]"
         >
           <option value="">All Processes</option>
           <option value="CNC Milling">CNC Milling</option>
@@ -141,7 +147,7 @@ export default function SupplierDirectory({
         <select
           value={selectedMaterial}
           onChange={(e) => setSelectedMaterial(e.target.value)}
-          className="bg-[#080d15] border border-[#1e293b] text-slate-200 rounded px-2.5 py-1 text-xs focus:outline-none focus:border-amber-500"
+          className="bg-[#0B100E] border border-[#E8EDE7]/10 text-[#E8EDE7] rounded-md px-3 py-1.5 text-xs focus:outline-none focus:border-[#A8B99A]"
         >
           <option value="">All Materials</option>
           <option value="Aluminium 6061">Aluminium 6061-T6</option>
@@ -154,7 +160,7 @@ export default function SupplierDirectory({
         <select
           value={selectedCertification}
           onChange={(e) => setSelectedCertification(e.target.value)}
-          className="bg-[#080d15] border border-[#1e293b] text-slate-200 rounded px-2.5 py-1 text-xs focus:outline-none focus:border-amber-500"
+          className="bg-[#0B100E] border border-[#E8EDE7]/10 text-[#E8EDE7] rounded-md px-3 py-1.5 text-xs focus:outline-none focus:border-[#A8B99A]"
         >
           <option value="">All Quality Certifications</option>
           <option value="ISO 9001">ISO 9001:2015</option>
@@ -170,15 +176,15 @@ export default function SupplierDirectory({
               setSelectedMaterial('');
               setSelectedCertification('');
             }}
-            className="ml-auto text-amber-400 hover:text-amber-300 font-semibold text-xs"
+            className="ml-auto text-[#A8B99A] hover:text-white font-mono font-semibold text-xs"
           >
-            Clear Filters
+            Reset Filters
           </button>
         )}
       </div>
 
       {/* Supplier Table */}
-      <div className="rounded bg-[#0e141f] border border-[#1e293b] overflow-hidden">
+      <div className="rounded-lg bg-[#151D18] border border-[#E8EDE7]/10 overflow-hidden">
         <table className="terminal-table">
           <thead>
             <tr>
@@ -196,30 +202,30 @@ export default function SupplierDirectory({
           </thead>
           <tbody>
             {filtered.map((s) => (
-              <tr key={s.supplierId} className="cursor-pointer" onClick={() => handleOpenDetail(s)}>
-                <td className="font-mono text-xs text-amber-400 font-bold">{s.supplierId}</td>
-                <td className="font-semibold text-slate-200">{s.companyName}</td>
-                <td className="text-slate-400 text-xs">
+              <tr key={s.supplierId} className="cursor-pointer hover:bg-[#1E2922]" onClick={() => handleOpenDetail(s)}>
+                <td className="font-mono text-xs text-[#D1B878] font-bold">{s.supplierId}</td>
+                <td className="font-semibold text-[#E8EDE7]">{s.companyName}</td>
+                <td className="text-[#929D92] text-xs">
                   {s.location?.city}, {s.location?.state}
                 </td>
                 <td>
                   <div className="flex flex-wrap gap-1 max-w-[220px]">
                     {(s.manufacturingProcesses || []).slice(0, 2).map((p, i) => (
-                      <span key={i} className="text-[10px] px-1.5 py-0.2 rounded bg-slate-800 text-slate-300">
+                      <span key={i} className="text-[10px] px-1.5 py-0.5 rounded bg-[#0B100E] text-[#929D92] border border-[#E8EDE7]/5 font-mono">
                         {p}
                       </span>
                     ))}
                     {(s.manufacturingProcesses || []).length > 2 && (
-                      <span className="text-[10px] text-slate-500">+{s.manufacturingProcesses.length - 2}</span>
+                      <span className="text-[10px] text-[#929D92]/60">+{s.manufacturingProcesses.length - 2}</span>
                     )}
                   </div>
                 </td>
                 <td>
-                  <span className="text-xs text-slate-300">
+                  <span className="text-xs text-[#929D92]">
                     {(s.materials || [])[0] || 'Aluminium'}
                   </span>
                 </td>
-                <td className="font-mono text-xs text-emerald-400 font-semibold">
+                <td className="font-mono text-xs text-[#A8B99A] font-semibold">
                   ₹{s.indicativeUnitPrice}
                 </td>
                 <td className="font-mono text-xs">{s.minimumOrderQuantity?.toLocaleString()}</td>
@@ -227,7 +233,7 @@ export default function SupplierDirectory({
                 <td>
                   <div className="flex items-center gap-1">
                     {(s.certifications || []).filter(c => c.status === 'verified_certificate').map((c, i) => (
-                      <span key={i} className="text-[9px] px-1.5 py-0.2 rounded font-mono bg-emerald-950/60 text-emerald-300 border border-emerald-800/80">
+                      <span key={i} className="text-[9px] px-1.5 py-0.5 rounded font-mono bg-[#A8B99A]/15 text-[#A8B99A] border border-[#A8B99A]/30">
                         {c.name.split(' ')[0]}
                       </span>
                     ))}
@@ -239,7 +245,7 @@ export default function SupplierDirectory({
                       e.stopPropagation();
                       handleOpenDetail(s);
                     }}
-                    className="px-2 py-1 rounded text-[11px] font-semibold bg-[#182233] hover:bg-slate-700 text-amber-400 border border-slate-700"
+                    className="myca-btn-secondary px-2.5 py-1 text-[11px] font-mono"
                   >
                     Inspect
                   </button>
@@ -252,48 +258,48 @@ export default function SupplierDirectory({
 
       {/* Slide-over Supplier Inspection Drawer */}
       {activeSupplierDetail && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex justify-end">
-          <div className="w-full max-w-2xl bg-[#0c1017] border-l border-[#1e293b] h-full overflow-y-auto p-6 space-y-6">
+        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex justify-end">
+          <div className="w-full max-w-2xl bg-[#0B100E] border-l border-[#E8EDE7]/10 h-full overflow-y-auto p-6 space-y-6">
             {/* Drawer Header */}
-            <div className="flex items-start justify-between pb-4 border-b border-[#1e293b]">
+            <div className="flex items-start justify-between pb-4 border-b border-[#E8EDE7]/10">
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="font-mono text-xs font-bold text-amber-400">{activeSupplierDetail.supplierId}</span>
-                  <span className="badge-verified">MASTER CATALOG DATA</span>
+                  <span className="font-mono text-xs font-bold text-[#D1B878]">{activeSupplierDetail.supplierId}</span>
+                  <span className="myca-badge-qualified">MASTER RECORD</span>
                 </div>
-                <h2 className="text-xl font-bold text-white mt-1">{activeSupplierDetail.companyName}</h2>
-                <p className="text-xs text-slate-400 flex items-center gap-1 mt-0.5">
-                  <MapPin className="w-3.5 h-3.5 text-slate-500" />
+                <h2 className="font-serif text-2xl font-normal text-[#E8EDE7] mt-1">{activeSupplierDetail.companyName}</h2>
+                <p className="text-xs text-[#929D92] flex items-center gap-1 mt-0.5">
+                  <MapPin className="w-3.5 h-3.5 text-[#A8B99A]" />
                   {activeSupplierDetail.location?.industrialArea}, {activeSupplierDetail.location?.city}, {activeSupplierDetail.location?.state}
                 </p>
               </div>
 
               <button
                 onClick={() => setActiveSupplierDetail(null)}
-                className="p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800"
+                className="p-1 rounded-full text-[#929D92] hover:text-white hover:bg-[#151D18] transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             {/* Sub-Tabs: Master Data vs Calculated Vendor Rating vs Matching */}
-            <div className="flex items-center gap-2 border-b border-[#1e293b] pb-2 text-xs">
+            <div className="flex items-center gap-2 border-b border-[#E8EDE7]/10 pb-2 text-xs">
               <button
                 onClick={() => setActiveTabInDrawer('master')}
-                className={`px-3 py-1.5 rounded font-semibold font-mono ${
+                className={`px-3 py-1.5 rounded font-medium font-mono transition-colors ${
                   activeTabInDrawer === 'master'
-                    ? 'bg-amber-500/10 text-amber-400 border border-amber-500/40'
-                    : 'text-slate-400 hover:text-slate-200'
+                    ? 'bg-[#A8B99A]/15 text-[#A8B99A] border border-[#A8B99A]/40'
+                    : 'text-[#929D92] hover:text-[#E8EDE7]'
                 }`}
               >
                 1. Supplier Master Data
               </button>
               <button
                 onClick={() => setActiveTabInDrawer('rating')}
-                className={`px-3 py-1.5 rounded font-semibold font-mono ${
+                className={`px-3 py-1.5 rounded font-medium font-mono transition-colors ${
                   activeTabInDrawer === 'rating'
-                    ? 'bg-amber-500/10 text-amber-400 border border-amber-500/40'
-                    : 'text-slate-400 hover:text-slate-200'
+                    ? 'bg-[#A8B99A]/15 text-[#A8B99A] border border-[#A8B99A]/40'
+                    : 'text-[#929D92] hover:text-[#E8EDE7]'
                 }`}
               >
                 2. Calculated Vendor Rating
@@ -304,60 +310,60 @@ export default function SupplierDirectory({
             {activeTabInDrawer === 'master' && (
               <div className="space-y-5 text-xs">
                 {/* Commercial Terms */}
-                <div className="p-4 rounded bg-[#0e141f] border border-[#1e293b]">
-                  <h3 className="font-mono uppercase font-bold text-slate-300 mb-3 flex items-center gap-1.5">
-                    <DollarSign className="w-4 h-4 text-emerald-400" /> Commercial Terms (Master Profile)
+                <div className="p-4 rounded-lg bg-[#151D18] border border-[#E8EDE7]/10">
+                  <h3 className="font-mono uppercase font-bold text-[#E8EDE7] mb-3 flex items-center gap-1.5">
+                    <DollarSign className="w-4 h-4 text-[#A8B99A]" /> Commercial Terms (Master Profile)
                   </h3>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono">
                     <div>
-                      <span className="text-[10px] text-slate-500 uppercase">Indicative Price</span>
-                      <p className="text-base font-bold text-emerald-400">₹{activeSupplierDetail.indicativeUnitPrice}</p>
+                      <span className="text-[10px] text-[#929D92] uppercase">Indicative Price</span>
+                      <p className="text-base font-bold text-[#A8B99A]">₹{activeSupplierDetail.indicativeUnitPrice}</p>
                     </div>
                     <div>
-                      <span className="text-[10px] text-slate-500 uppercase">Batch MOQ</span>
-                      <p className="text-sm font-semibold text-slate-200">{activeSupplierDetail.minimumOrderQuantity?.toLocaleString()} pcs</p>
+                      <span className="text-[10px] text-[#929D92] uppercase">Batch MOQ</span>
+                      <p className="text-sm font-semibold text-[#E8EDE7]">{activeSupplierDetail.minimumOrderQuantity?.toLocaleString()} pcs</p>
                     </div>
                     <div>
-                      <span className="text-[10px] text-slate-500 uppercase">Standard Lead Time</span>
-                      <p className="text-sm font-semibold text-slate-200">{activeSupplierDetail.leadTimeDays} days</p>
+                      <span className="text-[10px] text-[#929D92] uppercase">Standard Lead Time</span>
+                      <p className="text-sm font-semibold text-[#E8EDE7]">{activeSupplierDetail.leadTimeDays} days</p>
                     </div>
                     <div>
-                      <span className="text-[10px] text-slate-500 uppercase">Payment Terms</span>
-                      <p className="text-sm font-semibold text-slate-200">{activeSupplierDetail.paymentTerms || 'Net 30'}</p>
+                      <span className="text-[10px] text-[#929D92] uppercase">Payment Terms</span>
+                      <p className="text-sm font-semibold text-[#E8EDE7]">{activeSupplierDetail.paymentTerms || 'Net 30'}</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Technical Processes & Materials */}
-                <div className="p-4 rounded bg-[#0e141f] border border-[#1e293b] space-y-3">
-                  <h3 className="font-mono uppercase font-bold text-slate-300 flex items-center gap-1.5">
-                    <Cpu className="w-4 h-4 text-cyan-400" /> Manufacturing Capabilities & Materials
+                <div className="p-4 rounded-lg bg-[#151D18] border border-[#E8EDE7]/10 space-y-3">
+                  <h3 className="font-mono uppercase font-bold text-[#E8EDE7] flex items-center gap-1.5">
+                    <Cpu className="w-4 h-4 text-[#A8B99A]" /> Manufacturing Capabilities & Materials
                   </h3>
                   <div>
-                    <span className="text-[10px] text-slate-500 uppercase block mb-1">Processes</span>
+                    <span className="text-[10px] text-[#929D92] uppercase block mb-1">Processes</span>
                     <div className="flex flex-wrap gap-1.5">
                       {(activeSupplierDetail.manufacturingProcesses || []).map((p, i) => (
-                        <span key={i} className="px-2 py-0.5 rounded bg-[#162030] text-slate-300 font-mono text-[11px]">
+                        <span key={i} className="px-2 py-0.5 rounded bg-[#0B100E] text-[#E8EDE7] font-mono text-[11px] border border-[#E8EDE7]/5">
                           {p}
                         </span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <span className="text-[10px] text-slate-500 uppercase block mb-1">Materials</span>
+                    <span className="text-[10px] text-[#929D92] uppercase block mb-1">Materials</span>
                     <div className="flex flex-wrap gap-1.5">
                       {(activeSupplierDetail.materials || []).map((m, i) => (
-                        <span key={i} className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[11px]">
+                        <span key={i} className="px-2 py-0.5 rounded bg-[#0B100E] text-[#E8EDE7] font-mono text-[11px] border border-[#E8EDE7]/5">
                           {m}
                         </span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <span className="text-[10px] text-slate-500 uppercase block mb-1">Machinery & Testing Equipment</span>
+                    <span className="text-[10px] text-[#929D92] uppercase block mb-1">Machinery & Equipment</span>
                     <div className="flex flex-wrap gap-1.5">
                       {(activeSupplierDetail.equipmentCapabilities || []).map((eq, i) => (
-                        <span key={i} className="px-2 py-0.5 rounded bg-[#131b29] text-amber-300 font-mono text-[11px] border border-amber-900/40">
+                        <span key={i} className="px-2 py-0.5 rounded bg-[#1E2922] text-[#D1B878] font-mono text-[11px] border border-[#D1B878]/30">
                           {eq}
                         </span>
                       ))}
@@ -366,15 +372,15 @@ export default function SupplierDirectory({
                 </div>
 
                 {/* Audited Certifications */}
-                <div className="p-4 rounded bg-[#0e141f] border border-[#1e293b]">
-                  <h3 className="font-mono uppercase font-bold text-slate-300 mb-2 flex items-center gap-1.5">
-                    <ShieldCheck className="w-4 h-4 text-emerald-400" /> Audited Quality Certifications
+                <div className="p-4 rounded-lg bg-[#151D18] border border-[#E8EDE7]/10">
+                  <h3 className="font-mono uppercase font-bold text-[#E8EDE7] mb-2 flex items-center gap-1.5">
+                    <ShieldCheck className="w-4 h-4 text-[#A8B99A]" /> Audited Quality Certifications
                   </h3>
                   <div className="space-y-1.5">
                     {(activeSupplierDetail.certifications || []).map((c, i) => (
-                      <div key={i} className="p-2 rounded bg-[#080d15] flex items-center justify-between text-[11px] font-mono">
-                        <span className="font-semibold text-slate-200">{c.name}</span>
-                        <span className="text-emerald-400 font-bold uppercase">{c.status?.replace(/_/g, ' ')}</span>
+                      <div key={i} className="p-2.5 rounded bg-[#0B100E] border border-[#E8EDE7]/5 flex items-center justify-between text-[11px] font-mono">
+                        <span className="font-semibold text-[#E8EDE7]">{c.name}</span>
+                        <span className="text-[#A8B99A] font-bold uppercase">{c.status?.replace(/_/g, ' ')}</span>
                       </div>
                     ))}
                   </div>
@@ -386,57 +392,57 @@ export default function SupplierDirectory({
             {activeTabInDrawer === 'rating' && (
               <div className="space-y-5 text-xs">
                 {activeRequirement ? (
-                  <div className="p-3 rounded bg-[#0e141f] border border-[#1e293b] text-slate-300">
-                    <span className="text-[10px] uppercase font-mono text-slate-500 block">Evaluated Against Active Requirement</span>
-                    <p className="font-bold text-sm text-white mt-0.5">{activeRequirement.title}</p>
-                    <p className="text-[11px] text-slate-400 font-mono mt-0.5">
+                  <div className="p-3.5 rounded-lg bg-[#151D18] border border-[#E8EDE7]/10 text-[#E8EDE7]">
+                    <span className="text-[10px] uppercase font-mono text-[#929D92] block">Evaluated Against Active Requirement</span>
+                    <p className="font-bold text-sm text-[#E8EDE7] mt-0.5">{activeRequirement.title}</p>
+                    <p className="text-[11px] text-[#929D92] font-mono mt-0.5">
                       Quantity: {activeRequirement.targetQuantity} pcs | Target: ₹{activeRequirement.targetUnitPrice}
                     </p>
                   </div>
                 ) : (
-                  <div className="p-3 rounded bg-amber-950/30 border border-amber-800 text-amber-300 text-xs">
+                  <div className="p-3.5 rounded-lg bg-[#D1B878]/10 border border-[#D1B878]/30 text-[#D1B878] text-xs">
                     No active requirement loaded. Select or upload a requirement to run requirement-specific deterministic rating.
                   </div>
                 )}
 
                 {isRatingLoading ? (
-                  <div className="py-8 text-center text-slate-400 font-mono">
+                  <div className="py-8 text-center text-[#929D92] font-mono">
                     Calculating 5-dimension deterministic vendor rating from backend...
                   </div>
                 ) : vendorRating ? (
                   <div className="space-y-4">
                     {/* Overall Score Banner */}
-                    <div className="p-4 rounded bg-[#080d15] border border-[#1e293b] flex items-center justify-between">
+                    <div className="p-4 rounded-lg bg-[#151D18] border border-[#E8EDE7]/10 flex items-center justify-between">
                       <div>
-                        <span className="text-[10px] font-mono uppercase text-slate-400">Deterministic Overall Rating</span>
-                        <div className="text-3xl font-bold font-mono text-emerald-400 mt-1">
-                          {vendorRating.overallScore} <span className="text-sm text-slate-500">/ 100</span>
+                        <span className="text-[10px] font-mono uppercase text-[#929D92]">Deterministic Overall Rating</span>
+                        <div className="text-3xl font-bold font-mono text-[#A8B99A] mt-1">
+                          {vendorRating.overallScore} <span className="text-sm text-[#929D92]">/ 100</span>
                         </div>
-                        <span className="badge-verified mt-1">CONFIDENCE: {vendorRating.confidenceLevel}</span>
+                        <span className="myca-badge-qualified mt-1 inline-block">CONFIDENCE: {vendorRating.confidenceLevel}</span>
                       </div>
                       <div className="text-right">
-                        <span className="text-[10px] font-mono uppercase text-slate-400 block">Recommendation</span>
-                        <span className="px-2 py-1 rounded text-xs font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30 inline-block mt-1">
+                        <span className="text-[10px] font-mono uppercase text-[#929D92] block">Recommendation</span>
+                        <span className="px-2.5 py-1 rounded text-xs font-mono font-bold bg-[#D1B878]/15 text-[#D1B878] border border-[#D1B878]/30 inline-block mt-1">
                           {vendorRating.recommendationVerdict}
                         </span>
                       </div>
                     </div>
 
                     {/* 5-Dimensional Breakdown */}
-                    <div className="p-4 rounded bg-[#0e141f] border border-[#1e293b] space-y-3">
-                      <h4 className="font-mono uppercase font-bold text-slate-300 text-[11px]">
+                    <div className="p-4 rounded-lg bg-[#151D18] border border-[#E8EDE7]/10 space-y-3">
+                      <h4 className="font-mono uppercase font-bold text-[#E8EDE7] text-[11px]">
                         Multi-Dimensional Scoring Breakdown
                       </h4>
 
                       {Object.entries(vendorRating.scoringBreakdown?.dimensions || {}).map(([dimKey, dimData]) => (
                         <div key={dimKey} className="space-y-1">
                           <div className="flex items-center justify-between text-[11px] font-mono">
-                            <span className="text-slate-300 capitalize">{dimKey.replace(/([A-Z])/g, ' $1')}</span>
-                            <span className="text-slate-400">Weight: {Math.round(dimData.weight * 100)}% | <strong>{dimData.score}/100</strong></span>
+                            <span className="text-[#E8EDE7] capitalize">{dimKey.replace(/([A-Z])/g, ' $1')}</span>
+                            <span className="text-[#929D92]">Weight: {Math.round(dimData.weight * 100)}% | <strong className="text-[#E8EDE7]">{dimData.score}/100</strong></span>
                           </div>
-                          <div className="w-full h-1.5 bg-slate-800 rounded overflow-hidden">
+                          <div className="w-full h-1.5 bg-[#0B100E] rounded overflow-hidden">
                             <div 
-                              className="h-full bg-amber-500" 
+                              className="h-full bg-[#A8B99A]" 
                               style={{ width: `${dimData.score}%` }}
                             />
                           </div>
@@ -446,19 +452,19 @@ export default function SupplierDirectory({
 
                     {/* Positive Factors & Risks */}
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="p-3 rounded bg-[#0e141f] border border-[#1e293b]">
-                        <span className="text-[10px] font-mono uppercase text-emerald-400 font-bold block mb-2">Key Strengths</span>
-                        <ul className="space-y-1 text-[11px] text-slate-300 list-disc list-inside">
+                      <div className="p-3 rounded-lg bg-[#151D18] border border-[#E8EDE7]/10">
+                        <span className="text-[10px] font-mono uppercase text-[#A8B99A] font-bold block mb-2">Key Strengths</span>
+                        <ul className="space-y-1 text-[11px] text-[#E8EDE7] list-disc list-inside">
                           {(vendorRating.scoringBreakdown?.positiveFactors || []).map((f, i) => (
                             <li key={i}>{f}</li>
                           ))}
                         </ul>
                       </div>
 
-                      <div className="p-3 rounded bg-[#0e141f] border border-[#1e293b]">
+                      <div className="p-3 rounded-lg bg-[#151D18] border border-[#E8EDE7]/10">
                         <span className="text-[10px] font-mono uppercase text-rose-400 font-bold block mb-2">Identified Risks</span>
                         {(vendorRating.scoringBreakdown?.riskFactors || []).length === 0 ? (
-                          <p className="text-[11px] text-slate-500 font-mono">No disqualifying risk factors identified.</p>
+                          <p className="text-[11px] text-[#929D92] font-mono">No disqualifying risk factors identified.</p>
                         ) : (
                           <ul className="space-y-1 text-[11px] text-rose-300 list-disc list-inside">
                             {(vendorRating.scoringBreakdown?.riskFactors || []).map((r, i) => (
@@ -474,7 +480,7 @@ export default function SupplierDirectory({
                     <button
                       onClick={() => activeRequirement && evaluateVendorRating(activeSupplierDetail.supplierId, activeRequirement.id)}
                       disabled={!activeRequirement}
-                      className="px-4 py-2 rounded text-xs font-mono font-semibold bg-amber-600 hover:bg-amber-500 text-slate-950 disabled:opacity-50"
+                      className="myca-btn-primary px-4 py-2 text-xs font-mono disabled:opacity-50"
                     >
                       Calculate Deterministic Vendor Rating
                     </button>

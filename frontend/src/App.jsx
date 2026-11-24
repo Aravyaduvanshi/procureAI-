@@ -6,14 +6,34 @@ import RequirementUpload from './components/RequirementUpload.jsx';
 import SupplierMatching from './components/SupplierMatching.jsx';
 import ApprovalView from './components/ApprovalView.jsx';
 import NegotiationWorkspace from './components/NegotiationWorkspace.jsx';
+import LandingPage from './components/LandingPage.jsx';
 import api from '../utils/axios.js';
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../utils/firebase.js";
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('dashboard');
+  const [currentView, setCurrentView] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash.replace('#', '');
+      if (['app', 'demo', 'dashboard', 'suppliers', 'requirements', 'matching', 'approvals', 'negotiations'].includes(hash)) {
+        return 'app';
+      }
+    }
+    return 'landing';
+  });
+
+  const [activeTab, setActiveTab] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash.replace('#', '');
+      if (['dashboard', 'suppliers', 'requirements', 'matching', 'approvals', 'negotiations'].includes(hash)) {
+        return hash;
+      }
+    }
+    return 'dashboard';
+  });
+
   const [user, setUser] = useState({
-    name: 'ProcureAI Lead Buyer',
+    name: 'MYCA Lead Buyer',
     email: 'buyer@example.com',
     role: 'buyer'
   });
@@ -27,6 +47,24 @@ export default function App() {
   const [healthStatus, setHealthStatus] = useState('checking');
   const [recentActivity, setRecentActivity] = useState([]);
 
+  // Sync with browser hash changes for back/forward navigation
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (['app', 'demo'].includes(hash)) {
+        setCurrentView('app');
+      } else if (['dashboard', 'suppliers', 'requirements', 'matching', 'approvals', 'negotiations'].includes(hash)) {
+        setCurrentView('app');
+        setActiveTab(hash);
+      } else if (!hash || hash === 'landing') {
+        setCurrentView('landing');
+      }
+    };
+
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
+
   // Check health and load initial authoritative data from PostgreSQL
   useEffect(() => {
     fetchInitialData();
@@ -39,7 +77,7 @@ export default function App() {
       eventSource = new EventSource(`${serverUrl}/api/events`, { withCredentials: true });
 
       eventSource.onopen = () => {
-        console.log('[SSE] Connected to ProcureAI realtime event stream');
+        console.log('[SSE] Connected to MYCA realtime event stream');
       };
 
       eventSource.onmessage = (event) => {
@@ -258,7 +296,7 @@ export default function App() {
         setUser(data.user);
       }
     } catch (e) {
-      setUser({ name: 'ProcureAI Lead Buyer', email: 'buyer@example.com', role: 'buyer' });
+      setUser({ name: 'MYCA Lead Buyer', email: 'buyer@example.com', role: 'buyer' });
     }
   };
 
@@ -267,6 +305,20 @@ export default function App() {
       await api.post('/auth/logout');
     } catch (e) {}
     setUser(null);
+  };
+
+  // Navigation handlers
+  const handleOpenApp = (targetTab = 'dashboard') => {
+    setCurrentView('app');
+    setActiveTab(targetTab);
+    window.location.hash = targetTab;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleBackToLanding = () => {
+    setCurrentView('landing');
+    window.location.hash = '';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Workflow Handlers
@@ -352,19 +404,29 @@ export default function App() {
     }
   };
 
+  // Render Landing Page if on landing view
+  if (currentView === 'landing') {
+    return <LandingPage onOpenApp={handleOpenApp} />;
+  }
+
+  // Render Live Production Procurement MVP Application
   return (
-    <div className="terminal-grid-bg min-h-screen text-slate-100 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#0B100E] text-[#E8EDE7] flex flex-col font-sans selection:bg-[#A8B99A]/30 selection:text-white">
       <Navbar 
         activeTab={activeTab} 
-        setActiveTab={setActiveTab} 
+        setActiveTab={(tab) => {
+          setActiveTab(tab);
+          window.location.hash = tab;
+        }} 
         user={user} 
         onLogout={handleLogout} 
         onDevLogin={handleDevLogin}
         healthStatus={healthStatus}
         onDevReset={handleDevReset}
+        onBackToLanding={handleBackToLanding}
       />
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 pb-16">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 pb-16 pt-4">
         {activeTab === 'dashboard' && (
           <Dashboard 
             stats={{
@@ -374,11 +436,15 @@ export default function App() {
               pendingApprovals: approvals.filter(a => a.decision === 'PENDING').length,
               activeNegotiations: negotiations.filter(n => n.status !== 'COMPLETED').length
             }}
-            setActiveTab={setActiveTab}
+            setActiveTab={(tab) => {
+              setActiveTab(tab);
+              window.location.hash = tab;
+            }}
             recentActivity={recentActivity}
             requirements={requirements}
             onLoadSampleRequirement={() => {
               setActiveTab('requirements');
+              window.location.hash = 'requirements';
             }}
           />
         )}
@@ -389,6 +455,7 @@ export default function App() {
             activeRequirement={activeRequirement}
             onSelectForMatching={(s) => {
               setActiveTab('matching');
+              window.location.hash = 'matching';
             }}
           />
         )}
@@ -429,9 +496,17 @@ export default function App() {
         )}
       </main>
 
-      <footer className="border-t border-[#1e293b] bg-[#06090e] py-4 text-center text-[11px] font-mono text-slate-500">
-        <p>PROCUREAI // ENTERPRISE MANUFACTURING SOURCING & GOVERNANCE TERMINAL</p>
-        <p className="text-[10px] text-slate-600 mt-0.5">PostgreSQL Durable Single Source of Truth • Redis Event Bus</p>
+      <footer className="border-t border-[#E8EDE7]/10 bg-[#070B09] py-5 text-center text-xs text-[#929D92]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex items-center gap-2">
+            <span className="font-serif font-bold text-[#E8EDE7] tracking-wider text-sm">MYCA</span>
+            <span className="text-[#E8EDE7]/20">|</span>
+            <span className="font-mono text-[11px] uppercase tracking-wider text-[#929D92]">Autonomous Sourcing • Human-Controlled Decisions</span>
+          </div>
+          <div className="font-mono text-[10px] text-[#929D92]/70">
+            Durable PostgreSQL Source of Truth • Redis Distributed Bus • Groq LLM Strategy
+          </div>
+        </div>
       </footer>
     </div>
   );
